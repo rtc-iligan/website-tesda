@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_get'])->name('accounts.import_get');
+Route::post('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_post'])->name('accounts.import_post');
+Route::resource('/accounts', App\Http\Controllers\AccountsController::class);
+Route::resource('/roles', App\Http\Controllers\RolesController::class);
+Route::get('/reservation', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
+Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');
+Route::get('/mission-vision', [App\Http\Controllers\HomeController::class,'missionvision'])->name('missionvision');
+Route::get('/organizational-structure', [App\Http\Controllers\HomeController::class,'organizationalstructure'])->name('organizationalstructure');
+Route::get('/rtc-personnel', [App\Http\Controllers\HomeController::class,'rtcpersonnel'])->name('rtcpersonnel');
+Route::get('/contact-us', [App\Http\Controllers\HomeController::class,'contactus'])->name('contactus');
+Route::get('/gallery', [App\Http\Controllers\HomeController::class,'gallery'])->name('gallery');
+Route::get('/newsupdates', [App\Http\Controllers\HomeController::class,'newsupdates'])->name('newsupdates');
+Route::get('/success-stories', [App\Http\Controllers\HomeController::class,'successtories'])->name('successtories');
+Route::get('/requirements', [App\Http\Controllers\HomeController::class,'requirements'])->name('requirements');
