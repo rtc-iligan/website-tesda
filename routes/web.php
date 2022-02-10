@@ -24,13 +24,24 @@ Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 
 Route::post('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_post'])->name('accounts.import_post');
 Route::resource('/accounts', App\Http\Controllers\AccountsController::class);
 Route::resource('/roles', App\Http\Controllers\RolesController::class);
+Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
+
+
+
+
+
+
+
+
+
+
 Route::get('/reservation', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
 Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');
 Route::get('/mission-vision', [App\Http\Controllers\HomeController::class,'missionvision'])->name('missionvision');
 Route::get('/organizational-structure', [App\Http\Controllers\HomeController::class,'organizationalstructure'])->name('organizationalstructure');
 Route::get('/rtc-personnel', [App\Http\Controllers\HomeController::class,'rtcpersonnel'])->name('rtcpersonnel');
 Route::get('/contact-us', [App\Http\Controllers\HomeController::class,'contactus'])->name('contactus');
-Route::get('/gallery', [App\Http\Controllers\HomeController::class,'gallery'])->name('gallery');
+Route::get('/images', [App\Http\Controllers\HomeController::class,'images'])->name('images');
 Route::get('/newsupdates', [App\Http\Controllers\HomeController::class,'newsupdates'])->name('newsupdates');
 Route::get('/success-stories', [App\Http\Controllers\HomeController::class,'successtories'])->name('successtories');
 Route::get('/requirements', [App\Http\Controllers\HomeController::class,'requirements'])->name('requirements');

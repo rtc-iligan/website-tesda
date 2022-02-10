@@ -49,9 +49,9 @@ class HomeController extends Controller
     {
         return view('frontend.others.contactus');
     }
-    public function gallery()
+    public function images()
     {
-        return view('frontend.others.gallery');
+        return view('frontend.others.images');
     }
     public function newsupdates()
     {

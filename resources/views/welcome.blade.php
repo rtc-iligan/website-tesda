@@ -8,7 +8,6 @@
                 <h1>Welcome to RTC-ILIGAN</h1>
                 <p class="lead">"You bring the effort, we deliver result"</p>
                 <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
-               
             </div>
         </div>
         <div class="row">
