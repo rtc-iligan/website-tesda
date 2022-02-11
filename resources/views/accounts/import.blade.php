@@ -3,16 +3,15 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div class="float-right mb-2 ml-5">
+                <a class="btn btn-secondary btn-sm" href="{{ route('accounts.index') }}"><i class="fa-solid fa-angles-left"></i> Go Back</a>
+            </div>
         <div class="col-md-12">
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
             @endif
-            <div class="float-right mb-2">
-                <a class="btn btn-secondary btn-sm" href="{{ route('accounts.index') }}">Go Back</a>
-            </div>
-
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">

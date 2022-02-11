@@ -4,25 +4,27 @@
 @include('accounts._createUser')
 <div class="container">
     <div class="row justify-content-center">
+       
         <div class="col-md-10">
-            <div class="float-right mb-2">
-                @can('create_users')
-                    <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#createUser">Add User</button>
-                @endcan
-                @can('view_roles')
-                    <a class="btn btn-secondary btn-sm" href="{{ route('roles.index') }}">View Roles</a>
-                @endcan
-                @can('export_users')
-                    <a class="btn btn-secondary btn-sm" href="{{ route('accounts.index') }}?excel=true" target="_blank">Export Users</a>
-                @endcan
-                @can('import_users')
-                    <a class="btn btn-secondary btn-sm" href="{{ route('accounts.import_get') }}">Import Users</a>
-                @endcan
-            </div>
+            
 
             <div class="card">
                 <div class="card-header">
                     {{ __('Accounts') }}
+                    <div class="float-right mb-2 ml-5">
+                        @can('create_users')
+                            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#createUser">Add User</button>
+                        @endcan
+                        @can('view_roles')
+                            <a class="btn btn-secondary btn-sm" href="{{ route('roles.index') }}">View Roles</a>
+                        @endcan
+                        @can('export_users')
+                            <a class="btn btn-secondary btn-sm" href="{{ route('accounts.index') }}?excel=true" target="_blank">Export Users</a>
+                        @endcan
+                        @can('import_users')
+                            <a class="btn btn-secondary btn-sm" href="{{ route('accounts.import_get') }}">Import Users</a>
+                        @endcan
+                    </div>
                 </div>
             
                 <div class="card-body">

@@ -5,14 +5,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="float-right mb-2">
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createRole">Add Role</button>
-                <a class="btn btn-success btn-sm" href="{{ route('accounts.index') }}">View Users</a>
-            </div>
+            
 
             <div class="card">
                 <div class="card-header">
                     {{ __('Accounts') }}
+                    <div class="float-right mb-2">
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#createRole">Add Role</button>
+                        <a class="btn btn-success btn-sm" href="{{ route('accounts.index') }}">View Users</a>
+                    </div>
                 </div>
             
                 <div class="card-body">
