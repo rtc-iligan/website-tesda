@@ -40,5 +40,9 @@ class GalleryController extends Controller
     {
     	 return view('backend.gallery._update',compact('gallery'));
     }
+    public function show(Gallery $gallery)
+    {
+         return view('backend.gallery._view',compact('gallery'));
+    }
  
 }

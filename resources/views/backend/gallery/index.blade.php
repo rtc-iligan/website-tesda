@@ -47,7 +47,7 @@
                               </a>
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-magnifying-glass"></i> View</a></li>
+                                <li><a class="dropdown-item btn-view" href="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</a></li>
                                 <li><a class="dropdown-item btn-update" href="{{ route('gallery.edit',$gallery->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</a></li>
                               </ul>
@@ -61,12 +61,12 @@
         </div>
     </div>
 </div>
-<div class="append-gallery"></div>
+<div class="append-galleries"></div>
 @endsection
 @section('script')
 <script type="text/javascript">
    $('.btn-update').click(function(){
-            var div = $('.append-gallery');
+            var div = $('.append-galleries');
             div.empty();
             var url = $(this).data('url');
             $.ajax({
@@ -74,6 +74,18 @@
                 success:function(data){
                     div.append(data);
                     $('#update_gallery').modal('show');
+                }
+            });
+        });
+   $('.btn-view').click(function(){
+            var div = $('.append-galleries');
+            div.empty();
+            var url = $(this).data('url');
+            $.ajax({
+                url: url,
+                success:function(data){
+                    div.append(data);
+                    $('#view_gallery').modal('show');
                 }
             });
         });
