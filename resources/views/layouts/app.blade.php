@@ -50,6 +50,9 @@
                                         <a class="dropdown-item" href="">
                                             {{ __('News&Updates') }}
                                         </a>
+                                         <a class="dropdown-item" href="">
+                                            {{ __('RTC Personnel') }}
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
