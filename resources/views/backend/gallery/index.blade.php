@@ -47,7 +47,10 @@
                               </a>
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><a class="dropdown-item btn-view" href="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</a></li>
+                                <li>
+                                    {{-- <a class="dropdown-item btn-view" href="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</a> --}}
+                                    <button type="button" data-url="{{ route('gallery.show',$gallery->id) }}" class="dropdown-item btn-view">Edit</button>
+                                </li>
                                 <li><a class="dropdown-item btn-update" href="{{ route('gallery.edit',$gallery->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</a></li>
                                 <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</a></li>
                               </ul>
@@ -63,7 +66,7 @@
 </div>
 <div class="append-galleries"></div>
 @endsection
-@section('script')
+@section('scripts')
 <script type="text/javascript">
    $('.btn-update').click(function(){
             var div = $('.append-galleries');
@@ -78,6 +81,7 @@
             });
         });
    $('.btn-view').click(function(){
+      
             var div = $('.append-galleries');
             div.empty();
             var url = $(this).data('url');
