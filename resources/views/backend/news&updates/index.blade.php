@@ -51,9 +51,9 @@
                               </a>
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><a class="dropdown-item btn-view" href=""><i class="fa-solid fa-magnifying-glass"></i> View</a></li>
-                                <li><a class="dropdown-item btn-update" href=""><i class="fa-solid fa-pen-to-square"></i> Update</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</a></li>
+                                <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
+                                <li><button class="dropdown-item btn-update" data-url=""><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <li><button class="dropdown-item" data-url="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
                               </ul>
                             </div> 
                         </td>

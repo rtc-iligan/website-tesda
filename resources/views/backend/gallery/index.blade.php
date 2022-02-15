@@ -9,15 +9,17 @@
                 <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Gallery Management') }}</div>
                 <div class="card-header">
                     <div class="row">
+                        
                         <div class="col-md-2">
-                             <input type="date" name="" class="form-control">
+                             <input type="date" name="date" class="form-control">
                         </div>
                         <div class="col-md-2">
                              <select class="form-select"></select>
                         </div>
                         <div class="col-md-2 ">
-                            <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                            <button type="submit"  class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
                         </div>
+                        </form>
                         <div class="col-md-6 ">
                             <button type="submit" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
                         </div>
@@ -47,15 +49,23 @@
                               </a>
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><a class="dropdown-item btn-view" href="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</a></li>
-                                <li><a class="dropdown-item btn-update" href="{{ route('gallery.edit',$gallery->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</a></li>
-                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</a></li>
+                                <li><button class="dropdown-item btn-view" data-url="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
+                                <li><button class="dropdown-item btn-update" data-url="{{ route('gallery.edit',$gallery->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <form action="{{ route('gallery.destroy',$gallery->id) }}" method="post" >
+                                @csrf
+                                @method('DELETE')
+                                <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
+                                </form> 
                               </ul>
                             </div> 
                         </td>
                       </tr>
                       @endforeach
+
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {{ $galleries->links() }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +73,7 @@
 </div>
 <div class="append-galleries"></div>
 @endsection
-@section('script')
+@section('scripts')
 <script type="text/javascript">
    $('.btn-update').click(function(){
             var div = $('.append-galleries');
@@ -89,5 +99,7 @@
                 }
             });
         });
+
 </script>
+
 @endsection

@@ -18,6 +18,7 @@ class CreateGalleryTable extends Migration
             $table->string('subject');
             $table->date('date');
             $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
