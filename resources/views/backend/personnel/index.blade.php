@@ -10,7 +10,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-2">
-                             <input type="date" name="" class="form-control">
+                             <select class="form-select"></select>
                         </div>
                         <div class="col-md-2">
                              <select class="form-select"></select>
@@ -34,31 +34,59 @@
                         <th>Motto</th>
                         <th width="7%">Action</th>
                       </tr>
-                     
+                      @foreach($personnel as $i => $pnl)
+                      <tr>
+                        <td>{{ ++$i}}</td>
+                        <td>
+                             <img src="{{asset('storage/'.$pnl->image) }}" alt="image" width="70" height="50" align="left">
+                        </td>
+                        <td>{{ $pnl->name }}</td>
+                        <td>{{ $pnl->type }}</td>
+                        <td>{{ $pnl->position }}</td>
+                        <td>{{ $pnl->motto }}</td>
+                        <td>
+                           <div class="dropdown">
+                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-cog"></i>
+                              </a>
+
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
+                                <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
+                                <li><button class="dropdown-item btn-update"data-url="{{ route('personnel.edit',$pnl->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <form action="{{ route('personnel.destroy',$pnl->id) }}" method="post" >
+                                @csrf
+                                @method('DELETE')
+                                <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
+                                </form> 
+                              </ul>
+                            </div> 
+                        </td>
+                      </tr>
+                      @endforeach
                     </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="append-galleries"></div>
+<div class="append-personnel"></div>
 @endsection
-@section('script')
+@section('scripts')
 <script type="text/javascript">
    $('.btn-update').click(function(){
-            var div = $('.append-galleries');
+            var div = $('.append-personnel');
             div.empty();
             var url = $(this).data('url');
             $.ajax({
                 url: url,
                 success:function(data){
                     div.append(data);
-                    $('#update_gallery').modal('show');
+                    $('#update_personnel').modal('show');
                 }
             });
         });
    $('.btn-view').click(function(){
-            var div = $('.append-galleries');
+            var div = $('.append-personnel');
             div.empty();
             var url = $(this).data('url');
             $.ajax({

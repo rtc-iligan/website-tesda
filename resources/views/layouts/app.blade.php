@@ -23,8 +23,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/home') }}" >
+                    <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}" height="25"> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                     <ul class="navbar-nav ms-auto">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">{{ __('Dashboard') }}</a>
+                                    <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -46,13 +46,13 @@
                                         <a class="dropdown-item" href="{{ route('gallery.index') }}">
                                             {{ __('Gallery') }}
                                         </a>
-
+                                        <a class="dropdown-item" href="{{ route('personnel.index') }}">
+                                            {{ __('Personnel') }}
+                                        </a>
                                         <a class="dropdown-item" href="{{ route('news.index') }}">
                                             {{ __('News&Updates') }}
                                         </a>
-                                        <a class="dropdown-item" href="{{ route('personnel.index') }}">
-                                            {{ __('RTC Personnel') }}
-                                        </a>
+                                       
                                     </div>
                                 </li>
                                 <li class="nav-item">

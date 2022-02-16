@@ -52,8 +52,12 @@
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
                                 <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
-                                <li><button class="dropdown-item btn-update" data-url=""><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
-                                <li><button class="dropdown-item" data-url="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
+                                <li><button class="dropdown-item btn-update"data-url="{{ route('news.edit',$new->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <form action="{{ route('news.destroy',$new->id) }}" method="post" >
+                                @csrf
+                                @method('DELETE')
+                                <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
+                                </form> 
                               </ul>
                             </div> 
                         </td>
@@ -65,24 +69,24 @@
         </div>
     </div>
 </div>
-<div class="append-galleries"></div>
+<div class="append-news"></div>
 @endsection
-@section('script')
+@section('scripts')
 <script type="text/javascript">
    $('.btn-update').click(function(){
-            var div = $('.append-galleries');
+            var div = $('.append-news');
             div.empty();
             var url = $(this).data('url');
             $.ajax({
                 url: url,
                 success:function(data){
                     div.append(data);
-                    $('#update_gallery').modal('show');
+                    $('#update_news').modal('show');
                 }
             });
         });
    $('.btn-view').click(function(){
-            var div = $('.append-galleries');
+            var div = $('.append-news');
             div.empty();
             var url = $(this).data('url');
             $.ajax({

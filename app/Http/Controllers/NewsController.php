@@ -80,9 +80,9 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(News $news)
     {
-        //
+         return view('backend.news&updates._update',compact('news'));
     }
 
     /**
@@ -92,9 +92,22 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,  News $news)
     {
-        //
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->location = $request->location;
+        $news->date = $request->date;
+        if( $request->file('image') != null){
+            $picture = $request->file('image');
+            $fileName = time() . '.' . $picture->getClientOriginalExtension();
+            $img = Image::make($picture->getRealPath());
+            $img->stream();
+            $url = Storage::disk('public')->put('uploads/news', $picture);
+            $news->image = $url;  
+        }
+        $news->update();
+        return redirect()->back()->with('success','Successfully Updated!');
     }
 
     /**
@@ -103,8 +116,9 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(News $news)
     {
-        //
+        $news->delete();
+        return redirect()->back()->with('success','Successfully Deleted!');     
     }
 }
