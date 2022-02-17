@@ -28,6 +28,7 @@ Route::resource('/roles', App\Http\Controllers\RolesController::class);
 Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 Route::resource('/news', App\Http\Controllers\NewsController::class);
 Route::resource('/personnel', App\Http\Controllers\PersonnelController::class);
+Route::resource('/transparencyseal', App\Http\Controllers\TransparencySealController::class);
 
 
 

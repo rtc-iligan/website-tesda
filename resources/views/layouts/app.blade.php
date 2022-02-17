@@ -64,6 +64,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link " href="">{{ __('Announcement') }}</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
+                                </li>
                                  <li class="nav-item">
                                     <a class="nav-link " href="">{{ __('Schedule') }}</a>
                                 </li>
