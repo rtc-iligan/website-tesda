@@ -33,7 +33,6 @@
                         <th width="30%">Date</th>
                         <th width="7%">Action</th>
                       </tr>
-                     
                     </table>
                 </div>
             </div>

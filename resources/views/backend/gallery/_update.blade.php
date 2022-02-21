@@ -5,7 +5,7 @@
         @csrf  
         @method('PATCH')            
         <div class="modal-header">
-          <h4 class="modal-title">Edit Qualification</h4>
+          <h4 class="modal-title">Edit Gallery</h4>
           <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">

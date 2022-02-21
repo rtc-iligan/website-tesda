@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>TESDA/ RTC-ILIGAN</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -56,7 +56,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="">{{ __('Qualification') }}</a>
+                                    <a class="nav-link " href="{{ route('qualification.index') }}">{{ __('Qualification') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link " href="">{{ __('Reservation') }}</a>
@@ -130,9 +130,9 @@
     <script type="text/javascript">
             let success = "{{ Session::get('success') }}"
             if(success) {
-                Toast.setTheme(TOAST_THEME.DARK);
-                Toast.create('Success', success,TOAST_STATUS.SUCCESS, 10000);
-                // alert(success);
+                // Toast.setTheme(TOAST_THEME.DARK);
+                // Toast.create('Success', success,TOAST_STATUS.SUCCESS, 10000);
+                alert(success);
             }
             let error = "{{ Session::get('error') }}"
             if(error) {

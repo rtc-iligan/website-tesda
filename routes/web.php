@@ -29,6 +29,7 @@ Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 Route::resource('/news', App\Http\Controllers\NewsController::class);
 Route::resource('/personnel', App\Http\Controllers\PersonnelController::class);
 Route::resource('/transparencyseal', App\Http\Controllers\TransparencySealController::class);
+Route::resource('/qualification', App\Http\Controllers\QualificationController::class);
 
 
 

@@ -5,7 +5,7 @@
         @csrf  
         @method('PATCH')            
         <div class="modal-header">
-          <h4 class="modal-title">Update News&Updates</h4>
+          <h4 class="modal-title">Update Personnel Info</h4>
           <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
@@ -16,12 +16,12 @@
               </div>
               <div class="col-md-9">
                  <span >Full Name:</span>
-                 <input type="text" class="form-control" name="name"required>
+                 <input type="text" class="form-control" name="name"  value="{{$personnel->name}}" required>
                   <span class="" >Type</span>
-                  <select class="form-select"name="type" required>
-                    <option value=""  selected>------> Choose Here <------</option>
-                    <option value="Regular">Regular</option>
-                    <option value="Job Order">Job Order</option>
+                  <select class="form-select"name="type"required>
+                    <option value="" hidden="">------> Choose Here <------</option>
+                    <option value="Regular" @if($personnel->type) selected @endif>Regular</option>
+                    <option value="Job Order" @if($personnel->type) selected @endif>Job Order</option>
                   </select> 
               </div>
             </div>
@@ -32,7 +32,7 @@
           </div>
           <div class="input-group mb-3">
            <span class="input-group-text">Motto</span>
-            <input type="text" class="form-control" name="motto" value="{{$personnel->position}}" required>
+            <input type="text" class="form-control" name="motto" value="{{$personnel->motto}}" required>
           </div>
            <div class="input-group mb-3">
             <input type="file" class="form-control" name="image" id="image" onchange="previewFile(this);" required>

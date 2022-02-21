@@ -92,9 +92,22 @@ class PersonnelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Personnel $personnel)
     {
-        //
+        $personnel->name=$request->name;
+        $personnel->position=$request->position;
+        $personnel->type=$request->type;
+        $personnel->motto=$request->motto;
+        if( $request->file('image') != null){
+            $picture = $request->file('image');
+            $fileName = time() . '.' . $picture->getClientOriginalExtension();
+            $img = Image::make($picture->getRealPath());
+            $img->stream();
+            $url = Storage::disk('public')->put('uploads/personnel', $picture);
+            $personnel->image = $url;  
+        }
+        $personnel->update();
+        return redirect()->back()->with('success','Successfully Updated!');
     }
 
     /**
@@ -103,8 +116,10 @@ class PersonnelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Personnel $personnel)
     {
-        //
+       $personnel->delete();
+        return redirect()->back()->with('success','Successfully Deleted!');
     }
+    
 }
