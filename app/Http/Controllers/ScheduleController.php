@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Qualification;
+use App\Models\Schedule;
 use Illuminate\Http\Request;
 
-class QualificationController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,9 +12,8 @@ class QualificationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $qualis = Qualification::paginate(25);
-        return view('backend.qualification.index',compact('qualis'));
+    {
+        return view('backend.schedule.index');
     }
 
     /**
@@ -35,22 +34,7 @@ class QualificationController extends Controller
      */
     public function store(Request $request)
     {
-        $validate = $request->validate([
-            'title'=> 'required',
-            'cptr' => 'required',
-            'date' => 'required',
-            'hrs'  => 'required', 
-            'type'  => 'required' 
-        ]);
-
-        $quali=new Qualification();
-        $quali->title=$request->title;
-        $quali->date=$request->date;
-        $quali->cptr=$request->cptr;
-        $quali->hrs=$request->hrs;
-        $quali->type=$request->type;
-        $quali->save();
-        return redirect()->back()->with('success','Successfully Posted Qualification!');
+        //
     }
 
     /**
@@ -70,9 +54,9 @@ class QualificationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Qualification $quali, $id)
+    public function edit($id)
     {
-        return view('backend.qualification._update',compact('quali'));
+        //
     }
 
     /**
@@ -82,16 +66,9 @@ class QualificationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Qualification $quali)
+    public function update(Request $request, $id)
     {
-        $quali->title=$request->title;
-        $quali->cptr=$request->cptr;
-        $quali->date=$request->date;
-        $quali->hrs=$request->hrs;
-        $quali->type=$request->type;
-        $quali->update();
-
-        return redirect()->back()->with('success','Successfully Updated Qualification!');
+        //
     }
 
     /**

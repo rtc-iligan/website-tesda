@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
 @include('backend.qualification._create')
 <div class="container">
@@ -32,14 +33,14 @@
                         <th width="10%">Nominal Hrs</th>
                         <th width="7%">Action</th>
                       </tr>
-                       @foreach($qualis as $i => $quali)
+                       @foreach($qualis as $i => $ql)
                       <tr>
                         <td>{{ ++$i}}</td>
-                      
-                        <td>{{ $quali->title }}</td>
-                        <td>{{ $quali->cptr }}</td>
-                        <td>{{ date(' F d, Y', strtotime($quali->date)) }}</td>
-                        <td>{{ $quali->hrs }} hours</td>
+                     
+                        <td>{{ $ql->title }}</td>
+                        <td>{{ $ql->cptr }}</td>
+                        <td>{{ date(' F d, Y', strtotime($ql->date)) }}</td>
+                        <td>{{ $ql->hrs }} hours</td>
                         <td>
                            <div class="dropdown">
                               <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,8 +49,8 @@
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
                                 <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
-                                <li><button class="dropdown-item btn-update"data-url="{{ route('qualification.edit',$quali->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
-                                <form action="{{ route('qualification.destroy',$quali->id) }}" method="post" >
+                                <li><button class="dropdown-item btn-update"data-url="{{ route('qualification.edit',$ql->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <form action="{{ route('qualification.destroy',$ql->id) }}" method="post" >
                                 @csrf
                                 @method('DELETE')
                                 <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>

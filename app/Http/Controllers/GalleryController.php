@@ -23,7 +23,7 @@ class GalleryController extends Controller
             'date' => 'required',
         ]);
 
-        $gallery=new Gallery();
+        $gallery=new Gallery();=
         $gallery->subject=$request->subject;
         $gallery->date=$request->date;
         if( $request->file('image') != null){

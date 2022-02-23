@@ -30,14 +30,8 @@ Route::resource('/news', App\Http\Controllers\NewsController::class);
 Route::resource('/personnel', App\Http\Controllers\PersonnelController::class);
 Route::resource('/transparencyseal', App\Http\Controllers\TransparencySealController::class);
 Route::resource('/qualification', App\Http\Controllers\QualificationController::class);
-
-
-
-
-
-
-
-
+Route::resource('/announcement', App\Http\Controllers\AnnouncementController::class);
+Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
 
 Route::get('/reservation', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
 Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');
