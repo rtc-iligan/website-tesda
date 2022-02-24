@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-@include('backend.personnel._create')
+@include('backend.transparency._create')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Transparency Management') }}
-                    <button class="btn btn-outline-info float-right"><i class="fa-solid fa-sort"></i> Sort</button>
+                   <!--  <button class="btn btn-outline-info float-right"><i class="fa-solid fa-sort"></i> Sort</button> -->
                 </div>
                 <div class="card-header">
                     <div class="row">
@@ -26,13 +26,41 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover">
+                    <table class="table table-hover" id="table">
+                      <thead>
                       <tr>
                         <th width="5%">#</th>
                         <th >Category</th>
                         <th width="30%">Date</th>
                         <th width="7%">Action</th>
                       </tr>
+                      </thead>
+                       <tbody id="tablecontents">
+                       @foreach($ts as $i => $ts)
+                      <tr>
+                        <td>{{ ++$i}}</td>
+                        <td>{{ $ts->title }}</td>
+                        <td>{{ $ts->updated_at }}</td>
+                        <td>
+                           <div class="dropdown">
+                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-cog"></i>
+                              </a>
+
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
+                                <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
+                                <li><button class="dropdown-item btn-update"data-url="{{ route('transparencyseal.edit',$ts->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <form action="{{ route('transparencyseal.destroy',$ts->id) }}" method="post" >
+                                @csrf
+                                @method('DELETE')
+                                <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
+                                </form> 
+                              </ul>
+                            </div> 
+                        </td>
+                      </tr>
+                      </tbody>
+                      @endforeach   
                     </table>
                 </div>
             </div>
@@ -42,30 +70,51 @@
 <div class="append-personnel"></div>
 @endsection
 @section('scripts')
+
 <script type="text/javascript">
-   $('.btn-update').click(function(){
-            var div = $('.append-personnel');
-            div.empty();
-            var url = $(this).data('url');
-            $.ajax({
-                url: url,
-                success:function(data){
-                    div.append(data);
-                    $('#update_personnel').modal('show');
-                }
+  $(function () {
+      $("#table").DataTable();
+
+      $("#tablecontents").sortable({
+        items: "tr",
+        cursor: 'move',
+        opacity: 0.6,
+        update: function() {
+          orderChange();
+        }
+      });
+
+      function orderChange() {
+        var order = [];
+        var token = $('meta[name="csrf-token"]').attr('content');
+        $('tr.row1').each(function(index,element) {
+            order.push({
+              id: $(this).attr('data-id'),
+              position: index+1
             });
         });
-   $('.btn-view').click(function(){
-            var div = $('.append-personnel');
-            div.empty();
-            var url = $(this).data('url');
-            $.ajax({
-                url: url,
-                success:function(data){
-                    div.append(data);
-                    $('#view_gallery').modal('show');
-                }
-            });
+
+        $.ajax({
+            type: "GET", 
+            dataType: "json", 
+            url: "{{ url('post-sortable') }}",
+            data: 
+            {
+                  order: order,
+                  _token: token
+            },
+            success: function(response) 
+            {
+              if (response.status == "success")
+              {
+                console.log(response);
+              } else 
+              {
+                console.log(response);
+              }
+            }
         });
+      }
+  });
 </script>
 @endsection

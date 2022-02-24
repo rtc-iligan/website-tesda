@@ -15,6 +15,8 @@ class CreateTransparencySealsTable extends Migration
     {
         Schema::create('transparency_seals', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->integer('sort')->default(0);
             $table->timestamps();
         });
     }
