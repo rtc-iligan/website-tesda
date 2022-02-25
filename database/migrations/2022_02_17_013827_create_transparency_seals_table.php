@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGalleryTable extends Migration
+class CreateTransparencySealsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateGalleryTable extends Migration
      */
     public function up()
     {
-        Schema::create('media', function (Blueprint $table) {
+        Schema::create('transparency_seals', function (Blueprint $table) {
             $table->id();
-            $table->string('subject');
-            $table->date('date');
-            $table->string('image');
-            $table->softDeletes();
+            $table->string('title');
+            $table->integer('sort')->default(0);
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateGalleryTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('media');
+        Schema::dropIfExists('transparency_seals');
     }
 }

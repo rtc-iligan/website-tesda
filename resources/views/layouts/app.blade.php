@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>TESDA/ RTC-ILIGAN</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -15,16 +15,20 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-toaster@4.0.1/css/bootstrap-toaster.min.css" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> --}}
 </head>
 <body>
-    <div id="app">
+    <div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ url('/home') }}" >
+                    <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}" height="25"> 
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +39,7 @@
                     <ul class="navbar-nav ms-auto">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="">{{ __('Dashboard') }}</a>
+                                    <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -46,14 +50,17 @@
                                         <a class="dropdown-item" href="{{ route('gallery.index') }}">
                                             {{ __('Gallery') }}
                                         </a>
-
-                                        <a class="dropdown-item" href="">
+                                        <a class="dropdown-item" href="{{ route('personnel.index') }}">
+                                            {{ __('Personnel') }}
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('news.index') }}">
                                             {{ __('News&Updates') }}
                                         </a>
+                                       
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="">{{ __('Qualification') }}</a>
+                                    <a class="nav-link " href="{{ route('qualification.index') }}">{{ __('Qualification') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link " href="">{{ __('Reservation') }}</a>
@@ -61,13 +68,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link " href="">{{ __('Announcement') }}</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
+                                </li>
                                  <li class="nav-item">
                                     <a class="nav-link " href="">{{ __('Schedule') }}</a>
                                 </li>
-            
                             </ul>
                         </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
@@ -117,10 +125,34 @@
         </main>
     </div>
     {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> --}}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> --}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
     @yield('scripts')
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-toaster@4.0.1/js/bootstrap-toaster.min.js"></script> --}}
+    {{-- <script type="text/javascript">
+            let success = "{{ Session::get('success') }}"
+            if(success) {
+                // Toast.setTheme(TOAST_THEME.DARK);
+                // Toast.create('Success', success,TOAST_STATUS.SUCCESS, 10000);
+                alert(success);
+            }
+            let error = "{{ Session::get('error') }}"
+            if(error) {
+                Toast.setTheme(TOAST_THEME.DARK);
+                Toast.create('Error', error,TOAST_STATUS.DANGER, 10000);
+            }
+            let info = "{{ Session::get('info') }}"
+            if(info) {
+                Toast.setTheme(TOAST_THEME.DARK);
+                Toast.create('Warning', info,TOAST_STATUS.WARNING, 10000);
+            }
+            $(document).on('click','.close', function(e) {
+                $('.modal').modal('hide');
+            })
+        </script> --}}
 </body>
 </html>
