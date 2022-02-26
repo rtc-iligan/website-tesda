@@ -10,6 +10,7 @@ class TransparencySealController extends Controller
     public function index()
     {   
         $ts=TransparencySeal::orderBy('sort','ASC')->get();
+        // return $ts;
         return view('backend.transparency.index',compact('ts'));
     }
     public function store(Request $request)
@@ -28,21 +29,35 @@ class TransparencySealController extends Controller
     {
         $ts = TransparencySeal::get();
 
-        foreach ($ts as $post) {
-            foreach ($request->sort as $sort) {
-                if ($sort['id'] == $post->id) {
-                    $post->update(['sort' => $sort['position']]);
+        // return $request->All();
+        // foreach ($ts as $post) {
+        //     foreach ($request->order as $order) {
+        //         if ($order['id'] == $post->id) {
+        //             $post->update(['sort' => $order['position']]);
 
                     // $data = array();
                     // $data['sort'] = $sort['position'];
                     // DB::table('ts')
                     //     ->where('sort', $sort['id'])
                     //     ->update($data);
+        //         }
+        //     }
+        // }
+        foreach ($ts as $post) {
+            foreach ($request->order as $order) {
+                if ($order['id'] == $post->id) {
+                    $post->update(['sort' => $order['position']]);
+
+                    // $data = array();
+                    // $data['order'] = $order['position'];
+                    // DB::table('posts')
+                    //     ->where('order', $order['id'])
+                    //     ->update($data);
                 }
             }
         }
 
-        // return $request->sort;
+       
         
         return response('Update Successfully.', 200);
     }
