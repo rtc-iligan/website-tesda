@@ -49,13 +49,12 @@
                               </a>
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><button class="dropdown-item btn-view" data-url="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
-                                <li><button class="dropdown-item btn-update" data-url="{{ route('gallery.edit',$gallery->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
-                                <form action="{{ route('gallery.destroy',$gallery->id) }}" method="post" >
-                                @csrf
-                                @method('DELETE')
-                                <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
-                                </form> 
+                                <li>
+                                    {{-- <a class="dropdown-item btn-view" href="{{ route('gallery.show',$gallery->id) }}"><i class="fa-solid fa-magnifying-glass"></i> View</a> --}}
+                                    <button type="button" data-url="{{ route('gallery.show',$gallery->id) }}" class="dropdown-item btn-view">Edit</button>
+                                </li>
+                                <li><a class="dropdown-item btn-update" href="{{ route('gallery.edit',$gallery->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</a></li>
                               </ul>
                             </div> 
                         </td>
@@ -88,6 +87,7 @@
             });
         });
    $('.btn-view').click(function(){
+      
             var div = $('.append-galleries');
             div.empty();
             var url = $(this).data('url');
