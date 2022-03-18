@@ -6,79 +6,65 @@ use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function index()
     {
-        return view('backend.announcement.blade.php');
+        $announcement= Announcement::paginate(10);
+        return view('backend.announcement.index',compact('announcement'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'subject' => 'required',
+            'content' => 'required',
+            'location' => 'required',
+            'date' => 'required',
+        ]);
+
+        $announcement=new Announcement();
+        $announcement->title=$request->title;
+        $announcement->subject=$request->subject;
+        $announcement->content=$request->content;
+        $announcement->location=$request->location;
+        $announcement->date=$request->date;
+        $announcement->save();
+
+        return redirect()->back()->with('success','Successfully Posted Announcement!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+   
+    public function edit(Announcement $announcement)
     {
-        //
+        return view('backend.announcement._update',compact('announcement'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function update(Request $request, Announcement $announcement)
     {
-        //
+        $announcement->title=$request->title;
+        $announcement->subject=$request->subject;
+        $announcement->content=$request->content;
+        $announcement->location=$request->location;
+        $announcement->date=$request->date;
+        $announcement->update();
+
+        return redirect()->back()->with('success','Successfully Updated Announcement!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function destroy(Announcement $announcement)
     {
-        //
+        $announcement->delete();
+        return redirect()->back()->with('success','Successfully Deleted Announcement!');
     }
 }

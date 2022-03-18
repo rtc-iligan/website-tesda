@@ -26,12 +26,12 @@
                 <div class="masonry__item col-md-6 text-center filter-print" data-masonry-filter="Print">
                     <div class="project-thumb">
                         <a href="#"> <img alt="Image" class="border--round" src="img/tesdabuilding.png" style="height: 335px;"> </a>
-                        <h4>TESDA</h4> <span>Brief History of TESDA</span> </div>
+                        <h4>TESDA</h4> <span>Brief History of TESDA</span> <a class="d-flex justify-content-end" href="http://127.0.0.1:8000/newsupdates"> >>See More</a></div>
                 </div>
                 <div class="masonry__item col-md-6 text-center filter-print" data-masonry-filter="Print">
                     <div class="project-thumb">
-                        <a href="#"> <img alt="Image" class="border--round" src="img/building.jpg"> </a>
-                        <h4>Central Office</h4> <span>CO</span> </div>
+                        <a href="#"> <img alt="Image" class="border--round" src="img/building.jpg" style="height: 335px;"> </a>
+                        <h4>Central Office</h4> <span>CO</span> <a class="d-flex justify-content-end" href="http://127.0.0.1:8000/newsupdates"> >>See More</a></div>
                 </div>
             </div>
         </div>

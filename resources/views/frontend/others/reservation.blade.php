@@ -9,166 +9,126 @@
         </div>
     </div>
 </section>
-<!-- <section class="imagebg" data-overlay="4" style="height: 5px;">
-    <div class="background-image-holder" > <img alt="background" src="stack/img/hero-1.jpg"> </div>
-    <div class="container" >
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Simple Title</h1>
-            </div>
-        </div>
-    </div>
-</section> -->
 
-<section class="imagebg">
+<section class="">
     <div class="container">
         <div class="card">
-        	<div class="card-body">
-        		 <form class="text-left row">
-                	<div class="col-md-12 text-center ">
-                        <h2 class="res-txt-cl">General Information</h2><hr>
-                    </div>
-                    <div class="col-md-6"> 
-                    	<span class="res-txt-cl">Last Name:</span>
-                    	<input type="text" name="name" class="form-control" required>
-                    </div>
-                    <div class="col-md-6">
-                        <span class="res-txt-cl">Extension Name:</span> 
-                        <input type="text" name="company" class="form-control"> 
-                    </div>
-                    <div class="col-md-6"> 
-                    	<span class="res-txt-cl">First Name:</span>
-                    	<input type="text" name="email" class="form-control" required> 
-                    </div>
-                    <div class="col-md-6"> 
-                    	<span class="res-txt-cl">Middle Name:</span> 
-                    	<input type="text" name="phone" class="form-control"> 
-                    </div>
-                   	<span class="res-txt-cl">Complete Permanent Address</span>
-                   	<div class="col-md-4"> 
-                    	<span class="res-txt-cl">Region:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Province:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">City:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Barangay:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Street/Purok/Number:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">District:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Email Address:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Contact Number:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Nationality:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-5"> 
-                    	<span class="res-txt-cl">Qualification:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Educational Attainment:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">National Certificate:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <hr><span class="res-txt-cl">Personal Information</span><hr>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Gender:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Civil Status:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Employment Status:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Birth Date:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Birth Month:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Birth Year:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Age:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <hr><span class="res-txt-cl">Parent/Spouse/Guardian Information</span><hr>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">First Name:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Middle Name:</span> 
-                    	<input class="form-control">
-                    </div>
-                     <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Last Name:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-3"> 
-                    	<span class="res-txt-cl">Contact Number:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Barangay:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">City/Municipality:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <div class="col-md-4"> 
-                    	<span class="res-txt-cl">Province:</span> 
-                    	<input class="form-control">
-                    </div>
-                    <hr>
-                    <div class="col-md-6"> 
-                    	<span class="res-txt-cl">Learners/trainee/Student(Client) Classification:</span> 
-                    	<select class="form-select"></select>
-                    </div>
-                    <hr>
-                    <div class="col-md-12 ">
-					    <div class="input-checkbox"> <input type="checkbox" name="design">
-					    	<label></label>
-					    	<p class="res-txt-cl">Agree I hereby allow TESDA to use/post my contact details, name, email,cellphone/landline nos. adn other information I provided which
-							maybe used for processing of my scholarship application, for employment opportunities and other purposes.</p> 
-					    </div>
-					</div>
-					<div align="right">
-						<button type="submit" class="btn btn-primary" style="width: 70px;">Submit</button>
-					</div>
-                </form>
-        	</div>
+            <div class="card-body">
+                 <div class="row">
+                     <div class="col-md-3 rv-col-1 title_message">
+                         <div class="rv-left-dsgn mt-5">1 &nbsp;&nbsp;&nbsp;Personal Information</div>
+                         <div class="rv-left-dsgn">2 &nbsp;&nbsp;&nbsp;Profiles </div>
+                         <div class="rv-left-dsgn">3 &nbsp;&nbsp;&nbsp;Educational Attainment</div>
+                         <div class="rv-left-dsgn">4 &nbsp;&nbsp;&nbsp;Classification</div>
+                         <div class="rv-left-dsgn">5 &nbsp;&nbsp;&nbsp;Disability Information</div>
+                         <div class="rv-left-dsgn">6 &nbsp;&nbsp;&nbsp;Program Offerings</div>
+                         <div class="rv-left-dsgn mb-5">7 &nbsp;&nbsp;&nbsp;Privacy Disclaimer</div>
+                     </div>
+                     <div class="col-md-9">
+                         <h5 class="rv-pi text-center font-weight-bold text-primary">PERSONAL INFORMATION</h5>
+                         <p class="text-center m-0 text-uppercase text-primary">STEP 1 / 7</p>
+                         <p style="max-width: 500px; margin-bottom: 40px;" class="mt-4 mx-auto text-center text-center text-muted">Welcome USERNAME ! Let’s create your full reservation to get you started. <br>Please fill-in all necessary information accurately to complete your registration</p>
+                         <form>
+                            <div class="form-row ml-3">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">Given Name</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div> 
+                            <div class="form-row ml-3">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">Middle Name</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Suffix</label>
+                                    <input style="max-width: 100px" type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div>
+                            <h5 class="text-center font-weight-bold mt-3">COMPLETE PERMANENT MAILING ADDRESS</h5>
+                            <div class="form-row ml-2">
+                                <div class="form-group col-md-12"
+                                    <label for="first_name">Address</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div> 
+                            <div class="form-row ml-3">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">Region</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Province</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div> 
+                            <div class="form-row ml-3">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">City/Municipality</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Country</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div>
+                            <h5 class="text-center font-weight-bold mt-3">COMPLETE CURRENT MAILING ADDRESS</h5>
+                                <div class="col-12">
+                                    <div class="input-checkbox">
+                                        <input type="checkbox" name="agree">
+                                        <label></label> 
+                                    </div>
+                                    Same as Permanent Mailing Address
+                                </div>
+                            <div class="form-row ml-2">
+                                <div class="form-group col-md-12"
+                                    <label for="first_name">Address</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div> 
+                            <div class="form-row ml-3">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">Region</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Province</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div> 
+                            <div class="form-row ml-3">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">City/Municipality</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Country</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div>
+                            <div class="form-row ml-3 mt-5">
+                                <div class="form-group col-md-6"
+                                    <label for="first_name">Contact Number</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="last_name">Email address</label>
+                                    <input type="text" class="form-control " value=""name=""required>
+                                </div>
+                            </div>
+                            <div class=" d-md-flex justify-content-md-end">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-lg" style="width: 100px;">Continue >></button>
+                                </div>
+                            </div>
+                         </form>
+                     </div>
+                 </div>
+            </div>
         </div>
     </div>
 </section>

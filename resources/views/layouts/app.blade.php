@@ -53,7 +53,9 @@
                                         <a class="dropdown-item" href="{{ route('news.index') }}">
                                             {{ __('News&Updates') }}
                                         </a>
-                                       
+                                        <a class="dropdown-item" href="{{ route('successstories.index') }}">
+                                            {{ __('Success Stories') }}
+                                        </a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
@@ -63,13 +65,13 @@
                                     <a class="nav-link " href="">{{ __('Reservation') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="">{{ __('Announcement') }}</a>
+                                    <a class="nav-link " href="{{ route('announcement.index') }}">{{ __('Announcement') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
                                 </li>
                                  <li class="nav-item">
-                                    <a class="nav-link " href="">{{ __('Schedule') }}</a>
+                                    <a class="nav-link " href="{{ route('schedule.index') }}">{{ __('Schedule') }}</a>
                                 </li>
                             </ul>
                         </ul>

@@ -7,6 +7,7 @@
         <link href="{{asset('stack/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all">
         <link href="{{asset('stack/css/socicon.css')}}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{asset('stack/css/iconsmind.css')}}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{{asset('stack/css/flickity.css')}}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{asset('stack/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{asset('stack/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{asset('stack/css/theme.css')}}" rel="stylesheet" type="text/css" media="all" />
@@ -18,7 +19,8 @@
          <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     </head>
-    <body data-smooth-scroll-offset="77">
+   
+    <body data-smooth-scroll-offset="77" oncontextmenu="return false">
         <div class="nav-container">
             <div class="via-1641870894008" via="via-1641870894008" vio="Home">
                 <div class="bar bar--sm visible-xs">
@@ -121,7 +123,7 @@
                                                                 <li> <a href="{{URL::to('/contact-us')}}">Contact Us</a> </li>
                                                             </ul> -->
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="{{URL::to('/gallery')}}">Gallery</a> </li>
+                                                                <li> <a href="{{URL::to('/galleries')}}">Gallery</a> </li>
                                                             </ul>
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('/newsupdates')}}">News and Updates</a> </li>
@@ -192,7 +194,7 @@
         <script src="{{asset('stack/js/parallax.js')}}"></script>
         <script src="{{asset('stack/js/smooth-scroll.min.js')}}"></script>
         <script src="{{asset('stack/js/scripts.js')}}"></script>
-
+        <script src="{{asset('stack/js/flickity.min.js')}}"></script>
     </body>
 
 </html>

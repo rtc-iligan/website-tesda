@@ -70,9 +70,9 @@ class QualificationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Qualification $quali, $id)
+    public function edit(Qualification $qualification)
     {
-        return view('backend.qualification._update',compact('quali'));
+        return view('backend.qualification._update',compact('qualification'));
     }
 
     /**
@@ -82,14 +82,14 @@ class QualificationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Qualification $quali)
+    public function update(Request $request, Qualification $qualification)
     {
-        $quali->title=$request->title;
-        $quali->cptr=$request->cptr;
-        $quali->date=$request->date;
-        $quali->hrs=$request->hrs;
-        $quali->type=$request->type;
-        $quali->update();
+        $qualification->title=$request->title;
+        $qualification->cptr=$request->cptr;
+        $qualification->date=$request->date;
+        $qualification->hrs=$request->hrs;
+        $qualification->type=$request->type;
+        $qualification->update();
 
         return redirect()->back()->with('success','Successfully Updated Qualification!');
     }
@@ -100,8 +100,9 @@ class QualificationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Qualification $qualification)
     {
-        //
+        $qualification->delete();
+        return redirect()->back()->with('success','Successfully Deleted Qualification!');
     }
 }

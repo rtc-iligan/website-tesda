@@ -46,7 +46,6 @@
                               <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-cog"></i>
                               </a>
-
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
                                 <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
                                 <li><button class="dropdown-item btn-update"data-url="{{ route('transparencyseal.edit',$ts->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
@@ -54,7 +53,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
-                                </form> 
+                                </form>
                               </ul>
                             </div> 
                         </td>

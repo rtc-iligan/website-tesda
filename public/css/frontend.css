@@ -3,3 +3,36 @@
 	font-size: 18px;
 	font-weight: bold;
 }
+.rv-col-1{
+	background-color: gray;
+	border-radius: 1%;
+}
+.rv-col-2{
+	
+}
+.rv-left-dsgn{
+	font-size: 15px;
+	font-weight: 2px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.rv-pi{
+	color: black;
+	font-size: 18px;
+}
+.rv-check{
+	font-family: system-ui, sans-serif;
+  	font-size: 2rem;
+  	font-weight: bold;
+  	line-height: 1.1;
+}
+@media screen and (max-width: 600px) {
+  .title_message {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}

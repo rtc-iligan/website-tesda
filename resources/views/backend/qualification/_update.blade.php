@@ -1,7 +1,7 @@
 <div class="modal fade" id="update_qualification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-primary" role="document">
     <div class="modal-content">
-      <form action="{{ route('qualification.update',$quali->id) }}" method="post">
+      <form action="{{ route('qualification.update',$qualification->id) }}" method="post">
         @csrf  
         @method('PATCH')            
         <div class="modal-header">
@@ -11,23 +11,23 @@
         <div class="modal-body">
          <div class="input-group mb-3">
             <span class="input-group-text" >Title</span>
-            <input type="text" class="form-control" name="title" value="">
+            <input type="text" class="form-control" name="title" value="{{$qualification->title}}">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text">CPTR Number</span>
-            <input type="text" class="form-control" name="cptr" value=""  >
+            <input type="text" class="form-control" name="cptr" value="{{$qualification->cptr}}"  >
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text" >Type </span>
-            <input type="text" class="form-control" name="type" value="">
+            <input type="text" class="form-control" name="type" value="{{$qualification->type}}">
           </div>
          <div class="input-group mb-3">
             <span class="input-group-text" >Nominal Hours </span>
-            <input type="text" class="form-control" name="hrs" value="">
+            <input type="text" class="form-control" name="hrs" value="{{$qualification->hrs}}">
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text"> Date Accredited</span>
-            <input type="date" class="form-control" name="date" value="" >
+            <input type="date" class="form-control" name="date" value="{{$qualification->date}}" >
           </div>
          
         </div>

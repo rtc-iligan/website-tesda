@@ -57,7 +57,7 @@ class HomeController extends Controller
     {
         return view('frontend.others.newsupdates');
     }
-    public function successtories()
+    public function achiever()
     {
         return view('frontend.others.successtories');
     }

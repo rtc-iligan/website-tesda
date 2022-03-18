@@ -15,11 +15,11 @@
             <div class="col-md-6 col-12">
                 <div class="video-cover border--round box-shadow-wide">
                     <div class="background-image-holder"> <img alt="image" src="img/blog-3.jpg"> </div>
-                    <div class="video-play-icon"></div> <iframe data-src="{{asset('video/tesda.mp4')}}" allowfullscreen="allowfullscreen"></iframe> </div>
+                    <div class="video-play-icon"></div> <iframe src="https://www.youtube.com/embed/pujwfwYVo0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="switchable__text">
-                    <h2>Perfect components for modern startups</h2>
+                    <h2>Erwin H. Pitogo TVET Graduate</h2>
                     <p class="lead"> Launching an attractive and scalable website quickly and affordably is important for modern startups — Stack offers massive value without looking 'bargain-bin'. </p>
                 </div>
             </div>
@@ -28,30 +28,15 @@
     <div class="container">
         <div class="row justify-content-between align-items-center">
         	<div class="col-md-6 col-lg-5">
-                <div class="switchable__text">
-                    <h2>Perfect components for modern startups</h2>
+                <div class="switchable__text"> 
+                    <h2>Oseas G. Jesto Jr. TVET Graduate</h2>
                     <p class="lead"> Launching an attractive and scalable website quickly and affordably is important for modern startups — Stack offers massive value without looking 'bargain-bin'. </p>
                 </div>
             </div>
             <div class="col-md-6 col-12">
                 <div class="video-cover border--round box-shadow-wide">
                     <div class="background-image-holder"> <img alt="image" src="img/blog-3.jpg"> </div>
-                    <div class="video-play-icon"></div> <iframe data-src="{{asset('video/tesda.mp4')}}" allowfullscreen="allowfullscreen"></iframe> </div>
-            </div>
-        </div>
-    </div>
-     <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 col-12">
-                <div class="video-cover border--round box-shadow-wide">
-                    <div class="background-image-holder"> <img alt="image" src="img/blog-3.jpg"> </div>
-                    <div class="video-play-icon"></div> <iframe data-src="{{asset('video/tesda.mp4')}}" allowfullscreen="allowfullscreen"></iframe> </div>
-            </div>
-            <div class="col-md-6 col-lg-5">
-                <div class="switchable__text">
-                    <h2>Perfect components for modern startups</h2>
-                    <p class="lead"> Launching an attractive and scalable website quickly and affordably is important for modern startups — Stack offers massive value without looking 'bargain-bin'. </p>
-                </div>
+                    <div class="video-play-icon"></div> <iframe  src="https://www.youtube.com/embed/ZUQOD0vQD68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
             </div>
         </div>
     </div>

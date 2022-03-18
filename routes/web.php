@@ -29,6 +29,7 @@ Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
 Route::resource('/news', App\Http\Controllers\NewsController::class);
 Route::resource('/personnel', App\Http\Controllers\PersonnelController::class);
 Route::resource('/transparencyseal', App\Http\Controllers\TransparencySealController::class);
+Route::resource('/successstories', App\Http\Controllers\SuccessStoriesController::class);
 
 Route::resource('/qualification', App\Http\Controllers\QualificationController::class);
 Route::resource('/announcement', App\Http\Controllers\AnnouncementController::class);
@@ -40,7 +41,7 @@ Route::get('/mission-vision', [App\Http\Controllers\HomeController::class,'missi
 Route::get('/organizational-structure', [App\Http\Controllers\HomeController::class,'organizationalstructure'])->name('organizationalstructure');
 Route::get('/rtc-personnel', [App\Http\Controllers\HomeController::class,'rtcpersonnel'])->name('rtcpersonnel');
 Route::get('/contact-us', [App\Http\Controllers\HomeController::class,'contactus'])->name('contactus');
-Route::get('/images', [App\Http\Controllers\HomeController::class,'images'])->name('images');
+Route::get('/galleries', [App\Http\Controllers\HomeController::class,'images'])->name('images');
 Route::get('/newsupdates', [App\Http\Controllers\HomeController::class,'newsupdates'])->name('newsupdates');
-Route::get('/success-stories', [App\Http\Controllers\HomeController::class,'successtories'])->name('successtories');
+Route::get('/success-stories', [App\Http\Controllers\HomeController::class,'achiever'])->name('achiever');
 Route::get('/requirements', [App\Http\Controllers\HomeController::class,'requirements'])->name('requirements');
