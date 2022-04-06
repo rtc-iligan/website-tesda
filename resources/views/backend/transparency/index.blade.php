@@ -35,31 +35,6 @@
                           <th width="7%">Action</th>
                         </tr>
                       </thead>
-<<<<<<< HEAD
-                       <tbody id="tablecontents">
-                       @foreach($ts as $i => $ts)
-                      <tr>
-                        <td>{{ ++$i}}</td>
-                        <td>{{ $ts->title }}</td>
-                        <td>{{ $ts->updated_at }}</td>
-                        <td>
-                           <div class="dropdown">
-                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa fa-cog"></i>
-                              </a>
-                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
-                                <li><button class="dropdown-item btn-update"data-url="{{ route('transparencyseal.edit',$ts->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
-                                <form action="{{ route('transparencyseal.destroy',$ts->id) }}" method="post" >
-                                @csrf
-                                @method('DELETE')
-                                <li><button class="dropdown-item" href="#"><i class="fa-solid fa-trash-can"></i> Delete</button></li>
-                                </form>
-                              </ul>
-                            </div> 
-                        </td>
-                      </tr>
-=======
                       <tbody id="tablecontents">
                           @foreach($ts as $i)
                           <tr class="row1" data-id="{{ $i->id }}">
@@ -73,7 +48,6 @@
                                   </a>
 
                                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                    <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
                                     <li><button class="dropdown-item btn-update"data-url="{{ route('transparencyseal.edit',$i->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
                                     <form action="{{ route('transparencyseal.destroy',$i->id) }}" method="post" >
                                     @csrf
@@ -85,7 +59,6 @@
                             </td>
                           </tr>
                           @endforeach  
->>>>>>> 4e1a277a46116677f44536de309acf2f44bde909
                       </tbody>
                        
                     </table>

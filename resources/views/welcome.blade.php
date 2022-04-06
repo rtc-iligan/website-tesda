@@ -61,7 +61,7 @@
     </div>
 </section>
 <section class="space--sm unpad--bottom switchable text-center testimonial testimonial-1 imagebg" data-overlay="4">
-    <div class="background-image-holder"> <img alt="background" src="{{asset('stack/img/tesda5.jpg')}}"> </div>
+    <div class="background-image-holder"> <img alt="background" src="{{asset('img/tesda2.jpg')}}"> </div>
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-lg-5"> <img alt="Image" src="{{asset('img/mcj.png')}}"> </div>

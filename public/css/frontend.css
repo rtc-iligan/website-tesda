@@ -35,4 +35,46 @@
     width: 28%;
     display: none;
   }
+  .tesda-md{
+    position: relative !important;
+    bottom: 5px;
+    left: -120px;
+  }
+  .rtciligan-md{
+  	position: relative !important;
+    bottom: 105px;
+    left: 0px;
+  }
+  .trans-md{
+ 	 position: relative !important;
+	 bottom: 205px !important;
+	 right: -120px !important;
+	 
+  }
+  .link1-md{
+  	 position: relative !important;
+    bottom: 170px;
+    left: -120px;
+  }
+  .link2-md{
+  	   position: relative !important;
+    bottom: 335px;
+    left: 80px;
+  }
+  
+  .footer-gasa{
+     position: relative; !important;
+     bottom: 300px;
+     align-content: center;
+  }
+  .ft-ht{
+  	background-color: gray !important;
+  	height: 480px !important;
+  	overflow-y:hidden !important;
+  }
 }
+.ftr-wht {
+	color: #ffffff !important;
+	
+}
+

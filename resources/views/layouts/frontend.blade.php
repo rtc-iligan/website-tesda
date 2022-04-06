@@ -164,28 +164,41 @@
         <div class="main-container">
             @yield('content')
         </div>
-            <footer class="footer-4 space--sm text-center-xs" style="background-color: gray;">
+            <footer class="footer-4 space--sm text-center-xs ft-ht" style="background-color: gray !important;">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6"> <img alt="Image" width="90" height="75" src="{{asset('img/rtclogo.png')}}"> <span class="block--xs text-white">RTC-ILIGAN OFFCIAL WEBSITE</span> </div>
-                        <div class="col-sm-6">
-                            <form class="row" action="//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=f300c9cce8" data-success="Thanks for signing up.  Please check your inbox for a confirmation email." data-error="Please provide your email address.">
-                                <div class="col-sm-7"> <input class="validate-required validate-email" type="text" name="EMAIL" placeholder="Email Address"> </div>
-                                <div class="col-sm-5"> <button type="submit" class="btn btn--primary type--uppercase">Subscribe</button> </div>
-                                <div style="position: absolute; left: -5000px" aria-hidden="true"> <input type="text" name="b_77142ece814d3cff52058a51f_f300c9cce8" tabindex="-1" value=""> </div>
-                            </form>
+                    <div class="row" style="overflow-x:hidden !important;">
+                        <div class="col-sm-2 tesda-md">
+                           <img alt="Image" width="105" height="105" src="{{asset('img/tesda.png')}}" alt="">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 text-white"> <span class="type--fine-print">© <span class="update-year"></span> Gasa.tech</span> </div>
-                        <div class="col-sm-6 text-right text-center-xs block--xs">
-                            <ul class="social-list list-inline list--hover">
-                                <li><a mail="rtciligan@tesda.gov.ph"><i class="socicon socicon-google icon icon--xs"></i></a></li>
-                                <li><a href="#"><i class="socicon socicon-twitter icon icon--xs"></i></a></li>
-                                <li><a href="#"><i class="socicon socicon-facebook icon icon--xs"></i></a></li>
-                                <li><a href="#"><i class="socicon socicon-instagram icon icon--xs"></i></a></li>
+                        <div class="col-sm-2 rtciligan-md">
+                           <img alt="Image" width="110" height="100" src="{{asset('img/rtciligan.png')}}" alt="">
+                        </div>
+                        <div class="col-sm-2 trans-md">
+                            <img alt="Image" width="100" height="100" src="{{asset('img/transparencyseal.png')}}" alt="">
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-xs-6 link1-md">
+                            <h6 class="type--uppercase usl">USEFULL LINKS</h6>
+                            <ul class="list--hover text-white">
+                                <li><a class="ftr-wht" href="#">Home</a></li>
+                                <li><a class="ftr-wht" href="#">About</a></li>
+                                <li><a class="ftr-wht" href="#">Program & Services</a></li>
+                                <li><a class="ftr-wht" href="#">Online Reservation</a></li>
                             </ul>
                         </div>
+                        <div class="col-sm-3 col-md-3 col-xs-6 link2-md">
+                            <h6 class="type--uppercase">TESDA OTHER LINKS</h6>
+                            <ul >
+                                <li><a class="ftr-wht" href="#">Quick Survey</a></li>
+                                <li><a class="ftr-wht" href="#">TTI Directory</a></li>
+                                <li><a class="ftr-wht" href="#">Assessment Center</a></li>
+                                <li><a class="ftr-wht" href="#">Tesda Online Program(Free Training)</a></li>
+                            </ul>
+                        </div>
+                         <div class="row text-center">
+                        <div class="col-sm-12 text-white footer-gasa">
+                            <span class="type--fine-print">© <span class="update-year"></span> Gasa.tech</span> 
+                        </div>
+                    </div>
                     </div>
                 </div>
             </footer>
