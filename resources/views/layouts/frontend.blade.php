@@ -15,8 +15,9 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" type="text/css">
         <link href="{{asset('stack/css/font-roboto.css')}}" rel="stylesheet" type="text/css">
-         <link href="{{asset('css/frontend.css')}}" rel="stylesheet" type="text/css">
-         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/frontend.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/reservation.css')}}" rel="stylesheet" type="text/css">
+        <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     </head>
    
@@ -203,11 +204,14 @@
                 </div>
             </footer>
         </div>
+         @yield('scripts')
         <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="{{asset('stack/js/parallax.js')}}"></script>
         <script src="{{asset('stack/js/smooth-scroll.min.js')}}"></script>
         <script src="{{asset('stack/js/scripts.js')}}"></script>
         <script src="{{asset('stack/js/flickity.min.js')}}"></script>
+        <script src="{{asset('js/reservation.js')}}"></script>
+        
     </body>
-
 </html>

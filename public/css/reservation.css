@@ -1,0 +1,87 @@
+.title_message {
+    
+  }
+#regForm {
+
+}
+.input-rev {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+.input-inv.invalid {
+  background-color: #ffdddd;
+}
+
+.tab {
+  display: none;
+}
+
+.button-sub {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+.button-sub:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #0d6efd;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+ 
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #0d6efd;
+}
+.fake-input {
+    float: left;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9f9f9f;
+    background: #fff;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 10px;
+    border-radius: 4px;
+    color:#0d6efd;
+}
+input[type="checkbox"] {
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+}
+input[type="checkbox"]:checked + .fake-input:before {
+    content:"\2713";
+    position: absolute;
+    color: #000;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

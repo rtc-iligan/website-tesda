@@ -67,8 +67,9 @@
             <div class="col-md-6 col-lg-5"> <img alt="Image" src="{{asset('img/mcj.png')}}"> </div>
             <div class="col-md-6">
                 <div class="switchable__text">
-                    <blockquote> “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.” </blockquote>
-                    <h5>Maynard Jumawan</h5> <span>OIC Center Administrator</span> </div>
+                    <p style="font-size: 18px;font-weight: bold;"> 
+                        We are glad and thankful that you take the time to visit our website is a window to our institution. We hope that you will find the information here as useful as we believe it is. Here, we offer a place to connect us amidst todays challenges. We're proud of our hardworking team we have believe that together we can achieve our goal to deliver quality technical vocational education.<br><br>RTC-Iligan believes in the power in the power of education and we are very exicited to share our resources with you. Feel free to look around and don't hesitate to reach out if there's anything we can help you with. </p>
+                    <h5>Maynard C. Jumawan</h5> <span>Acting Center Administrator of RTC-Iligan</span> </div>
             </div>
         </div>
     </div>
@@ -79,37 +80,37 @@
             <div class="col-md-4">
                 <div class="feature">
                     <h4>Mission</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
                     <h4>Vision</h4>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
                     <h4>Values Statement</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p>We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
                     <h4>What is TWSP?</h4>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
                     <h4>What is UAQETA?</h4>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature">
                     <h4>What is STEP?</h4>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <p> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </p>
                 </div>
             </div>
         </div>
