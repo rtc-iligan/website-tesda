@@ -54,7 +54,6 @@
  
 }
 
-/* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #0d6efd;
 }
