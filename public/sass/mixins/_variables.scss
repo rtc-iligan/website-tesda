@@ -1,0 +1,27 @@
+@import 'responsive';
+$xs : '<=767px';
+$sm : '>=768px','<=991px';
+$md : '>=992px','<=1199px';
+$lg : '>=1200px';
+$font-bold : 'Averta-Bold', sans-serif;
+$font-semibold: 'Averta-Semibold', sans-serif;
+$font-black: 'Averta-Black', sans-serif;
+
+$color-primary : #0099da;
+$color-secondary : #ffcc00;
+$color-dark-blue: #1E2D40;
+$color-light-blue: #e6f6ff;
+$color-black-2: #515151;
+$color-pink: #d470ad;
+$color-black : #000;
+$color-gray : #4B5766;
+$color-white : #fff;
+$color-facebook : #3b5998;
+$color-twitter : #00acee;
+$color-whatsapp: #25D366;
+$color-instagram: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+$max: 80;
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+  transition: $property $duration $ease;
+}

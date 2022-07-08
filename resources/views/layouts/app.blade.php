@@ -73,8 +73,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
                                 </li>
-                                 <li class="nav-item">
-                                    <a class="nav-link " href="{{ route('schedule.index') }}">{{ __('Schedule') }}</a>
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ __('Assessment') }}
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('schedule.index') }}">
+                                            {{ __('Schedule') }}
+                                        </a>
+                                        <a class="dropdown-item" href="">
+                                            {{ __('Acc. Qualification') }}
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
                         </ul>

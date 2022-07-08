@@ -14,13 +14,15 @@ class GalleryController extends Controller
     public function index()
     {
     	$galleries=Gallery::paginate(5);
-        return view('backend.gallery.index',compact('galleries'));
+        // dd($galleries);
+       return view('backend.gallery.index',compact('galleries'));
     }
    public function store(Request $request)
     {
         $validatedData = $request->validate([
             'subject' => 'required',
             'date' => 'required',
+            
         ]);
 
         $gallery=new Gallery();

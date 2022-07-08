@@ -1,0 +1,195 @@
+
+.mt {
+	@for $i from 3 through 80 {
+        &--#{$i} {
+            margin-top:#{($i * 1)}px !important;
+        }
+    }
+}
+
+.mb {
+	@for $i from 3 through 80 {
+        &--#{$i} {
+            margin-bottom:#{($i * 1)}px !important;
+            
+        }
+       
+    }
+}
+
+.ml {
+	@for $i from 1 through 80 {
+        &--#{$i} {
+            margin-left:#{($i * 1)}px !important;
+        }
+    }
+}
+.mr {
+	@for $i from 1 through 80 {
+        &--#{$i} {
+            margin-right:#{($i * 1)}px !important;
+        }
+    }
+}
+
+.pl {
+	@for $i from 1 through 80 {
+        &--#{$i} {
+            padding-left:#{($i * 1)}px !important;
+        }
+    }
+}
+
+.pr {
+    @for $i from 1 through 80 {
+        &--#{$i} {
+            padding-right:#{($i * 1)}px !important;
+        }
+        
+    }
+}
+
+@include media($sm...) {
+    .mt {
+        @for $i from 1 through 80 {
+            &-sm-#{$i} {
+                @include media($sm...) {
+                    margin-top:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .mb {
+        @for $i from 1 through 80 {
+
+            &-sm-#{$i} {
+                @include media($sm...) {
+                    margin-bottom:#{($i * 1)}px !important;
+
+                }
+            }
+        }
+    }
+    .ml {
+        @for $i from 1 through 80 {
+            &-sm-#{$i} {
+                @include media($sm...) {
+                    margin-left:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .mr {
+         @for $i from 1 through 80 {
+            &-sm-#{$i} {
+                @include media($sm...) {
+                    margin-right:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .pl {
+        @for $i from 1 through 80 {
+            &-sm-#{$i} {
+                @include media($sm...) {
+                    padding-left:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .pr {
+        @for $i from 1 through 80 {   
+            &-sm-#{$i} {
+            @include media($sm...) {
+                    padding-right:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+}
+
+@include media($xs) {
+    .mt {
+        @for $i from 1 through 80 {           
+            &-xs-#{$i} {
+                @include media($xs) {
+                    margin-top:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+
+    .mb {
+        @for $i from 1 through 80 {             
+            &-xs-#{$i} {
+                @include media($xs) {
+                    margin-bottom:#{($i * 1)}px !important;
+
+                }
+            }
+        }
+    }
+    .ml {
+        @for $i from 1 through 80 {    
+            &-xs-#{$i} {
+                @include media($xs) {
+                    margin-left:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .mr {
+        @for $i from 1 through 80 {
+
+            &-xs-#{$i} {
+                @include media($xs) {
+                    margin-right:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .pl {
+        @for $i from 1 through 80 {
+            &-xs-#{$i} {
+                @include media($xs) {
+                    padding-left:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .pr {
+        @for $i from 1 through 80 {
+            &-xs-#{$i} {
+                @include media($xs) {
+                    padding-right:#{($i * 1)}px !important;
+                }
+            }
+        }
+    }
+    .pl-xs-0 {
+        padding-left: 0;
+    }
+    .mb-xs-0 {
+        margin-bottom: 0 !important;
+    }
+    .mt-xs-0 {
+        margin-top: 0 !important;
+    }
+    .mr-xs-0 {
+        margin-right: 0 !important;
+    }
+
+}
+
+.unmarg--bottom {
+    margin-bottom: 0 !important;
+}
+
+
+.font {
+    @for $i from 1 through 80 {
+        &--#{$i} {
+            font-size:#{($i * 1)}px;
+        }
+    }
+}

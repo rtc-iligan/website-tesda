@@ -1,0 +1,15 @@
+@mixin flex($type){
+	@if $type == 'flex'{
+		display: flex;
+	}@else if $type == 'flex-center'{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}@else if $type == 'flex-h'{
+		display: flex;
+		justify-content: center;
+	}@else if $type == 'flex-v'{
+		display: flex;
+		align-items:center;
+	}
+}

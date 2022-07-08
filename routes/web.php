@@ -45,3 +45,4 @@ Route::get('/galleries', [App\Http\Controllers\HomeController::class,'images'])-
 Route::get('/newsupdates', [App\Http\Controllers\HomeController::class,'newsupdates'])->name('newsupdates');
 Route::get('/success-stories', [App\Http\Controllers\HomeController::class,'achiever'])->name('achiever');
 Route::get('/requirements', [App\Http\Controllers\HomeController::class,'requirements'])->name('requirements');
+Route::get('/utpras-directory', [App\Http\Controllers\HomeController::class,'qualification'])->name('qualification');

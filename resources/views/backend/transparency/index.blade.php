@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- @include('backend.transparency._create') --}}
+@include('backend.transparency._create')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Transparency Management') }}
-                   <!--  <button class="btn btn-outline-info float-right"><i class="fa-solid fa-sort"></i> Sort</button> -->
+                    <!-- <button class="btn btn-outline-info float-right"><i class="fa-solid fa-sort"></i> Sort</button> -->
                 </div>
-                {{-- <div class="card-header">
+              <div class="card-header">
                     <div class="row">
                         <div class="col-md-2">
                              <select class="form-select"></select>
@@ -24,7 +24,7 @@
                             <button type="submit" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
                         </div>
                     </div>
-                </div> --}}
+                </div>
                 {{-- <div class="card-body"> --}}
                     <table class="table table-bordered" id="table">
                       <thead>
@@ -48,7 +48,7 @@
                                   </a>
 
                                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                    <li><button class="dropdown-item btn-update"data-url="{{ route('transparencyseal.edit',$i->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                    <li><button class="dropdown-item btn-update"data-url="{{ route('transparencyseal.edit',$i->id) }}"><i class="fa-solid fa-pen-to-square"></i> View</button></li>
                                     <form action="{{ route('transparencyseal.destroy',$i->id) }}" method="post" >
                                     @csrf
                                     @method('DELETE')
@@ -82,10 +82,6 @@
         "info":     false,
         "searching": false
       });
-
-      // $('#tablecontents').click(function(){
-      //     alert("HELLLo");
-      // });
       $("#tablecontents").sortable({
         items: "tr",
         cursor: 'move',

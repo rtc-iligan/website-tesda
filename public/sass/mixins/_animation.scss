@@ -1,0 +1,13 @@
+@mixin animation( $type, $val : '' ){
+	@if $type == 'duration' {
+		-webkit-animation : $val;
+		-moz-animation : $val;
+		-o-animation : $val;
+		animation : $val;
+	} @else {
+		-webkit-animation-#{$type} : $val;
+		-moz-animation-#{$type} : $val;
+		-o-animation-#{$type} : $val;
+		animation-#{$type} : $val;
+	}
+}

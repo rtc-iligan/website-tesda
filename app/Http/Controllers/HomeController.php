@@ -65,4 +65,9 @@ class HomeController extends Controller
     {
         return view('frontend.others.requirements');
     }
+    public function qualification()
+    {
+        return view('frontend.others.qualification');
+    }
+    
 }

@@ -2473,7 +2473,7 @@ mr = (function (mr, $, window, document){
                 wrapAround: true,
                 pageDots: false,
                 prevNextButtons: false,
-                autoPlay: true,
+                autoPlay: false,
                 draggable: (childnum < 2 ? false: true),
                 imagesLoaded: true,
                 accessibility: true,

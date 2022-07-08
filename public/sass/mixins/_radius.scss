@@ -1,0 +1,11 @@
+@mixin radius($radius){
+	@if $radius == 'circle' {
+		-webkit-border-radius:50%;
+		-moz-border-radius:50%;
+		border-radius:50%;
+	} @else {
+		-webkit-border-radius:#{$radius}px;
+		-moz-border-radius:#{$radius}px;
+		border-radius:#{$radius}px;
+	}
+}

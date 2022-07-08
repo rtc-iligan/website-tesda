@@ -82,7 +82,7 @@
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-2">
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="#">Single Link</a> </li>
+                                                                <li> <a href="{{URL::to('utpras-directory')}}">UTPRAS Directory</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -169,7 +169,7 @@
                 <div class="container">
                     <div class="row" style="overflow-x:hidden !important;">
                         <div class="col-sm-2 tesda-md">
-                           <img alt="Image" width="105" height="105" src="{{asset('img/tesda.png')}}" alt="">
+                           <img alt="Image" width="90" height="100" src="{{asset('img/tesdanew.png')}}" alt="">
                         </div>
                         <div class="col-sm-2 rtciligan-md">
                            <img alt="Image" width="110" height="100" src="{{asset('img/rtciligan.png')}}" alt="">
@@ -178,7 +178,7 @@
                             <img alt="Image" width="100" height="100" src="{{asset('img/transparencyseal.png')}}" alt="">
                         </div>
                         <div class="col-sm-3 col-md-3 col-xs-6 link1-md">
-                            <h6 class="type--uppercase usl">USEFULL LINKS</h6>
+                            <h6 class="type--uppercase usl">USEFUL LINKS</h6>
                             <ul class="list--hover text-white">
                                 <li><a class="ftr-wht" href="#">Home</a></li>
                                 <li><a class="ftr-wht" href="#">About</a></li>
@@ -197,7 +197,9 @@
                         </div>
                          <div class="row text-center">
                         <div class="col-sm-12 text-white footer-gasa">
-                            <span class="type--fine-print">© <span class="update-year"></span> Gasa.tech</span> 
+                           <a href="ict.rtciligan.com" class="text-white">
+                                <span class="type--fine-print">© <span class="update-year"></span> ICT RTC-ILIGAN</span> 
+                           </a>
                         </div>
                     </div>
                     </div>
@@ -212,6 +214,18 @@
         <script src="{{asset('stack/js/scripts.js')}}"></script>
         <script src="{{asset('stack/js/flickity.min.js')}}"></script>
         <script src="{{asset('js/reservation.js')}}"></script>
-        
+        <script src="{{asset('stack/js/isotope.min.js')}}"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript">    
+        // Init AOS
+        function aos_init() {
+            AOS.init({
+            });
+        }
+        $(window).on('load', function() {
+            aos_init();
+        });
+        </script>
     </body>
 </html>

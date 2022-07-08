@@ -1,0 +1,76 @@
+#menu-bar {
+	position:absolute;
+	z-index: 2;
+	width: 100%;
+	padding-top: 1em;
+	.container {
+		padding-bottom: 0.6em;
+	}
+	.navbar-brand {
+		.logo {
+			max-height: 2.3em;
+
+			@include media('<=phone'){
+				height: 3em;
+			}
+		}
+	}
+	.navbar-nav {
+		.nav-item {
+			margin-right: 2em;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		.nav-link{
+			color: white;
+			opacity: 1;
+			font-family: 'Montserrat';
+			font-size: 16px;
+			
+			&.active, 
+			.show > .nav-link {
+				color: $color-primary !important;
+				opacity: 1;
+			}
+			&:hover {
+				color: $color-secondary;
+			}
+
+		}
+	}
+
+	.btn {
+		background-color: transparent;
+		border: 2px solid #86d6eb;
+		color: $color-primary !important;
+		border-radius: 30px;
+		padding: 0.5em 1.1em;
+		font-size: 15px;
+		font-family: $font-bold;
+		&:hover {
+			
+			color: $color-black !important;
+			
+		}
+	}
+}
+
+.navbar {
+	&-toggler {
+	min-width: unset;
+		i {
+			color: white !important;
+		}
+	}
+	&-collapse {
+		@include media('<=phone'){
+			background: #1E2D40;
+		}
+	}
+}
+
+	
+
+
+

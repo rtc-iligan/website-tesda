@@ -13,20 +13,26 @@
             <input type="text" class="form-control" name="title" required>
           </div>
           <div class="input-group mb-3">
-           <span class="input-group-text">CPTR Number</span>
+            <span class="input-group-text">CPTR Number</span>
             <input type="text" class="form-control" name="cptr" required>
           </div>
-           <div class="input-group mb-3">
+          <div class="input-group mb-3">
             <span class="input-group-text">Date Accredited</span>
             <input type="date" class="form-control" name="date" required>
           </div>
           <div class="input-group mb-3">
-           <span class="input-group-text">Hours</span>
+            <span class="input-group-text">Hours</span>
             <input type="text" class="form-control" name="hrs" required>
           </div>
-           <div class="input-group mb-3">
-           <span class="input-group-text">Type</span>
-            <input type="text" class="form-control" name="type" required>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Type</span>
+            <select class="form-select" name="type" required>
+              <option value="" selected>------> Choose Here <------</option>
+              <option value="CBP">CBP</option>
+              <option value="IBP">IBP</option>
+              <option value="LSI">LSI</option>
+              <option value="MTP">MTP</option>
+            </select> 
           </div>
         </div>
         <div class="modal-footer">

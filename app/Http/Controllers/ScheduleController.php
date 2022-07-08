@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 use App\Models\Schedule;
 use Illuminate\Http\Request;
+use DB;
 
 class ScheduleController extends Controller
 {
 
     public function index()
     {
+      
         $schedule=Schedule::paginate(10);
         return view('backend.schedule.index',compact('schedule'));
+       
     }
 
     public function create()
