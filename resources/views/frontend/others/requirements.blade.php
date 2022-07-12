@@ -9,93 +9,117 @@
         </div>
     </div>
 </section>
-<section class="switchable">
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-md-6 switchable__text">
-                <ul class="accordion accordion-1">
-                    <li class="active">
-                        <div class="accordion__title"> <span class="h5">UAQTEA / DIPLOMA</span> </div>
-                        <div class="accordion__content">
-                            <div class="lead">
-                            	<h4 class="lead text-center">Requirements</h4>
-                            	<div class="row">
-                            		<div class="col-md-6 fw-bold">Certification of Indigency</div>
-                                	<div class="col-md-6 fw-bold">Form 138 (Card) Original Copy</div>
-                                	<div class="col-md-6 fw-bold">PSA/NSO Birth Certificate(Xerox Copy)</div>
-                                	<div class="col-md-6 fw-bold">Good Moral Certificate</div>
-                                	<div class="col-md-6 fw-bold">TOR/Honorable Dismissal</div>
-                                	<div class="col-md-6 fw-bold">Good Moral Certificate</div>
-                                	<div class="col-md-6 fw-bold">Latest Barangay Clearance</div>
-                                	<div class="col-md-6 fw-bold">2 pcs. Long Brown Envelope</div>
-                                	<div class="col-md-6 fw-bold">Permanent Record Form 137 For College Level/College Graduate</div>
-                            	</div>
+
+<section class="text-center">
+                <div class="tabs-container" data-content-align="left">
+                    <ul class="tabs tabs--spaced">
+                        <li class="active">
+                            <div class="tab__title text-center"> <span class="h5">UAQTEA / DIPLOMA</span> </div>
+                            <div class="tab__content">
+                                <div class="container switchable switchable--switch">
+                                    <div class="row">
+                                        <div class="col-md-7"> <img alt="Image" src="img/grad1.jpg"> </div>
+                                        <div class="col-md-5 col-lg-4">
+                                            <div class="mt--1">
+                                                <h3>Requirements</h3>
+                                               <div class="row">
+                                               <div class="col-md-6">
+                                                    <p class="lead">• Certification of Indigency</p>
+                                                    <p class="lead">• Form 138 (Card) Original Copy</p>
+                                                    <p class="lead">• PSA/NSO Birth Certificate(Xerox Copy)</p>
+                                                    <p class="lead">• Good Moral Certificate</p>
+                                                 
+                                                </div>
+                                                <div class="col-md-6">
+                                                    
+                                                    <p class="lead">• TOR/Honorable Dismissal</p>
+                                                    <p class="lead">• Good Moral Certificate</p>
+                                                    <p class="lead">• Latest Barangay Clearance</p>
+                                                    <p class="lead">• 2 pcs. Long Brown Envelope</p>
+                                                </div>
+                                               </div>
+                                                <hr class="short">
+                                                <h3>Pictures</h3>
+                                                <p class="lead">Studio Shot taken within the last 6 months, white background with collar</p>
+                                                <p class="lead">6 pcs 1x1 and 2 pcs Passport Size</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          
-                            <div class="row">
-                            	<h4 class="lead text-center">Pictures</h4>
-                            	<h4 class="lead fw-bold" >Studio Shot taken within the last 6 months, white background with collar</h4>
-                            	<p class="lead text-center fw-bold">6 pcs 1x1 and 2 pcs Passport Size</p>
+                        </li>
+                        <li>
+                            <div class="tab__title text-center">  <span class="h5">TWSP / REGULAR</span> </div>
+                            <div class="tab__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-7"> <img alt="Image" src="img/grad2.jpg"> </div>
+                                        <div class="col-md-5 col-lg-4 ml-2">
+                                            <div class="mt--1">
+                                            <h3>Requirements</h3>
+                                               <div class="row">
+                                               <div class="col-md-6">
+                                                    <p class="lead">• Certification of Indigency</p>
+                                                    <p class="lead">• Form 138 (Card) Original Copy</p>
+                                                    <p class="lead">• PSA/NSO Birth Certificate(Xerox Copy)</p>
+                                                    <p class="lead">• For GTAW NC II (Requirements: Must be SMAW NC II Certificate Holder)</p>
+                                                    <p class="lead">• For EIM NC III (Requirements: Must be EIM NC III Certificate Holder)</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    
+                                                    <p class="lead">• TOR/Honorable Dismissal</p>
+                                                    <p class="lead">• Good Moral Certificate</p>
+                                                    <p class="lead">• Permanent Record Form 137 For College Level/College Graduate</p>
+                                                    <p class="lead">• Latest Barangay Clearance</p>
+                                                    <p class="lead">• 2 pcs. Long Brown Envelope</p>
+                                                </div>
+                                               </div>
+                                                <hr class="short">
+                                                <h3>Pictures</h3>
+                                                <p class="lead">Studio Shot taken within the last 6 months, white background with collar</p>
+                                                <p class="lead">4 pcs 1x1 and 3 pcs Passport Size</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="mb-3">
-                       <div class="accordion__title"> <span class="h5">TWSP / Regular</span> </div>
-                        <div class="accordion__content ">
-                            <div class="lead">
-                            	<h5 class="lead text-center">Requirements</h5>
-                            	<div class="row">
-                            		<div class="col-md-6 fw-bold">-Certification of Indigency</div>
-                                	<div class="col-md-6 fw-bold">-Form 138 (Card) Original Copy</div>
-                                	<div class="col-md-6 fw-bold">-PSA/NSO Birth Certificate(Xerox Copy)</div>
-                                	<div class="col-md-6 fw-bold">-Good Moral Certificate</div>
-                                	<div class="col-md-6 fw-bold">-TOR/Honorable Dismissal</div>
-                                	<div class="col-md-6 fw-bold">-Good Moral Certificate</div>
-                                	<div class="col-md-6 fw-bold">-Latest Barangay Clearance</div>
-                                	<div class="col-md-6 fw-bold">-2 pcs. Long Brown Envelope</div>
-                                	<div class="col-md-6 fw-bold">-For GTAW NC II (Requirements: Must be SMAW NC II Certificate Holder)</div>
-                                	<div class="col-md-6 fw-bold">-For EIM NC III (Requirements: Must be EIM NC III Certificate Holder)</div>
-                                	<div class="col-md-6 fw-bold">-Permanent Record Form 137 For College Level/College Graduate</div>
-                            	</div>
-                            
+                        </li>
+                        <li>
+                            <div class="tab__title text-center">  <span class="h5">COMPETENCY ASSESSMENT</span> </div>
+                            <div class="tab__content">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-7"> <img alt="Image" src="img/login.jpg"> </div>
+                                        <div class="col-md-5 col-lg-4">
+                                            <div class="mt--1">
+                                                <h3>Requirements For National Competency Assessment</h3>
+                                                <div class="row">
+                                               <div class="col-md-6">
+                                                    <p class="lead">• Duty Accomplished Form</p>
+                                                    <p class="lead">• Form 138 (Card) Original Copy</p>
+                                                    <p class="lead">• PSA/NSO Birth Certificate(Xerox Copy)</p>
+                                                   
+                                                </div>
+                                                <div class="col-md-6">
+                                                    
+                                                    <p class="lead">• Photocopy NSO Marriage Certificate(For Married Female only)</p>
+                                                    <p class="lead">• 1 Photocopy of Certificate of Employment, Training Certificate, Diploma or Transcript of Records</p>
+                                                  
+                                                </div>
+                                               </div>
+                                                <hr class="short">
+                                                <h3>Pictures</h3>
+                                                <p class="lead">3 pcs Passport Size I.D Picture, White background with collar(Studio Shot)</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          
-                            <div class="row mb-5">
-                            	<h4 class="lead text-center">Pictures</h4>
-                            	<h5 class="lead fw-bold" >Studio Shot taken within the last 6 months, white background with collar (4 pcs 1x1 and 3 pcs Passport Size)</h5>
-                            
-                            </div>
-                        </div>
-                       
-                    </li>
-                  
-                    <li >
-                        <div class="accordion__title "> <span class="h5">Requirement For National Competency Assessment</span> </div>
-                        <div class="accordion__content">
-                            <div class="lead">
-                            	<h4 class="lead text-center">Requirements</h4>
-                            	<div class="row">
-                            		<div class="col-md-6 fw-bold">Duty Accomplished Form</div>
-                                	<div class="col-md-6 fw-bold">Form 138 (Card) Original Copy</div>
-                                	<div class="col-md-6 fw-bold">PSA/NSO Birth Certificate(Xerox Copy)</div>
-                                	<div class="col-md-6 fw-bold">Photocopy NSO Marriage Certificate(For Married Female only)</div>
-                                	<div class="col-md-6 fw-bold">1 Photocopy of Certificate of Employment, Training Certificate, Diploma or Transcript of Records</div>
-                            	</div>
-                            
-                            </div>
-                          
-                            <div class="row">
-                            	<h4 class="lead text-center">Pictures</h4>
-                            	<h4 class="lead fw-bold" >3 pcs Passport Size I.D Picture, White background with collar(Studio Shot)</h4>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-5" > <img alt="Image"  src="img/dl1.png" width="300" style="display:block;margin-left: auto; margin-right: auto;"> </div>
-        </div>
-    </div>
-</section>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 @endsection
 @section('scripts')
    

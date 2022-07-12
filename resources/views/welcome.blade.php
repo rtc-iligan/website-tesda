@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
+            <div class="col-md-4 animated pulse infinite"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
                 <a href="{{URL::to('/reservation')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white" > <i class="icon icon-Clock-Back color--primary"></i>
                         <div class="feature__body">
@@ -52,7 +52,7 @@
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </div>
-            <div class="col-md-6"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+            <div class="col-md-6 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                 <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round">
                     <h5>RTC-Iligan Employees Corporate Photo</h5>
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
@@ -84,9 +84,9 @@
                     <p>The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </p>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature">
-                    <h4>Vision</h4>
+            <div class="col-md-4 bc-design"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+                <div class="feature text-center text-justify">
+                    <h4 class="">Vision</h4>
                     <p> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </p>
                 </div>
             </div>

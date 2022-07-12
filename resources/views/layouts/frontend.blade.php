@@ -19,6 +19,9 @@
         <link href="{{asset('css/reservation.css')}}" rel="stylesheet" type="text/css">
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
+ 
+         
     </head>
    
     <body data-smooth-scroll-offset="77" oncontextmenu="return false">
@@ -28,7 +31,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3 col-md-2">
-                                <a href="{{URL::to('/')}}"> <img class="logo logo-dark" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
+                                <a href="{{URL::to('/')}}"> <img class="logo logo-dark animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
                             </div>
                             <div class="col-9 col-md-10 text-right">
                                 <a href="{{URL::to('/')}}" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
@@ -39,9 +42,9 @@
                 <nav id="menu1" class="bar bar-1 hidden-xs">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-1 col-md-2 hidden-xs">
+                            <div class="col-lg-1 col-md-2 hidden-xs" >
                                 <div class="bar__module">
-                                    <a href="{{URL::to('/')}}"> <img class="logo logo-dark" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
+                                    <a href="{{URL::to('/')}}"> <img class="logo logo-dark animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
                                 </div>
                             </div>
                             <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
@@ -140,7 +143,7 @@
                                         <li class="dropdown"> <span class="dropdown__trigger">
                                         Online Course
                                         </span>
-                                            <div class="dropdown__container">
+                                            <div class="dropdown__container">p
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-2">
@@ -225,7 +228,9 @@
         }
         $(window).on('load', function() {
             aos_init();
+         
         });
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js"></script>
     </body>
 </html>

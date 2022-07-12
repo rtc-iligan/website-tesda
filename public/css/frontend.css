@@ -63,7 +63,7 @@
   }
   
   .footer-gasa{
-     position: relative; !important;
+     position: relative !important;
      bottom: 300px;
      align-content: center;
   }
@@ -76,5 +76,17 @@
 .ftr-wht {
 	color: #ffffff !important;
 	
+}
+.bc-design {
+  border-radius: 50% 20% / 60% 40%;
+  width: 100px;
+  height: 150px;
+  background: #f6c102 !important;
+  background: -webkit-linear-gradient(to bottom right,
+      #f6c102,
+      #ffe496);
+  background: linear-gradient(to bottom right,
+      #f6c102,
+      #ffe496);
 }
 

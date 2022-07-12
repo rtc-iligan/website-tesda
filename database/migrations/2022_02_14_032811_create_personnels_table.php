@@ -18,8 +18,8 @@ class CreatePersonnelsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->string('position');
-            $table->string('motto');
-            $table->string('image');
+            $table->string('motto')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

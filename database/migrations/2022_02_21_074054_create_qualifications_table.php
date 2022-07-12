@@ -16,10 +16,13 @@ class CreateQualificationsTable extends Migration
         Schema::create('qualifications', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('abrv');
+            $table->string('discription');
             $table->string('cptr');
             $table->string('type');
             $table->string('hrs');
             $table->date('date');
+            $table->string('tuition_fee');
             $table->timestamps();
         });
     }
