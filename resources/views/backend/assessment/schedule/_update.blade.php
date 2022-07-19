@@ -11,7 +11,7 @@
         <div class="modal-body">
           <div class="input-group mb-3">
             <span class="input-group-text">Qualification</span>
-            <input type="text" class="form-control" name="qualification" value="{{$schedule->qualification}}"required>
+            <input type="text" class="form-control" name="acc_id" value="{{$schedule->title}}"required>
           </div>
           <div class="input-group mb-3">
            <span class="input-group-text">Applicant</span>

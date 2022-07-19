@@ -40,7 +40,9 @@ class QualificationController extends Controller
             'cptr' => 'required',
             'date' => 'required',
             'hrs'  => 'required', 
-            'type'  => 'required' 
+            'discription'  => 'required',
+            'tuition_fee'  => 'required',
+            'abrv'  => 'required'
         ]);
 
         $quali=new Qualification();
@@ -49,6 +51,9 @@ class QualificationController extends Controller
         $quali->cptr=$request->cptr;
         $quali->hrs=$request->hrs;
         $quali->type=$request->type;
+        $quali->discription=$request->discription;
+        $quali->tuition_fee=$request->tuition_fee;
+        $quali->abrv=$request->abrv;
         $quali->save();
         return redirect()->back()->with('success','Successfully Posted Qualification!');
     }
@@ -89,6 +94,9 @@ class QualificationController extends Controller
         $qualification->date=$request->date;
         $qualification->hrs=$request->hrs;
         $qualification->type=$request->type;
+        $qualification->discription=$request->discription;
+        $qualification->tuition_fee=$request->tuition_fee;
+        $qualification->abrv=$request->abrv;
         $qualification->update();
 
         return redirect()->back()->with('success','Successfully Updated Qualification!');

@@ -31,7 +31,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3 col-md-2">
-                                <a href="{{URL::to('/')}}"> <img class="logo logo-dark animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
+                                <a href="{{URL::to('/')}}"> <img class="logo logo-dark " alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light " alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
                             </div>
                             <div class="col-9 col-md-10 text-right">
                                 <a href="{{URL::to('/')}}" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
@@ -44,7 +44,7 @@
                         <div class="row">
                             <div class="col-lg-1 col-md-2 hidden-xs" >
                                 <div class="bar__module">
-                                    <a href="{{URL::to('/')}}"> <img class="logo logo-dark animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light animated headShake infinite" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
+                                    <a href="{{URL::to('/')}}"> <img class="logo logo-dark" alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
                                 </div>
                             </div>
                             <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">

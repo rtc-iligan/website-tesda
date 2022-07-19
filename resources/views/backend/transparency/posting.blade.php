@@ -1,46 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-@include('backend.transparency._create')
+@include('backend.transparency._createPosting')
+
 <div class="container">
+  
     <div class="row justify-content-center">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{URL::to('/transparencyseal')}}">Tranparency Seal</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{$getTransparencySealID->title}}</li>
+        </ol>
+      </nav>
         <div class="col-md-12">
+          
             <div class="card">
-                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Transparency Management') }}
-                    <!-- <button class="btn btn-outline-info float-right"><i class="fa-solid fa-sort"></i> Sort</button> -->
+              
+                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Posting Management for ') }}{{$getTransparencySealID->title}}
+                <button type="submit" class="btn btn-secondary float-end " id="buttonref"><i class="fa-solid fa-sort"></i></i> Sort</button>
+                <button type="submit" class="btn btn-primary float-end mr-2" data-bs-toggle="modal" data-bs-target="#createModalPosting"><i class="fa-solid fa-plus"></i></i> Create</button>
                 </div>
-              <div class="card-header">
-                    <div class="row">
-                        <div class="col-md-2">
-                             <select class="form-select"></select>
-                        </div>
-                        <div class="col-md-2">
-                             <select class="form-select"></select>
-                        </div>
-                        <div class="col-md-2 ">
-                            <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
-                        </div>
-                        <div class="col-md-6 ">
-                            <button type="submit" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
-                        </div>
-                    </div>
-                </div>
-                {{-- <div class="card-body"> --}}
+             
                     <table class="table table-bordered" id="table">
-                      <thead>
+                      <thead class="text-center">
                         <tr>
-                          <th width="5%">#</th>
-                          <th >Category</th>
-                          <th width="30%">Date</th>
-                          <th width="7%">Action</th>
+                         
+                          <th width="5%">Year</th>
+                          <th width="30%">Sub Title</th>
+                          <th width="50%">URL Link</th>
+                          <th width="5%">Action</th>
                         </tr>
                       </thead>
-                      <tbody id="tablecontents">
-                          @foreach($ts as $i)
-                          <tr class="row1" data-id="{{ $i->id }}">
-                            <td>{{ $i->sort }}</td>
-                            <td>{{ $i->title }}</td>
-                            <td>{{ $i->updated_at }}</td>
+                      <tbody id="tablecontents" class="text-center">
+                      @foreach($posting as $i)
+                          <tr class="row1" data-id="{{ $i->id }}" >
+                            <td>{{ $i->year ?? ''}}</td>
+                            <td>{{ $i->sub_title ?? 'No data Available'}}</td>
+                            <td style="text-overflow: ellipsis !important;">{{ $i->link ?? 'No data Available'}}</td>
                             <td>
                               <div class="dropdown">
                                   <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,11 +44,8 @@
                                   </a>
 
                                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                    
-                                    <a type="button" href="{{ URL::to('/addPosting/'.$i->id)}}" class="dropdown-item btn" data-url="">
-                                                            <i class="fa-solid fa-pen-to-square"></i>
-                                                            &nbsp;View
-                                                        </a>
+                                  <li><button class="dropdown-item btn-update"data-url="{{ route('posting.edit',$i->id) }}"><i class="fa-solid fa-edit"></i> Update</button></li>
+                                 
                                     <form action="{{ route('transparencyseal.destroy',$i->id) }}" method="post" >
                                     @csrf
                                     @method('DELETE')
@@ -66,19 +59,35 @@
                       </tbody>
                        
                     </table>
-                {{-- </div> --}}
-                
             </div>
         </div>
     </div>
 </div>
-<div class="append-personnel"></div>
+<div class="append-posting"></div>
 @endsection
 @section('scripts')
 
 
 
 <script type="text/javascript">
+   $('.btn-update').click(function(){
+            var div = $('.append-posting');
+            div.empty();
+            var url = $(this).data('url');
+            $.ajax({
+                url: url,
+                success:function(data){
+                    div.append(data);
+                    $('#update_posting').modal('show');
+                }
+            });
+        });
+   $(document).ready(function () {
+            $("#buttonref").click(function () {
+                location.reload(true);
+              
+            });
+        });
   $(function () {
       $("#table").DataTable({
         "paging":   false,
@@ -108,7 +117,7 @@
         $.ajax({
             type: "GET", 
             dataType: "json", 
-            url: "{{ url('post-sortable') }}",
+            url: "{{ url('sortable-post') }}",
             data: 
             {
                   order: order,

@@ -82,7 +82,7 @@
                                         <a class="dropdown-item" href="{{ route('schedule.index') }}">
                                             {{ __('Schedule') }}
                                         </a>
-                                        <a class="dropdown-item" href="">
+                                        <a class="dropdown-item"  href="{{ route('accredited.index') }}">
                                             {{ __('Acc. Qualification') }}
                                         </a>
                                     </div>

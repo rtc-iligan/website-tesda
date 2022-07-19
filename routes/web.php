@@ -18,7 +18,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+//Route::get('/addPosting/{id}', App\Http\Controllers\PostingController::class,'index')->name('index');
+Route::get('/addPosting/{posting_id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
+Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_get'])->name('accounts.import_get');
 Route::post('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_post'])->name('accounts.import_post');
@@ -33,7 +35,10 @@ Route::resource('/successstories', App\Http\Controllers\SuccessStoriesController
 
 Route::resource('/qualification', App\Http\Controllers\QualificationController::class);
 Route::resource('/announcement', App\Http\Controllers\AnnouncementController::class);
+Route::resource('/accredited', App\Http\Controllers\AccreditedController::class);
 Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
+Route::resource('/posting', App\Http\Controllers\PostingController::class);
+
 
 Route::get('/reservation', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
 Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');

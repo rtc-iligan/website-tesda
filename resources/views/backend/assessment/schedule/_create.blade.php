@@ -10,7 +10,12 @@
          
           <div class="input-group mb-3">
             <span class="input-group-text">Qualification</span>
-            <input type="text" class="form-control" name="qualification" required>
+            <select class="form-select" name="acc_id" required>
+              <option value="" selected>------> Choose Here <------</option>
+             @foreach($acc as $accs)
+              <option value="{{$accs->id}}">{{$accs->title}}</option>
+             @endforeach
+            </select>
           </div>
           <div class="input-group mb-3">
            <span class="input-group-text">Applicant</span>

@@ -78,10 +78,11 @@
 	
 }
 .bc-design {
-  border-radius: 50% 20% / 60% 40%;
-  width: 100px;
-  height: 150px;
-  background: #f6c102 !important;
+  border-radius: 50% 50% 30% 70% / 21% 5% 95% 79% ;
+  word-break: break-all !important;
+  width: 100%;
+  height: 450px;
+  background: #5f8ee394 !important;
   background: -webkit-linear-gradient(to bottom right,
       #f6c102,
       #ffe496);
@@ -89,4 +90,3 @@
       #f6c102,
       #ffe496);
 }
-

@@ -14,6 +14,18 @@
             <input type="text" class="form-control" name="title" value="{{$qualification->title}}">
           </div>
           <div class="input-group mb-3">
+            <span class="input-group-text">Abrv</span>
+            <input type="text" class="form-control" name="abrv"  value="{{$qualification->abrv}}">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Description</span>
+            <input type="text" class="form-control" name="discription"  value="{{$qualification->discription}}">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Tuition Fee</span>
+            <input type="text" class="form-control" name="tuition_fee"  value="{{$qualification->tuition_fee}}">
+          </div>
+          <div class="input-group mb-3">
             <span class="input-group-text">CPTR Number</span>
             <input type="text" class="form-control" name="cptr" value="{{$qualification->cptr}}"  >
           </div>

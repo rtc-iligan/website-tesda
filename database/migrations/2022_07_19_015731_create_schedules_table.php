@@ -15,11 +15,17 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            $table->string('qualification');
+            $table->unsignedBigInteger('acc_id');
+          
             $table->date('date');
             $table->string('applicant');
             $table->string('competent');
             $table->timestamps();
+
+            $table->foreign('acc_id')
+            ->references('id')
+            ->on('accrediteds')
+            ->onDelete('cascade');
         });
     }
 

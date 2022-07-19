@@ -43,14 +43,15 @@
 <section>
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-md-6">
-                <h4><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h4>
-                <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <div class="col-md-6 bc-design "><br>
+                <h5 class="text-center" ><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h5>
+                <p class="lead" style="font-size:15px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <p style="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </p>
+               
             </div>
             <div class="col-md-6 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                 <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round">
@@ -84,7 +85,7 @@
                     <p>The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </p>
                 </div>
             </div>
-            <div class="col-md-4 bc-design"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                 <div class="feature text-center text-justify">
                     <h4 class="">Vision</h4>
                     <p> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </p>
@@ -97,19 +98,19 @@
                 </div>
             </div>
             <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature">
+                <div class="feature text-center text-justify">
                     <h4>What is TWSP?</h4>
                     <p> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </p>
                 </div>
             </div>
             <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="feature">
+                <div class="feature text-center text-justify">
                     <h4>What is UAQETA?</h4>
                     <p> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </p>
                 </div>
             </div>
             <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature">
+                <div class="feature text-center text-justify">
                     <h4>What is STEP?</h4>
                     <p> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </p>
                 </div>

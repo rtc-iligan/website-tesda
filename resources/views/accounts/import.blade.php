@@ -34,7 +34,7 @@
                                 <table class="table table-xxs table-bordered" id="table-import">
                                     <thead>
                                         <tr>
-                                            @foreach($columns as $i => $col)
+                                            @foreach($columns as $1`i => $col)
                                             <th>{{ $col }}</th>
                                             @endforeach
                                         </tr>
