@@ -24,33 +24,11 @@
                 </div>
             </div>
             <div class="masonry__container row masonry--active">
-                <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/building.jpg" data-lightbox="Gallery 1"> <img alt="Image" src="img/building.jpg" style="height: 190px;"> </a>
-                </div>
-                 <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/tesdabuilding.png" data-lightbox="Gallery 1"> <img alt="Image" src="img/tesdabuilding.png" style="height: 190px;"> </a>
-                </div>
+            @foreach($gallery as $gl)
                <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/IMG-2891.jpg" data-lightbox="Gallery 1"> <img alt="Image" src="img/IMG-2891.jpg" style="height: 190px;"> </a>
+                    <a href="{{asset('storage/'.$gl->image) }}" data-lightbox="Gallery 1"> <img alt="Image" src="{{asset('storage/'.$gl->image) }}" style="height: 190px;"> </a>
                 </div>
-                <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/building.jpg" data-lightbox="Gallery 1"> <img alt="Image" src="img/building.jpg" style="height: 190px;"> </a>
-                </div>
-                 <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/tesdabuilding.png" data-lightbox="Gallery 1"> <img alt="Image" src="img/tesdabuilding.png" style="height: 190px;"> </a>
-                </div>
-               <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/IMG-2891.jpg" data-lightbox="Gallery 1"> <img alt="Image" src="img/IMG-2891.jpg" style="height: 190px;"> </a>
-                </div>
-                <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/building.jpg" data-lightbox="Gallery 1"> <img alt="Image" src="img/building.jpg" style="height: 190px;"> </a>
-                </div>
-                 <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/tesdabuilding.png" data-lightbox="Gallery 1"> <img alt="Image" src="img/tesdabuilding.png" style="height: 190px;"> </a>
-                </div>
-               <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="img/IMG-2891.jpg" data-lightbox="Gallery 1"> <img alt="Image" src="img/IMG-2891.jpg" style="height: 190px;"> </a>
-                </div>
+               @endforeach
             </div>
         </div>
     </div>

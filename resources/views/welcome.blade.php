@@ -151,7 +151,22 @@
         </div>
     </div>
 </section>
-
+<!-- <div class="modal" tabindex="-1" id="simpleModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="modal-title fs-5">Announcement!!!</a>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>DATA HEREEEE</p>
+      </div>
+      <div class="modal-footer">
+        <a data-bs-dismiss="modal">Close</a>
+      </div>
+    </div>
+  </div>
+</div> -->
 @endsection
 @section('scripts')
 

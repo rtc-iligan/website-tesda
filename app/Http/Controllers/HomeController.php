@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\{Personnel, Gallery, Qualification};
 class HomeController extends Controller
 {
     /**
@@ -43,7 +43,9 @@ class HomeController extends Controller
     }
     public function rtcpersonnel()
     {
-        return view('frontend.about.rtc-personnel');
+        $regular = Personnel::where('type','=','Regular')->get();
+        $joborder = Personnel::where('type','=','Job Order')->get();
+        return view('frontend.about.rtc-personnel',compact('joborder','regular'));
     }
     public function contactus()
     {
@@ -51,7 +53,8 @@ class HomeController extends Controller
     }
     public function images()
     {
-        return view('frontend.others.images');
+        $gallery = Gallery::get();
+        return view('frontend.others.images',compact('gallery'));
     }
     public function newsupdates()
     {
@@ -67,7 +70,19 @@ class HomeController extends Controller
     }
     public function qualification()
     {
-        return view('frontend.others.qualification');
+         $qualiSector = Qualification::select('sector')->get()->keyBy('sector');
+        return view('frontend.others.qualification', compact('qualiSector'));
+    }
+    public function sector($sector)
+    {
+        
+        $perQualiSector = Qualification::where('sector',$sector)->get();
+        return view('frontend.others.sector',compact('perQualiSector','sector'));
+    }
+    public function perQualiSector($id)
+    {
+        $qualification = Qualification::where('id',$id)->first();
+        return view('frontend.others.perQualiSector',compact('qualification'));
     }
     
 }

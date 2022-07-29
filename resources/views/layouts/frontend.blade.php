@@ -69,7 +69,7 @@
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('organizational-structure')}}">Organizational Structure</a> </li>
                                                             </ul>
-                                                             <ul class="menu-vertical">
+                                                            <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('rtc-personnel')}}">RTC Personnel</a> </li>
                                                             </ul>
                                                         </div>
@@ -189,13 +189,13 @@
                                 <li><a class="ftr-wht" href="#">Online Reservation</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-3 col-md-3 col-xs-6 link2-md">
+                        <div class="col-sm-3 col-md-3 col-xs-4 link2-md">
                             <h6 class="type--uppercase">TESDA OTHER LINKS</h6>
                             <ul >
                                 <li><a class="ftr-wht" href="#">Quick Survey</a></li>
                                 <li><a class="ftr-wht" href="#">TTI Directory</a></li>
                                 <li><a class="ftr-wht" href="#">Assessment Center</a></li>
-                                <li><a class="ftr-wht" href="#">Tesda Online Program(Free Training)</a></li>
+                                <li><a class="ftr-wht" href="#">Tesda Online Program</a></li>
                             </ul>
                         </div>
                          <div class="row text-center">
@@ -232,5 +232,13 @@
         });
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/js/mdb.min.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                OpenBootstrapPopup();
+            };
+            function OpenBootstrapPopup() {
+                $("#simpleModal").modal('show');
+            }
+        </script>
     </body>
 </html>

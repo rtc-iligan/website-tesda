@@ -43,7 +43,7 @@ class PersonnelController extends Controller
             'name' => 'required',
             'type' => 'required',
             'position' => 'required',
-            'motto' => 'required',
+            'motto' => '',
         ]);
 
         $personnel=new Personnel();

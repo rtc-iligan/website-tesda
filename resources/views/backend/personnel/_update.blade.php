@@ -16,9 +16,9 @@
               </div>
               <div class="col-md-9">
                  <span >Full Name:</span>
-                 <input type="text" class="form-control" name="name"  value="{{$personnel->name}}" required>
+                 <input type="text" class="form-control" name="name"  value="{{$personnel->name}}" >
                   <span class="" >Type</span>
-                  <select class="form-select"name="type"required>
+                  <select class="form-select"name="type">
                     <option value="" hidden="">------> Choose Here <------</option>
                     <option value="Regular" @if($personnel->type) selected @endif>Regular</option>
                     <option value="Job Order" @if($personnel->type) selected @endif>Job Order</option>
@@ -28,14 +28,14 @@
           </div> 
           <div class="input-group mb-3">
             <span class="input-group-text">Position</span>
-            <input type="text" class="form-control" name="position" value="{{$personnel->position}}" required>
+            <input type="text" class="form-control" name="position" value="{{$personnel->position}}" >
           </div>
           <div class="input-group mb-3">
            <span class="input-group-text">Motto</span>
-            <input type="text" class="form-control" name="motto" value="{{$personnel->motto}}" required>
+            <input type="text" class="form-control" name="motto" value="{{$personnel->motto}}" >
           </div>
            <div class="input-group mb-3">
-            <input type="file" class="form-control" name="image" id="image" onchange="previewFile(this);" required>
+            <input type="file" class="form-control" name="image" id="image" onchange="previewFile(this);" >
           </div>
         </div>
         <div class="modal-footer">

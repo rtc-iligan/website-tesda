@@ -17,36 +17,14 @@
             <div class="col">
                 <div class="slider" data-paging="true">
                     <ul class="slides">
+                        @foreach($regular as $reg)
                         <li class="col-md-4 col-12" >
                             <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
+                                <a href="#"> <img alt="Image" class="border--round" src="{{asset('storage/'.$reg->image) }}" style="height: 300px;width: 300px;"> </a>
+                                <h4>{{$reg->name}}</h4> <span>{{$reg->position}}</span> </div>
                         </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12" >
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
+                        @endforeach
+                       
                     </ul>
                 </div>
             </div>
@@ -60,36 +38,14 @@
             <div class="col">
                 <div class="slider" data-paging="true">
                     <ul class="slides">
+                    @foreach($joborder as $jo)
                         <li class="col-md-4 col-12" >
                             <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
+                                <a href="#"> <img alt="Image" class="border--round" src="{{asset('storage/'.$jo->image) }}" style="height: 300px;width: 300px;"> </a>
+                                <h4>{{$jo->name}}</h4> <span>{{$jo->position}}</span> </div>
                         </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12" >
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
-                        <li class="col-md-4 col-12">
-                            <div class="project-thumb">
-                                <a href="#"> <img alt="Image" class="border--round" src="img/regular/gbt.jpg" style="height: 300px;width: 300px;"> </a>
-                                <h4>Maynard M. Jumawan</h4> <span>Acting Administrator</span> </div>
-                        </li>
+                        @endforeach
+                        
                     </ul>
                 </div>
             </div>

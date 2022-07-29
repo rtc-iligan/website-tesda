@@ -51,7 +51,7 @@
                               </a>
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
-                                <li><button class="dropdown-item btn-view" data-url=""><i class="fa-solid fa-magnifying-glass"></i> View</button></li>
+                                
                                 <li><button class="dropdown-item btn-update"data-url="{{ route('personnel.edit',$pnl->id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
                                 <form action="{{ route('personnel.destroy',$pnl->id) }}" method="post" >
                                 @csrf
@@ -85,17 +85,6 @@
                 }
             });
         });
-   $('.btn-view').click(function(){
-            var div = $('.append-personnel');
-            div.empty();
-            var url = $(this).data('url');
-            $.ajax({
-                url: url,
-                success:function(data){
-                    div.append(data);
-                    $('#view_gallery').modal('show');
-                }
-            });
-        });
+  
 </script>
 @endsection

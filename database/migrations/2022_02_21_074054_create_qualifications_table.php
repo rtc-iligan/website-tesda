@@ -17,10 +17,12 @@ class CreateQualificationsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('abrv');
-            $table->string('discription');
+            $table->string('discription',6000);
             $table->string('cptr');
             $table->string('type');
+            $table->string('sector');
             $table->string('hrs');
+            $table->string('image');
             $table->date('date');
             $table->string('tuition_fee');
             $table->timestamps();

@@ -30,10 +30,10 @@
           </div>
           <div class="input-group mb-3">
            <span class="input-group-text">Motto</span>
-            <input type="text" class="form-control" name="motto" required>
+            <input type="text" class="form-control" name="motto" >
           </div>
            <div class="input-group mb-3">
-            <input type="file" class="form-control" name="image" onchange="previewFile(this);" required>
+            <input type="file" class="form-control" name="image" onchange="previewFile(this);" >
           </div>
         </div>
         <div class="modal-footer">

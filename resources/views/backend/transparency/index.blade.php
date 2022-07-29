@@ -21,7 +21,8 @@
                             <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
                         </div>
                         <div class="col-md-6 ">
-                            <button type="submit" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
+                            <button type="submit" class="btn btn-secondary float-end " id="buttonref"><i class="fa-solid fa-sort"></i></i> Sort</button>
+                            <button type="submit" class="btn btn-primary float-end mr-2" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
                         </div>
                     </div>
                 </div>
@@ -79,6 +80,12 @@
 
 
 <script type="text/javascript">
+  $(document).ready(function () {
+            $("#buttonref").click(function () {
+                location.reload(true);
+              
+            });
+        });
   $(function () {
       $("#table").DataTable({
         "paging":   false,

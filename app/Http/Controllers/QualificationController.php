@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Qualification;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image as Image;
 
 class QualificationController extends Controller
 {
@@ -42,7 +44,9 @@ class QualificationController extends Controller
             'hrs'  => 'required', 
             'discription'  => 'required',
             'tuition_fee'  => 'required',
-            'abrv'  => 'required'
+            'abrv'  => 'required',
+            'sector'  => 'required',
+            'image' => 'required',
         ]);
 
         $quali=new Qualification();
@@ -54,6 +58,15 @@ class QualificationController extends Controller
         $quali->discription=$request->discription;
         $quali->tuition_fee=$request->tuition_fee;
         $quali->abrv=$request->abrv;
+        $quali->sector=$request->sector;
+        if( $request->file('image') != null){
+            $picture = $request->file('image');
+            $fileName = time() . '.' . $picture->getClientOriginalExtension();
+            $img = Image::make($picture->getRealPath());
+            $img->stream();
+            $url = Storage::disk('public')->put('uploads/qualification', $picture);
+            $quali->image = $url;  
+        }
         $quali->save();
         return redirect()->back()->with('success','Successfully Posted Qualification!');
     }
@@ -97,6 +110,15 @@ class QualificationController extends Controller
         $qualification->discription=$request->discription;
         $qualification->tuition_fee=$request->tuition_fee;
         $qualification->abrv=$request->abrv;
+        $qualification->sector=$request->sector;
+        if( $request->file('image') != null){
+            $picture = $request->file('image');
+            $fileName = time() . '.' . $picture->getClientOriginalExtension();
+            $img = Image::make($picture->getRealPath());
+            $img->stream();
+            $url = Storage::disk('public')->put('uploads/qualification', $picture);
+            $qualification->image = $url;  
+        }
         $qualification->update();
 
         return redirect()->back()->with('success','Successfully Updated Qualification!');

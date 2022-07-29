@@ -35,8 +35,21 @@
                       @foreach($posting as $i)
                           <tr class="row1" data-id="{{ $i->id }}" >
                             <td>{{ $i->year ?? ''}}</td>
-                            <td>{{ $i->sub_title ?? 'No data Available'}}</td>
-                            <td style="text-overflow: ellipsis !important;">{{ $i->link ?? 'No data Available'}}</td>
+                            <td>
+                             
+                              @if(!$i->sub_title)
+                              <span class="badge badge-secondary">No Data Available</span>
+                              @else
+                              {{ $i->sub_title }}
+                              @endif
+                            </td>
+                            <td style="text-overflow: ellipsis !important;">
+                              @if(!$i->link)
+                              <span class="badge badge-secondary">No Data Available</span>
+                              @else
+                              {{ $i->link }}
+                              @endif
+                            </td>
                             <td>
                               <div class="dropdown">
                                   <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -95,6 +108,7 @@
         "info":     false,
         "searching": false
       });
+
       $("#tablecontents").sortable({
         items: "tr",
         cursor: 'move',

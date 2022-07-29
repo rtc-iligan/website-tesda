@@ -51,3 +51,5 @@ Route::get('/newsupdates', [App\Http\Controllers\HomeController::class,'newsupda
 Route::get('/success-stories', [App\Http\Controllers\HomeController::class,'achiever'])->name('achiever');
 Route::get('/requirements', [App\Http\Controllers\HomeController::class,'requirements'])->name('requirements');
 Route::get('/utpras-directory', [App\Http\Controllers\HomeController::class,'qualification'])->name('qualification');
+Route::get('/sector/{sector}', [App\Http\Controllers\HomeController::class,'sector'])->name('sector');
+Route::get('/perQualiSector/{id}', [App\Http\Controllers\HomeController::class,'perQualiSector'])->name('perQualiSector');
