@@ -10,7 +10,6 @@ class TransparencySealController extends Controller
     public function index()
     {   
         $ts=TransparencySeal::orderBy('sort','ASC')->get();
-        // return $ts;
         return view('backend.transparency.index',compact('ts'));
     }
     public function store(Request $request)

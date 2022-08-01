@@ -55,7 +55,6 @@
 			        div.append(data);
                     $('#perQualiSector-card').addClass('Active');
 			        $('#perQualiSector-card').show();
-                   
                     $('.masonry').hide();
 			    }
 			});

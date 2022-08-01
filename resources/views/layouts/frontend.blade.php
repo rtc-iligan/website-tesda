@@ -100,7 +100,7 @@
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-2">
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="#">Transparency Seal</a> </li>
+                                                                <li> <a href="{{URL::to('/transparencyseal')}}">Transparency Seal</a> </li>
                                                             </ul>
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="#">Citizen Charter</a> </li>

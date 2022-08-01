@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 //Route::get('/addPosting/{id}', App\Http\Controllers\PostingController::class,'index')->name('index');
-Route::get('/addPosting/{posting_id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
+Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
 Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_get'])->name('accounts.import_get');
@@ -53,3 +53,4 @@ Route::get('/requirements', [App\Http\Controllers\HomeController::class,'require
 Route::get('/utpras-directory', [App\Http\Controllers\HomeController::class,'qualification'])->name('qualification');
 Route::get('/sector/{sector}', [App\Http\Controllers\HomeController::class,'sector'])->name('sector');
 Route::get('/perQualiSector/{id}', [App\Http\Controllers\HomeController::class,'perQualiSector'])->name('perQualiSector');
+Route::get('/transparencyseals', [App\Http\Controllers\HomeController::class,'transparencyseals'])->name('transparencyseals');

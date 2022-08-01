@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Personnel, Gallery, Qualification};
+use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting};
 class HomeController extends Controller
 {
     /**
@@ -84,5 +84,19 @@ class HomeController extends Controller
         $qualification = Qualification::where('id',$id)->first();
         return view('frontend.others.perQualiSector',compact('qualification'));
     }
-    
+    public function transparencyseals()
+    {
+        $trans = TransparencySeal::get();
+         $post=Posting::orderBy('sort','ASC')->get()->groupBy('ts_id');
+         foreach($trans as $trans){
+            echo $trans;
+            foreach( $post as  $post){
+                echo $post->year;  echo '<br>';
+                echo $post->sub_title;
+                 echo $post->link;
+             }
+           
+         }
+       // return view('frontend.transparencys.transparencyseals',compact('trans','post'));
+    }
 }

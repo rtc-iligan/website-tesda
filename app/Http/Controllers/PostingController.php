@@ -12,10 +12,10 @@ class PostingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($posting_id)
+    public function index($id)
     {
-        $getTransparencySealID =  TransparencySeal::where('id', $posting_id)->first();
-        $posting=Posting::orderBy('sort','ASC')->get();
+        $getTransparencySealID = TransparencySeal::where('id', $id)->first();
+        $posting=Posting::where('ts_id', $id)->orderBy('sort','ASC')->get();
         return view('backend.transparency.posting',compact('posting','getTransparencySealID'));
     }
 
