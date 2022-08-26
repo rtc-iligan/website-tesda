@@ -15,7 +15,7 @@
         <div class="card">
             <div class="card-body">
                  <div class="row">
-                     <div class="col-md-2 rv-col-1 title_message">
+                     <div class="col-md-4 rv-col-1 title_message">
                          <div class="rv-left-dsgn mt-5" id="nav1">1 &nbsp;Personal Information</div>
                          <div class="rv-left-dsgn" id="nav2">2 &nbsp;Profiles </div>
                          <div class="mt-3 mb-3" id="nav3">3 &nbsp;Educational Attainment</div>
@@ -23,7 +23,7 @@
                          <div class="rv-left-dsgn" id="nav5">5 &nbsp;Program Offerings</div>
                          <div class="rv-left-dsgn mb-5" id="nav6">6 &nbsp;Privacy Disclaimer</div>
                      </div>
-                     <div class="col-md-10">
+                     <div class="col-md-8">
                           <p style="max-width: 500px; margin-bottom: 40px;" class="mt-4 mx-auto text-center text-center text-muted">Welcome USERNAME ! Let’s create your full reservation to get you started. <br>Please fill-in all necessary information accurately to complete your registration</p>
                          <p class="text-center m-0 text-uppercase text-primary">STEP 1 / 6</p>
                          <div style="text-align:center;">
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="last_name">Suffix</label>
-                                        <input style="max-width: 100px" type="text" id="suffix"class="form-control" name="res_extension">
+                                        <input style="max-width: 100px" type="text" id="suffix"class="form-control" value=" "name="res_extension">
                                     </div>
                                 </div>
                                 <h5 class="text-center font-weight-bold mt-3">COMPLETE PERMANENT ADDRESS</h5>
@@ -81,63 +81,22 @@
                                 <div class="form-row ml-3">
                                     <div class="form-group col-md-4">
                                         <label for="last_name">Barangay</label>
-                                        <input type="text" id="country"class="form-control input-inv" value=""name="" >
+                                        <input type="text" id="country"class="form-control input-inv" value="" oninput="this.className = ''"  name="" required>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="last_name">Purok/Block/Street</label>
-                                        <input type="text" id="country"class="form-control input-inv" value=""name="" >
+                                        <input type="text" id="country"class="form-control input-inv" value="" oninput="this.className = ''"  name="" required>
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="last_name">District</label>
-                                        <input type="text" id="country"class="form-control input-inv" value=""name="" >
+                                        <input type="text" id="country"class="form-control input-inv" value="" oninput="this.className = ''"  name="" required>
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="last_name">Nationality</label>
-                                        <input type="text" id="country"class="form-control input-inv" value="Philippines"name="" disabled>
+                                        <input type="text" id="country"class="form-control input-inv" value="Filipino"name="" disabled>
                                     </div>
                                 </div>
-                                <h5 class="text-center font-weight-bold mt-3">COMPLETE CURRENT MAILING ADDRESS</h5>
-                                <div class="col-12">
-                                    <div class="input-checkbox" data-bs-toggle="tooltip" data-bs-placement="top" title="Please fill up first the complete permanent address upon checking this checkbox!">
-                                        <input type="checkbox" id="addressChecked"name="agree" >
-                                        <label></label> 
-                                    </div>
-                                    Same as Permanent Address
-                                </div>
-                                <div id="step1-2">
-                                   <div class="form-row ml-3">
-                                    <div class="form-group col-md-4"
-                                        <label for="first_name">Region</label>
-                                        <input type="text" id="region"class="form-control input-inv" value="" oninput="this.className = ''" name=""required>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="last_name">Province</label>
-                                        <input type="text" id="province"class="form-control input-inv" value="" oninput="this.className = ''" name=""required>
-                                    </div>
-                                    <div class="form-group col-md-4"
-                                        <label for="first_name">City/Municipality</label>
-                                        <input type="text" id="city"class="form-control input-inv" value="" oninput="this.className = ''" name=""required>
-                                    </div>
-                                </div> 
-                                <div class="form-row ml-3">
-                                    <div class="form-group col-md-4">
-                                        <label for="last_name">Barangay</label>
-                                        <input type="text" id="country"class="form-control input-inv" value=""name="" >
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="last_name">Purok/Block/Street</label>
-                                        <input type="text" id="country"class="form-control input-inv" value=""name="" >
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label for="last_name">District</label>
-                                        <input type="text" id="country"class="form-control input-inv" value=""name="" >
-                                    </div>
-                                    <div class="form-group col-md-2">
-                                        <label for="last_name">Country</label>
-                                        <input type="text" id="country"class="form-control input-inv" value="Philippines"name="" disabled>
-                                    </div>
-                                </div>
-                                </div>
+                               
                                 <div class="form-row ml-3 mt-5">
                                     <div class="form-group col-md-6"
                                         <label for="first_name">Contact Number</label>
@@ -239,25 +198,25 @@
                                     <div class="form-row ml-3">
                                       <div class="form-group col-md-4"
                                           <label for="validationServer01">Name of Employer</label>
-                                          <input type="text" class="form-control" id="es1"value=""name="" required>
+                                          <input type="text" class="form-control" id="es1"value=" "name="" required>
                                       </div>
                                       <div class="form-group col-md-4">
                                           <label for="last_name">Date Employed</label>
-                                          <input type="text" class="form-control" id="es2"value=""name="" required>
+                                          <input type="text" class="form-control" id="es2"value=" "name="" required>
                                       </div>
                                       <div class="form-group col-md-4">
                                           <label for="last_name">Address of Employer</label>
-                                          <input type="text" class="form-control" id="es3"value=""name=""required>
+                                          <input type="text" class="form-control" id="es3"value=" "name=""required>
                                       </div>
                                     </div>
                                     <div class="form-row ml-3">
                                       <div class="form-group col-md-6"
                                           <label for="validationServer01">Salary Info(Monthly Income)</label>
-                                          <input type="text" class="form-control" id="es4"value=""name="" required>
+                                          <input type="text" class="form-control" id="es4"value=" "name="" required>
                                       </div>
                                       <div class="form-group col-md-6">
                                           <label for="last_name">Classification of Worker</label>
-                                          <input type="text" class="form-control" id="es5"value=""name="" required>
+                                          <input type="text" class="form-control" id="es5"value=" "name="" required>
                                       </div>
                                      </div>
                                     </div>
@@ -267,7 +226,7 @@
                               <div class="tab" id="tab3">
                                 <h5 class="rv-pi text-center font-weight-bold text-primary">EDUCATIONAL ATTAINMENT</h5><hr>
                                 <div class="row ">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -275,7 +234,7 @@
                                               </div> <span>Elementary Undergraduate</span>
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -283,17 +242,17 @@
                                               </div> <span>Elementary Graduate</span>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
                                                   <label></label>
-                                              </div> <span>Post Secondary Non-Tertiary/Technical Vocational Course Undergraduate</span>
+                                              </div> <span>Post Secondary Non-Tertiary/Tech Vocational Course Undergrad</span>
                                         </div>
                                     </div> 
                                  </div>
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -301,7 +260,7 @@
                                               </div> <span>High School Undergraduate</span>
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -309,18 +268,18 @@
                                               </div> <span>High School Graduate</span>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
                                                   <label></label>
-                                              </div> <span>Post Secondary Non-Tertiary/Technical Vocational Course Graduate</span>
+                                              </div> <span>Post Secondary Non-Tertiary/Tech Vocational Course Graduate</span>
                                         </div>
                                     </div> 
                                   </div>
                              
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -328,7 +287,7 @@
                                               </div> <span>College Undergraduate</span>
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -336,7 +295,7 @@
                                               </div> <span>College Graduate</span>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -346,7 +305,7 @@
                                     </div> 
                                   </div>
                                   <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -354,7 +313,7 @@
                                               </div> <span>Doctorate</span>
                                         </div>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -362,7 +321,7 @@
                                               </div> <span>Junior High(K-12)</span>
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-md-6 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -374,7 +333,7 @@
                                   
                                   
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -389,7 +348,7 @@
                               <div class="tab" id="tab4">
                                   <h5 class="rv-pi text-center font-weight-bold text-primary">CLASSIFICATION</h5><hr>
                                  <div class="row ">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -397,7 +356,7 @@
                                               </div> <span>4Ps Beneficiary</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -405,7 +364,7 @@
                                               </div> <span>Overseas Filipino Workers(OFW)Dependents</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -415,7 +374,7 @@
                                     </div> 
                                  </div>
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -423,7 +382,7 @@
                                               </div> <span>Balik Probinsya</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -431,7 +390,7 @@
                                               </div> <span>Drug Dependents Surrenderees/Surrenderers</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -442,7 +401,7 @@
                                   </div>
                              
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -450,7 +409,7 @@
                                               </div> <span>Displaced Workers</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -458,7 +417,7 @@
                                               </div> <span>Agrarian Reform Beneficiary</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -468,7 +427,7 @@
                                     </div> 
                                   </div>
                                   <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -476,7 +435,7 @@
                                               </div> <span>RCEF-RESP</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -484,7 +443,7 @@
                                               </div> <span>Farmers and Fisherman</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -494,7 +453,7 @@
                                     </div> 
                                   </div>
                                   <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -502,7 +461,7 @@
                                               </div> <span>Farmers and Fisherman</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -510,7 +469,7 @@
                                               </div> <span>Inmates and Detainees</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -520,7 +479,7 @@
                                     </div> 
                                   </div>
                                   <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -528,7 +487,7 @@
                                               </div> <span>Industry Workers</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -536,7 +495,7 @@
                                               </div> <span>Out-of-School-Youth</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -546,7 +505,7 @@
                                     </div> 
                                  </div>
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -554,7 +513,7 @@
                                               </div> <span>Student</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -562,7 +521,7 @@
                                               </div> <span>TESDA Alumni</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -572,7 +531,7 @@
                                     </div> 
                                  </div>
                                  <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-md-3 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -580,7 +539,7 @@
                                               </div> <span>TVET Trainers</span>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -588,7 +547,7 @@
                                               </div> <span>Uniformed Personnel</span>
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-md-5 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
@@ -650,14 +609,15 @@
                                             <div class="input-checkbox">
                                                   <input type="checkbox" id="" name="agree">
                                                   <label></label>
-                                              </div> <span>Agree I hereby allow TESDA to use/post my contact details, name, email,cellphone/landline number and other information I provided which <br> maybe used for processing of my scholarship application, for employment opportunities and other purposes.</span>
+                                              </div> 
+                                              <div style="font-size: 3vw !important; font-size: 12px !important;width: 100%;">Agree I hereby allow TESDA to use/post my contact details, name, email,cellphone/landline number and other information I provided which <br> maybe used for processing of my scholarship application, for employment opportunities and other purposes.</div>
                                         </div>
                                 </div>   
                               </div>
                               <div class="d-md-flex justify-content-md-end">
                                 <div class="form-group">
-                                  <button type="button" id="prevBtn" class="btn btn-secondary btn-lg" style="width: 100px;"onclick="nextPrev(-1)">Previous</button>
-                                  <button type="button" id="nextBtn" class="btn btn-primary btn-lg" style="width: 100px;"onclick="nextPrev(1)">Next</button>
+                                  <button type="button" id="prevBtn" class="btn btn-secondary btn-lg" style="width: 150px;"onclick="nextPrev(-1)">Previous</button>
+                                  <button type="button" id="nextBtn" class="btn btn-primary btn-lg" style="width: 130px;"onclick="nextPrev(1)">Next</button>
                                 </div>
                               </div>
                              

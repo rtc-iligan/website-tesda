@@ -11,7 +11,7 @@
         <link href="{{asset('stack/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{asset('stack/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all" />
         <link href="{{asset('stack/css/theme.css')}}" rel="stylesheet" type="text/css" media="all" />
-        <link href="{{asset('stack/css/custom.css')}}" rel="stylesheet" type="text/css" media="all" />
+       
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet" type="text/css">
         <link href="{{asset('stack/css/font-roboto.css')}}" rel="stylesheet" type="text/css">
@@ -21,7 +21,6 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
  
-         
     </head>
    
     <body data-smooth-scroll-offset="77" oncontextmenu="return false">
@@ -100,13 +99,13 @@
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-2">
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="{{URL::to('/transparencyseal')}}">Transparency Seal</a> </li>
+                                                                <li> <a href="{{URL::to('/transparencyseals')}}">Transparency Seal</a> </li>
                                                             </ul>
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="#">Citizen Charter</a> </li>
+                                                                <li> <a href="{{URL::to('/citizenscharter')}}">Citizen Charter</a> </li>
                                                             </ul>
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="#">Philgeps</a> </li>
+                                                                <li> <a href="{{URL::to('/philgeps')}}">Philgeps</a> </li>
                                                             </ul>
                                                         </div>
                                                     </div>

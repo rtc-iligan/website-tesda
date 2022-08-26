@@ -54,3 +54,5 @@ Route::get('/utpras-directory', [App\Http\Controllers\HomeController::class,'qua
 Route::get('/sector/{sector}', [App\Http\Controllers\HomeController::class,'sector'])->name('sector');
 Route::get('/perQualiSector/{id}', [App\Http\Controllers\HomeController::class,'perQualiSector'])->name('perQualiSector');
 Route::get('/transparencyseals', [App\Http\Controllers\HomeController::class,'transparencyseals'])->name('transparencyseals');
+Route::get('/philgeps', [App\Http\Controllers\HomeController::class,'philgeps'])->name('philgeps');
+Route::get('/citizenscharter', [App\Http\Controllers\HomeController::class,'citizenscharter'])->name('citizenscharter');

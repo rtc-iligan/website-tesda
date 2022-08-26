@@ -86,17 +86,16 @@ class HomeController extends Controller
     }
     public function transparencyseals()
     {
-        $trans = TransparencySeal::get();
-         $post=Posting::orderBy('sort','ASC')->get()->groupBy('ts_id');
-         foreach($trans as $trans){
-            echo $trans;
-            foreach( $post as  $post){
-                echo $post->year;  echo '<br>';
-                echo $post->sub_title;
-                 echo $post->link;
-             }
-           
-         }
-       // return view('frontend.transparencys.transparencyseals',compact('trans','post'));
+        $trans = TransparencySeal::orderBy('sort','ASC')->get();
+     
+        return view('frontend.transparencys.transparencyseals',compact('trans'));
+    }
+    public function philgeps()
+    {
+        return view('frontend.transparencys.philgeps');
+    }
+    public function citizenscharter()
+    {
+        return view('frontend.transparencys.citizencharter');
     }
 }
