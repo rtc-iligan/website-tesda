@@ -73,7 +73,7 @@
   	overflow-y:hidden !important;
   }
   .drp-attainment{
-    
+
   }
 }
 .ftr-wht {
@@ -93,3 +93,7 @@
       #f6c102,
       #ffe496);
 }
+.error-rev{
+  color: #4285f4 !important;
+}
+

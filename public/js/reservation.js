@@ -1,3 +1,5 @@
+
+
 $('#employ_stat1').hide();
 $('#employ_stat').change(function(){
     if($(this).val() == 'Employed'){
@@ -158,3 +160,150 @@ $('#addressChecked').on('click', function(){
        
           x[n].className += " active";
         }
+
+        var my_handlers = {
+
+          fill_provinces:  function(){
+
+              var region_code = $(this).val();
+              $('#province').ph_locations('fetch_list', [{"region_code": region_code}]);
+              
+          },
+
+          fill_cities: function(){
+
+              var province_code = $(this).val();
+              $('#city').ph_locations( 'fetch_list', [{"province_code": province_code}]);
+          },
+
+
+          fill_barangays: function(){
+
+              var city_code = $(this).val();
+              $('#barangay').ph_locations('fetch_list', [{"city_code": city_code}]);
+          }
+      };
+
+      $(function(){
+          $('#region').on('change', my_handlers.fill_provinces);
+          $('#province').on('change', my_handlers.fill_cities);
+          $('#city').on('change', my_handlers.fill_barangays);
+
+          $('#region').ph_locations({'location_type': 'regions'});
+          $('#province').ph_locations({'location_type': 'provinces'});
+          $('#city').ph_locations({'location_type': 'cities'});
+          $('#barangay').ph_locations({'location_type': 'barangays'});
+
+          $('#region').ph_locations('fetch_list');
+      });   
+    
+;( function( $, window, document, undefined ) {
+
+	"use strict";
+
+		// defaults
+		var pluginName = "ph_locations",
+			defaults = {
+                location_type : "city", // what data this control supposed to display? regions, provinces, cities or barangays?,
+				api_base_url: 'https://ph-locations-api.buonzz.com/',
+				filter: {}
+            };
+
+		// plugin constructor
+		function Plugin ( element, options ) {
+			this.element = element;
+			this.settings = $.extend( {}, defaults, options );
+			this._defaults = defaults;
+			this._name = pluginName;
+			this.init();
+		}
+
+		// Avoid Plugin.prototype conflicts
+		$.extend( Plugin.prototype, {
+			init: function() {
+				return this
+            },
+            
+			fetch_list: function (filter) {
+
+				this.settings.filter = filter;
+
+				$.ajax({
+                    type: "GET",
+                    url: this.settings.api_base_url + 'v1/' +  this.settings.location_type,
+					success: this.onDataArrived.bind(this),
+					data: $.param(this.map_parameters())
+                });
+
+            }, // fetch list
+            onDataArrived(data){
+				$(this.element).html(this.build_options(data));
+			},
+
+			map_parameters(){
+
+				var mapped_parameter = {"filter": {
+					"where": {}
+					} 
+				};
+
+				 for(var property in this.settings.filter)
+				    mapped_parameter.filter.where[property] = this.settings.filter[property];
+
+				 return mapped_parameter;
+			},
+
+			build_options(params){
+				var shtml = "";
+        shtml += '<option value="" selected="" disabled required>Please Choose</option>';
+				for(var i=0; i<params.data.length;i++){
+					shtml += '<option value="' + params.data[i].id + '">';
+					shtml +=  params.data[i].name ;
+					shtml += '</option>';
+				}
+
+				return shtml
+			}
+            
+		} );
+
+
+		$.fn[ pluginName ] = function( options, args ) {
+			return this.each( function() {
+				var $plugin = $.data( this, "plugin_" + pluginName );
+				if (!$plugin) {
+					var pluginOptions = (typeof options === 'object') ? options : {};
+					$plugin = $.data( this, "plugin_" + pluginName, new Plugin( this, pluginOptions ) );
+				}
+				
+				if (typeof options === 'string') {
+					if (typeof $plugin[options] === 'function') {
+						if (typeof args !== 'object') args = [args];
+						$plugin[options].apply($plugin, args);
+					}
+				}
+			} );
+		};
+
+} )( jQuery, window, document );      
+
+
+window.onload = function () {
+  var ddlYears = document.getElementById("ddlYears");
+  var currentYear = (new Date()).getFullYear();
+  for (var i = 1950; i <= currentYear; i++) {
+      var option = document.createElement("OPTION");
+      option.innerHTML = i;
+      option.value = i;
+      ddlYears.appendChild(option);
+  }
+};
+
+function onlyNumber(evt) {
+  var charCode = (evt.which) ? evt.which : event.keyCode
+  if (charCode > 31 && (charCode < 48 || charCode > 57)){
+          return false;
+      }
+  return true;
+}
+

@@ -1,6 +1,3 @@
-.title_message {
-    
-  }
 #regForm {
 
 }
@@ -14,6 +11,7 @@
 
 .input-inv.invalid {
   background-color: #ffdddd;
+
 }
 
 .tab {
@@ -83,4 +81,17 @@ input[type="checkbox"]:checked + .fake-input:before {
     left: 0;
     right: 0;
     bottom: 0;
+}
+.txt-ups{
+  text-transform: uppercase !important;
+}
+
+@media screen and (max-width: 600px) {
+.wllpr {
+  display: none;
+}
+.wllpr-1 {
+height:150px !important;
+width:500px !important;
+}
 }

@@ -14,7 +14,7 @@ class CreateReservationsTable extends Migration
     public function up()
     {
         Schema::create('reservations', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('res_id');
             $table->string('res_lname');
             $table->string('res_fname');
             $table->string('res_mname')->nullable();
@@ -28,6 +28,7 @@ class CreateReservationsTable extends Migration
             $table->string('res_email');
             $table->string('res_contact');
             $table->string('res_nationality');
+            $table->string('res_birthdate');
             $table->string('res_gender');
             $table->string('res_civilstat');
             $table->string('res_employstat');
@@ -35,7 +36,7 @@ class CreateReservationsTable extends Migration
             $table->string('res_addemp')->nullable();
             $table->string('res_datemp')->nullable();
             $table->string('res_salary')->nullable();
-            
+        
             $table->string('res_daterec')->nullable();
             $table->string('res_dateaccom')->nullable();
             $table->string('res_scholarship')->nullable();
@@ -55,7 +56,6 @@ class CreateReservationsTable extends Migration
             $table->string('res_parentmailbar');
             $table->string('res_parentmailcit');
             $table->string('res_parentmailpro');
-            $table->string('res_admin')->nullable();
             $table->string('autoid')->nullable();
             $table->string('registeredDate');
             $table->string('res_lts')->nullable();
@@ -65,6 +65,7 @@ class CreateReservationsTable extends Migration
             $table->string('res_dm')->nullable();
             $table->string('res_update')->nullable();
             $table->string('res_updatedate')->nullable();
+            $table->string('qualification_id')->nullable();
             $table->timestamps();
         });
     }
