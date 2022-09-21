@@ -199,7 +199,7 @@
                         </div>
                          <div class="row text-center">
                         <div class="col-sm-12 text-white footer-gasa">
-                           <a href="ict.rtciligan.com" class="text-white">
+                           <a href="http://ict.rtciligan.com" class="text-white">
                                 <span class="type--fine-print">© <span class="update-year"></span> ICT RTC-ILIGAN</span> 
                            </a>
                         </div>

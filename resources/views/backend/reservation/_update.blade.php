@@ -214,27 +214,27 @@
           <div class="row">
               <div class="col-6">
                   <Label>Name of Employer:</Label>
-                  <input type="text" class="form-control text-center text-uppercase" value="{{$rese->res_namemp}}">
+                  <input type="text" class="form-control text-center text-uppercase" name="res_namemp" value="{{$rese->res_namemp}}">
               </div>
               <div class="col-6">
                   <Label>Date Employed:</Label>
-                  <input type="date" class="form-control text-center text-uppercase" value="{{$rese->res_datemp}}">  
+                  <input type="date" class="form-control text-center text-uppercase" name="res_datemp" value="{{$rese->res_datemp}}">  
               </div>
               <div class="col-6">
                   <Label>Address of Employer:</Label>
-                  <input type="text" class="form-control text-center text-uppercase" value="{{$rese->res_addemp}}">
+                  <input type="text" class="form-control text-center text-uppercase" name="res_addemp" value="{{$rese->res_addemp}}">
               </div>
               <div class="col-6">
                    <Label>Salary Info(Monthly Income):</Label>
-                  <input type="text" class="form-control text-center text-uppercase"  value="{{$rese->res_salary}}">
+                  <input type="text" class="form-control text-center text-uppercase"  name="res_salary" value="{{$rese->res_salary}}">
               </div>
               <div class="col-6">
                   <label>Classification of Worker:</label>
-                  <input type="text" class="form-control text-center text-uppercase"  value="{{$rese->res_classworker}}">
+                  <input type="text" class="form-control text-center text-uppercase" name="res_classworker" value="{{$rese->res_classworker}}">
               </div>
               <div class="col-6">
                   <label>Qualification:</label>
-                  <input type="text" class="form-control text-center text-uppercase" value="{{$rese->res_qualification}}">
+                  <input type="text" class="form-control text-center text-uppercase" name="res_qualification" value="{{$rese->res_qualification}}">
               </div>
              
           </div>

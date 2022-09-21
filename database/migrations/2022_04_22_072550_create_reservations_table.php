@@ -52,7 +52,7 @@ class CreateReservationsTable extends Migration
             $table->string('res_birthprov');
             $table->string('res_birthreg');
             $table->string('res_parent');
-            $table->string('res_parentcon');
+            $table->string('res_parentcon')->nullable();
             $table->string('res_parentmailbar');
             $table->string('res_parentmailcit');
             $table->string('res_parentmailpro');

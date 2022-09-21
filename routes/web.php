@@ -41,6 +41,10 @@ Route::resource('/posting', App\Http\Controllers\PostingController::class);
 Route::resource('/reservation', App\Http\Controllers\ReservationController::class);
 Route::post('/addReservation', [App\Http\Controllers\ReservationController::class,'addReservation'])->name('addReservation');
 
+Route::get('/remarks/{res_id}', [App\Http\Controllers\ReservationController::class,'remarks'])->name('remarks');
+Route::post('/addremarks/{res_id}', [App\Http\Controllers\ReservationController::class,'addremarks'])->name('addremarks');
+
+
 Route::get('/reservations', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
 Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');
 Route::get('/mission-vision', [App\Http\Controllers\HomeController::class,'missionvision'])->name('missionvision');

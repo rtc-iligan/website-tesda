@@ -49,8 +49,14 @@
                         <td>{{ $res->res_qualification }}</td>
                         <td>{{ $res->registeredDate }}</td>
                         <td class="text-center">
-                            @if($res->res_update == null)
-                                <button class="btn btn-sm btn-light">No Remarks</button>
+                            @if($res->res_update=='Confirm')<span class="badge badge-success">Confirm</span>
+                            @elseif (is_null($res->res_update))<span class="badge badge-light">No Remarks</span>
+                            @elseif($res->res_update=='Undecided') <span class="badge badge-primary">Undecided</span>
+                            @elseif($res->res_update=='Unattended') <span class="badge badge-secondary">Unattended</span>
+                            @elseif($res->res_update=='Not Qualified') <span class="badge badge-info">Not Qualified</span>
+                            @elseif($res->res_update=='No-Response') <span class="badge badge-warning">No-Response'</span>
+                            @elseif($res->res_update=='Not-Interested')  <span class="badge badge-dark">Not-Interested</span>
+                            @elseif($res->res_update=='Block') <span class="badge badge-danger">Block</span>
                             @endif
                         </td>
                         <td>
@@ -61,7 +67,7 @@
 
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
                                 <li><button class="dropdown-item btn-update" data-url="{{ route('reservation.edit',$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
-                                <li><button class="dropdown-item btn-update" data-url=""><i class="fa-solid fa-pen-to-square"></i> Remarks</button></li>
+                                <li><button class="dropdown-item btn-remarks" data-url="{{ URL::to('/remarks/'.$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Remarks</button></li>
                               </ul>
                             </div> 
                         </td>
@@ -89,6 +95,19 @@
                 success:function(data){
                     div.append(data);
                     $('#update_reservation').modal('show');
+                }
+            });
+            //alert('asdsadasdas');
+    });
+    $('.btn-remarks').click(function(){
+            var div = $('.append-reservation');
+            div.empty();
+            var url = $(this).data('url');
+            $.ajax({
+                url: url,
+                success:function(data){
+                    div.append(data);
+                    $('#remarks').modal('show');
                 }
             });
             //alert('asdsadasdas');
