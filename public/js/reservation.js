@@ -225,7 +225,6 @@ $('#addressChecked').on('click', function(){
             },
             
 			fetch_list: function (filter) {
-
 				this.settings.filter = filter;
 
 				$.ajax({
@@ -288,16 +287,6 @@ $('#addressChecked').on('click', function(){
 } )( jQuery, window, document );      
 
 
-window.onload = function () {
-  var ddlYears = document.getElementById("ddlYears");
-  var currentYear = (new Date()).getFullYear();
-  for (var i = 1950; i <= currentYear; i++) {
-      var option = document.createElement("OPTION");
-      option.innerHTML = i;
-      option.value = i;
-      ddlYears.appendChild(option);
-  }
-};
 
 function onlyNumber(evt) {
   var charCode = (evt.which) ? evt.which : event.keyCode
@@ -306,4 +295,25 @@ function onlyNumber(evt) {
       }
   return true;
 }
+
+
+$("#region").on("change",function(){
+var selValue = $("#region :selected").text();
+$("#textFieldTextJQ").val(selValue);
+});
+
+$("#province").on("change",function(){
+var selValue = $("#province :selected").text();
+$("#textFieldTextJQ1").val(selValue);
+}); 
+$("#city").on("change",function(){
+var selValue = $("#city :selected").text();
+$("#textFieldTextJQ2").val(selValue);
+});
+
+$("#barangay").on("change",function(){
+var selValue = $("#barangay :selected").text();
+$("#textFieldTextJQ3").val(selValue);
+}); 
+
 

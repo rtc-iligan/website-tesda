@@ -34,7 +34,7 @@
                                 <table class="table table-xxs table-bordered" id="table-import">
                                     <thead>
                                         <tr>
-                                            @foreach($columns as $1`i => $col)
+                                            @foreach($columns as $i => $col)
                                             <th>{{ $col }}</th>
                                             @endforeach
                                         </tr>
@@ -88,7 +88,7 @@
                     alert("This browser does not support HTML5.");
                 }
             } else {
-                alert("Please upload a valid CSV file.");
+                alert("Please upload a valid .CSV or .txt file.");
             }
         });
     });

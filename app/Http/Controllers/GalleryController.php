@@ -22,7 +22,6 @@ class GalleryController extends Controller
         $validatedData = $request->validate([
             'subject' => 'required',
             'date' => 'required',
-            
         ]);
 
         $gallery=new Gallery();

@@ -1,0 +1,97 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header h4">
+                    <i class="fa-solid fa-align-justify"></i>{{ __(' Reservation Management') }}
+
+                    <button class="btn btn-sm btn-primary float-right"><i class="fa-solid fa-file-export"></i> Export</button>
+                
+                </div>
+                <div class="card-header">
+                    <div class="row">
+                        
+                        <div class="col-md-3">
+                            <input type="text" class="form-control text-center" name="res_lname" placeholder="Last Name">
+                        </div>
+                        <div class="col-md-4">
+                             <select class="form-select text-center">
+                                <option value=" " selected disabled>Select Qualification</option>
+                             </select>
+                        </div>
+                        <div class="col-md-5 text-right">
+                            <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-hover">
+                      <tr >
+                        <th width="2%">#</th>
+                        <th width="12%">Name</th>
+                        <th width="5%">Contact</th>
+                        <th width="18%">Qualification</th>
+                        <th width="5%">Date Reserved</th>
+                        <th width="5%" class="text-center">Remarks</th>
+                        <th width="3%">Action</th>
+                      </tr>
+                       @foreach($reservation as $i => $res)
+                      <tr >
+                        <td>{{ ++$i}}</td>
+                     
+                        <td>{{ strtoupper($res->res_lname) }}, {{strtoupper($res->res_fname)}} {{strtoupper(substr($res->res_mname,0,1))}}.</td>
+                        <td>{{ $res->res_contact }}</td>
+                        <td>{{ $res->res_qualification }}</td>
+                        <td>{{ $res->registeredDate }}</td>
+                        <td class="text-center">
+                            @if($res->res_update == null)
+                                <button class="btn btn-sm btn-light">No Remarks</button>
+                            @endif
+                        </td>
+                        <td>
+                           <div class="dropdown">
+                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-cog"></i>
+                              </a>
+
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
+                                <li><button class="dropdown-item btn-update" data-url="{{ route('reservation.edit',$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
+                                <li><button class="dropdown-item btn-update" data-url=""><i class="fa-solid fa-pen-to-square"></i> Remarks</button></li>
+                              </ul>
+                            </div> 
+                        </td>
+                      </tr>
+                      @endforeach
+                    </table>
+                </div>
+                <div style="margin: 0 auto !important;">
+                    {{ $reservation->links() }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="append-reservation"></div>
+@endsection
+@section('scripts')
+<script type="text/javascript">
+   $('.btn-update').click(function(){
+            var div = $('.append-reservation');
+            div.empty();
+            var url = $(this).data('url');
+            $.ajax({
+                url: url,
+                success:function(data){
+                    div.append(data);
+                    $('#update_reservation').modal('show');
+                }
+            });
+            //alert('asdsadasdas');
+    });
+</script>
+@endsection

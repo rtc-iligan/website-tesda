@@ -28,7 +28,7 @@ class CreateReservationsTable extends Migration
             $table->string('res_email');
             $table->string('res_contact');
             $table->string('res_nationality');
-            $table->string('res_birthdate');
+            $table->string('res_birthdate')->nullable();
             $table->string('res_gender');
             $table->string('res_civilstat');
             $table->string('res_employstat');

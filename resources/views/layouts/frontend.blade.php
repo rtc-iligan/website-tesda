@@ -20,7 +20,7 @@
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js">
+        <link rel="stylesheet" type="text/css" href="">
     </head>
    
     <body data-smooth-scroll-offset="77" oncontextmenu="return false">
@@ -120,7 +120,7 @@
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-3">
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="{{URL::to('/reservation')}}">Online Reservation</a> </li>
+                                                                <li> <a href="{{URL::to('/reservations')}}">Online Reservation</a> </li>
                                                             </ul>
                                                             <!-- <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('/contact-us')}}">Contact Us</a> </li>
@@ -218,9 +218,72 @@
         <script src="{{asset('js/reservation.js')}}"></script>
         <script src="{{asset('js/frontend.js')}}"></script>
         <script src="{{asset('stack/js/isotope.min.js')}}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+      var success = "";
+      if (success) {
+          swal ({
+              title: "Successfully submitted your reservation!",
+              text: success,
+              icon: 'success',
+              button: 'OK',
+          });
+      }
+
+      var deleted = "";
+      if (deleted) {
+          swal ({
+              text: deleted,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var error = "";
+      if (error) {
+          swal ({
+              text: error,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var danger = "";
+      if (danger) {
+          swal ({
+              text: danger,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var warning = "";
+      if (warning) {
+          swal ({
+              text: warning,
+              icon: 'info',
+              button: 'OK',
+          });
+      }
+
+      var errors = $('.alert-errors').length;
+      var html_errors = $('#html_errors').val();
+      if(errors){
+          swal ({
+              text: html_errors,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      $('.logout-link').on('click', function(e) {
+        $(this).closest('form').submit();
+      })
+
+        </script>
     </body>
 </html>

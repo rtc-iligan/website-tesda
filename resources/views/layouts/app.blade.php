@@ -65,7 +65,7 @@
                                     <a class="nav-link " href="{{ route('qualification.index') }}">{{ __('Qualification') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="">{{ __('Reservation') }}</a>
+                                    <a class="nav-link "  href="{{ route('reservation.index') }}">{{ __('Reservation') }}</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link " href="{{ route('announcement.index') }}">{{ __('Announcement') }}</a>

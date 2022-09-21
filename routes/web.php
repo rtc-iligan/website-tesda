@@ -38,9 +38,10 @@ Route::resource('/announcement', App\Http\Controllers\AnnouncementController::cl
 Route::resource('/accredited', App\Http\Controllers\AccreditedController::class);
 Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
 Route::resource('/posting', App\Http\Controllers\PostingController::class);
+Route::resource('/reservation', App\Http\Controllers\ReservationController::class);
+Route::post('/addReservation', [App\Http\Controllers\ReservationController::class,'addReservation'])->name('addReservation');
 
-
-Route::get('/reservation', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
+Route::get('/reservations', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
 Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');
 Route::get('/mission-vision', [App\Http\Controllers\HomeController::class,'missionvision'])->name('missionvision');
 Route::get('/organizational-structure', [App\Http\Controllers\HomeController::class,'organizationalstructure'])->name('organizationalstructure');

@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             <div class="col-md-4 animated pulse infinite"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
-                <a href="{{URL::to('/reservation')}}">
+                <a href="{{URL::to('/reservations')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white" > <i class="icon icon-Clock-Back color--primary"></i>
                         <div class="feature__body">
                             <p> <b>Online Reservation</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>

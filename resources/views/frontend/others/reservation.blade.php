@@ -21,7 +21,7 @@
                      </div>
                      <div class="col-md-8">
                         <img src="{{asset('img/ABOTLAHAT.png')}}" alt="ABOTLAHAT" class="wllpr"style="width:200px;height:50px;position: absolute;left:0px;bottom: -20px;">
-                        <p style="max-width: 500px; margin-bottom: 40px;" class="mt-4 mx-auto text-center text-center text-muted">Welcome visitor ! Let’s create your full reservation to get you started. <br>Please fill-in all necessary information accurately to complete your registration</p>
+                        <p style="max-width: 500px; margin-bottom: 40px;" class="mt-4 mx-auto text-center text-center text-muted">Welcome Visitor ! Let’s create your full reservation to get you started. <br>Please fill-in all necessary information accurately to complete your registration</p>
                          <p class="text-center m-0 text-uppercase text-primary">STEP 1 / 6</p>
                          <div style="text-align:center;">
                                 <span class="step"></span>
@@ -31,7 +31,8 @@
                                 <span class="step"></span>
                                 <span class="step"></span>
                          </div>
-                         <form id="regForm" action="" method="post" autocomplete="off" class="was-validated" novalidate>
+                         <form id="regForm" action="{{URL::to('/addReservation')}}" method="post" autocomplete="off" class="was-validated" novalidate>
+                            @csrf
                               <div class="tab" id="tab1">
                                 <h5 class="rv-pi text-center font-weight-bold text-primary">PERSONAL INFORMATION</h5>
                                  <div class="form-row ml-3">
@@ -88,22 +89,26 @@
                                 <div class="form-row ml-3">
                                     <div class="form-group col-md-4">
                                         <label for="sasa">Region</label>
-                                        <select type="text" id="region" class="custom-select"name="res_region" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="region" class="custom-select" required style="text-transform:uppercase;text-align:center;"></select>
                                         <div class="invalid-feedback"></div>
+                                        <input type="hidden" name="res_region" id="textFieldTextJQ">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="last_name">Province</label>
-                                        <select type="text" id="province" class="custom-select"name="res_province" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="province" class="custom-select" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <input type="hidden" name="res_province" id="textFieldTextJQ1">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="first_name">City/Municipality</label>
-                                        <select type="text" id="city" class="custom-select" name="res_city" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="city" class="custom-select"required style="text-transform:uppercase;text-align:center;"></select>
+                                        <input type="hidden" name="res_city" id="textFieldTextJQ2">
                                     </div>
                                 </div> 
                                 <div class="form-row ml-3">
                                     <div class="form-group col-md-4">
                                         <label for="last_name">Barangay</label>
-                                        <select type="text" id="barangay" class="custom-select"name="res_barangay" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="barangay" class="custom-select" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <input type="hidden" name="res_barangay"id="textFieldTextJQ3">
                                     </div>
                                     <div class="form-group col-md-3">
                                         <label for="last_name">Purok/Block/Street</label>
@@ -489,7 +494,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="amily Members of AFP PNP/Killed-in-Action">
+                                                  <input type="checkbox" id="" name="res_lts" value="Family Members of AFP PNP/Killed-in-Action">
                                                   <label></label>
                                               </div> <span>Family Members of AFP&amp;PNP/Killed-in-Action</span>
                                         </div>
@@ -699,6 +704,7 @@
                                             <label>National Certificate Acquired (ex. Driving NC II) for Trainers Methodology Level I Applicant Only</label>
                                             <input type="text" class="form-control" name="" id="nc">
                                         </div>
+                                        <input type="hidden" value="<?php echo date("d-m-Y") ?>" name="registeredDate">
                                     </div>
                               </div>
                                <div class="tab" id="tab6">

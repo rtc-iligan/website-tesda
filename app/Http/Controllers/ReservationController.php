@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Redirect;
+use DB;
+use Session;
 class ReservationController extends Controller
 {
     /**
@@ -14,7 +16,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $reservation = Reservation::paginate(5);
+        return view('backend.reservation.index',compact('reservation'));
     }
 
     /**
@@ -33,55 +36,52 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function addReservation(Request $request)
     {
-        $validated = $request->validate([
-            'res_fname' => 'required', 
-            'res_extension' => 'required', 
-            'res_mname' => 'required', 
-            'res_lname' => 'required',  
-            'res_barangay' => 'required', 
-            'res_city' => 'required', 
-            'res_street' => 'required', 
-            'res_province' => 'required',  
-            'res_region' => 'required', 
-            'res_district' => 'required',  
-            'res_email' => 'required', 
-            'res_contact' => 'required', 
-            'res_nationality' => 'required', 
-            'res_gender' => 'required',  
-            'res_civilstat' => 'required',  
-            'res_employstat' => 'required',  
-            'res_namemp' => '', 
-            'res_addemp' => '', 
-            'res_datemp' => '',
-            'res_salary' => '', 
-            'res_classworker' => '',  
-            'res_qualification' => 'required', 
-            'res_educational' => 'required', 
-            'res_nc' => '',  
-            'res_birthmonth' => 'required', 
-            'res_birthday' => 'required', 
-            'res_birthyear' => 'required', 
-            'res_age' => 'required', 
-            'res_birthcity' => 'required', 
-            'res_birthprov' => 'required', 
-            'res_birthreg' => 'required', 
-            'res_parent' => 'required', 
-            'res_lts' => 'required',
-            'res_ltsothers' => '', 
-            'res_parentmailbar' => 'required', 
-            'res_parentmailcit' => 'required', 
-            'res_parentmailpro' => 'required', 
-            'registeredDate' => 'required', 
-            'res_scholarship' => '',
-            'res_parentcon' => 'required', 
-        ]);
-        $data = new Reservation;
-        $data->fill($validated);
-        $data->save();
-
-        return redirect()->back()->with('success','Successfully Posted Qualification!');
+        $data = array();
+        $data['res_fname'] = $request->res_fname;
+        $data['res_extension'] = $request->res_extension;
+        $data['res_mname'] = $request->res_mname;
+        $data['res_lname'] = $request->res_lname;
+        $data['res_barangay'] = $request->res_barangay;
+        $data['res_city'] = $request->res_city;
+        $data['res_street'] = $request->res_street;
+        $data['res_province'] = $request->res_province;
+        $data['res_region'] = $request->res_region;
+        $data['res_district'] = $request->res_district;
+        $data['res_email'] = $request->res_email;
+        $data['res_contact'] = $request->res_contact;
+        $data['res_nationality'] = 'Filipino';
+        $data['res_gender'] = $request->res_gender;
+        $data['res_civilstat'] = $request->res_civilstat;
+        $data['res_employstat'] = $request->res_employstat;
+        $data['res_namemp'] = $request->res_namemp;
+        $data['res_addemp'] = $request->res_addemp;
+        $data['res_datemp'] = $request->res_datemp;
+        $data['res_salary'] = $request->res_salary;
+        $data['res_classworker'] = $request->res_classworker;
+        $data['res_qualification'] = $request->res_qualification;
+        $data['res_educational'] = $request->res_educational;
+        $data['res_nc'] = $request->res_nc;
+        $data['res_birthmonth'] = $request->res_birthmonth;
+        $data['res_birthday'] = $request->res_birthday;
+        $data['res_birthyear'] = $request->res_birthyear;
+        $data['res_age'] = $request->res_age;
+        $data['res_birthcity'] = $request->res_birthcity;
+        $data['res_birthprov'] = $request->res_birthprov;
+        $data['res_birthreg'] = $request->res_birthreg;
+        $data['res_parent'] = $request->res_parent;
+        $data['res_lts'] = $request->res_lts;
+        $data['res_ltsothers'] = $request->res_ltsothers;
+        $data['res_parentmailbar'] = $request->res_parentmailbar;
+        $data['res_parentmailcit'] = $request->res_parentmailcit;
+        $data['res_parentmailpro'] = $request->res_parentmailpro;
+        $data['registeredDate'] = $request->registeredDate;
+        $data['res_scholarship'] = $request->res_scholarship;
+        $data['res_parentcon'] = $request->res_parentcon;
+        DB::table('reservations')->insert($data);
+        Session::put('exception', 'Well Done!');
+        return Redirect::to('/reservations')->with('success','\nPlease note that all application are subject for validation and in limited slots only. Thank you for visiting our webpage and GOD bless.');
     }
 
     /**
@@ -101,9 +101,10 @@ class ReservationController extends Controller
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reservation $reservation)
-    {
-        //
+    public function edit($res_id)
+    {   
+        $rese = Reservation::find($res_id);
+        return view('backend.reservation._update',compact('rese'));
     }
 
     /**
@@ -113,9 +114,9 @@ class ReservationController extends Controller
      * @param  \App\Models\Reservation  $reservation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reservation $reservation)
+    public function update(Request $request)
     {
-        //
+       
     }
 
     /**
