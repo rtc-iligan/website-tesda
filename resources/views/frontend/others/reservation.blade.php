@@ -446,7 +446,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="4Ps Beneficiary">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="4Ps Beneficiary">
                                                   <label></label>
                                               </div> <span>4Ps Beneficiary</span>
                                         </div>
@@ -454,7 +454,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Overseas Filipino Workers(OFW)Dependents">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Overseas Filipino Workers(OFW)Dependents">
                                                   <label></label>
                                               </div> <span>Overseas Filipino Workers(OFW)Dependents</span>
                                         </div>
@@ -465,7 +465,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Balik Probinsya">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Balik Probinsya">
                                                   <label></label>
                                               </div> <span>Balik Probinsya</span>
                                         </div>
@@ -473,7 +473,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Drug Dependents Surrenderees/Surrenderers">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Drug Dependents Surrenderees/Surrenderers">
                                                   <label></label>
                                               </div> <span>Drug Dependents Surrenderees/Surrenderers</span>
                                         </div>
@@ -485,7 +485,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Displaced Workers">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Displaced Workers">
                                                   <label></label>
                                               </div> <span>Displaced Workers</span>
                                         </div>
@@ -494,7 +494,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Family Members of AFP PNP/Killed-in-Action">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Family Members of AFP PNP/Killed-in-Action">
                                                   <label></label>
                                               </div> <span>Family Members of AFP&amp;PNP/Killed-in-Action</span>
                                         </div>
@@ -504,7 +504,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="RCEF-RESP">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="RCEF-RESP">
                                                   <label></label>
                                               </div> <span>RCEF-RESP</span>
                                         </div>
@@ -513,7 +513,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Family Members of AFP PNP Wounded in Action">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Family Members of AFP PNP Wounded in Action">
                                                   <label></label>
                                               </div> <span>Family Members of AFP &amp; PNP Wounded in Action</span>
                                         </div>
@@ -523,7 +523,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Farmers and Fisherman">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Farmers and Fisherman">
                                                   <label></label>
                                               </div> <span>Farmers and Fisherman</span>
                                         </div>
@@ -532,7 +532,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Indigenous People Cultural Communties">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Indigenous People Cultural Communties">
                                                   <label></label>
                                               </div> <span>Indigenous People &amp; Cultural Communties</span>
                                         </div>
@@ -542,7 +542,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Industry Workers">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Industry Workers">
                                                   <label></label>
                                               </div> <span>Industry Workers</span>
                                         </div>
@@ -551,7 +551,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Rebel Returness/ Decommissioned Combatants">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Rebel Returness/ Decommissioned Combatants">
                                                   <label></label>
                                               </div> <span>Rebel Returness/ Decommissioned Combatants</span>
                                         </div>
@@ -562,7 +562,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="TESDA Alumni">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="TESDA Alumni">
                                                   <label></label>
                                               </div> <span>TESDA Alumni</span>
                                         </div>
@@ -570,7 +570,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Wounded-in-Action AFP/PNP Personnel">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Wounded-in-Action AFP/PNP Personnel">
                                                   <label></label>
                                               </div> <span>Wounded-in-Action AFP&amp;PNP Personnel</span>
                                         </div>
@@ -580,7 +580,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="TVET Trainers">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="TVET Trainers">
                                                   <label></label>
                                               </div> <span>TVET Trainers</span>
                                         </div>
@@ -588,7 +588,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="TESDA Alumni">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="TESDA Alumni">
                                                   <label></label>
                                               </div> <span>TESDA Alumni</span>
                                         </div>
@@ -599,7 +599,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Inmates and Detainees">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Inmates and Detainees">
                                                   <label></label>
                                               </div> <span>Inmates and Detainees</span>
                                         </div>
@@ -607,7 +607,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Victim of Natural Disasters and Calamities">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Victim of Natural Disasters and Calamities">
                                                   <label></label>
                                               </div> <span>Victim of Natural Disasters and Calamities</span>
                                         </div>
@@ -617,7 +617,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Out-of-School-Youth">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Out-of-School-Youth">
                                                   <label></label>
                                               </div> <span>Out-of-School-Youth</span>
                                         </div>
@@ -625,7 +625,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                               <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Student">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Student">
                                                   <label></label>
                                               </div> <span>Student</span>
                                         </div>
@@ -635,7 +635,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                             <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Agrarian Reform Beneficiary">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Agrarian Reform Beneficiary">
                                                   <label></label>
                                               </div> <span>Agrarian Reform Beneficiary</span>
                                         </div>
@@ -643,7 +643,7 @@
                                     <div class="col-md-8 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="res_lts" value="Returning/Repatriated Overseas Filipino Workers(OFW)">
+                                                  <input type="checkbox" id="" name="res_lts[]" value="Returning/Repatriated Overseas Filipino Workers(OFW)">
                                                   <label></label>
                                               </div> <span>Returning/Repatriated Overseas Filipino Workers(OFW)</span>
                                         </div>
@@ -653,7 +653,7 @@
                                     <div class="col-md-4 col-xs-12 col-sm-6">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="others" name="res_lts" value="Others">
+                                                  <input type="checkbox" id="others" name="res_lts[]" value="Others">
                                                   <label></label>
                                               </div> <span>Others</span>
                                         </div>

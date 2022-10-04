@@ -152,47 +152,47 @@
           </div><hr>
           <b>Learner/Trainee/Student(Clients Classification):</b>
           <div class="row">
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== '4Ps Beneficiary' ? 'checked' : '');?>> 4Ps Beneficiary</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Agrarian Reform Beneficiary' ? 'checked' : '');?>> Agrarian Reform Beneficiary</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Balik Probinsya' ? 'checked' : '');?>> Balik Probinsya</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Displaced Workers' ? 'checked' : '');?>> Displaced Workers</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Drug Dependents Surrenderees/Surrenderers' ? 'checked' : '');?>> Drug Surrenderees</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Family Members of AFP PNP/Killed-in-Action' ? 'checked' : '');?>> AFP&PNP/Killed-in-Action</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Family Members of AFP PNP Wounded in Action' ? 'checked' : '');?>>  AFP & PNP Wounded in Action</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Farmers and Fisherman' ? 'checked' : '');?>> Farmers and Fisherman</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Indigenous People Cultural Communtie' ? 'checked' : '');?>> Indigenous People</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Industry Worker' ? 'checked' : '');?>> Industry Workers</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Inmates and Detainees' ? 'checked' : '');?>> Inmates and Detainees</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'MILF Beneficiary' ? 'checked' : '');?>> MILF Beneficiary</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Out-of-School-Youth' ? 'checked' : '');?>> Out-of-School-Youth</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Overseas Filipino Workers(OFW)Dependents' ? 'checked' : '');?>> OFW Dependents</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'RCEF-RESP' ? 'checked' : '');?>> RCEF-RESP</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Rebel Returness/ Decommissioned Combatants' ? 'checked' : '');?>> Rebel/Decommissioned</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Returning/Repatriated Overseas Filipino Workers(OFW)' ? 'checked' : '');?>> Returning/Repatriated OFW</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Student' ? 'checked' : '');?>> Student</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'TESDA Alumni' ? 'checked' : '');?>> TESDA Alumni</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'TVET Trainers' ? 'checked' : '');?>> TVET Trainers</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Uniformed Personnel' ? 'checked' : '');?>> Uniformed Personnel</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Victim of Natural Disasters and Calamities' ? 'checked' : '');?>> Victim of Natural Disasters and Calamities</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Wounded-in-Action AFP/PNP Personnel' ? 'checked' : '');?>> Wounded-in-Action AFP&PNP Personnel</div>
-              <div class="col-4"><input type="checkbox" name="res_lts" <?php echo ($rese['res_lts']== 'Others' ? 'checked' : '');?>> Others</div> 
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== '4Ps Beneficiary' ? 'checked' : '');?>> 4Ps Beneficiary</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Agrarian Reform Beneficiary' ? 'checked' : '');?>> Agrarian Reform Beneficiary</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Balik Probinsya' ? 'checked' : '');?>> Balik Probinsya</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Displaced Workers' ? 'checked' : '');?>> Displaced Workers</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Drug Dependents Surrenderees/Surrenderers' ? 'checked' : '');?>> Drug Surrenderees</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Family Members of AFP PNP/Killed-in-Action' ? 'checked' : '');?>> AFP&PNP/Killed-in-Action</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Family Members of AFP PNP Wounded in Action' ? 'checked' : '');?>>  AFP & PNP Wounded in Action</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Farmers and Fisherman' ? 'checked' : '');?>> Farmers and Fisherman</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Indigenous People Cultural Communtie' ? 'checked' : '');?>> Indigenous People</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Industry Worker' ? 'checked' : '');?>> Industry Workers</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Inmates and Detainees' ? 'checked' : '');?>> Inmates and Detainees</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'MILF Beneficiary' ? 'checked' : '');?>> MILF Beneficiary</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Out-of-School-Youth' ? 'checked' : '');?>> Out-of-School-Youth</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Overseas Filipino Workers(OFW)Dependents' ? 'checked' : '');?>> OFW Dependents</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'RCEF-RESP' ? 'checked' : '');?>> RCEF-RESP</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Rebel Returness/ Decommissioned Combatants' ? 'checked' : '');?>> Rebel/Decommissioned</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Returning/Repatriated Overseas Filipino Workers(OFW)' ? 'checked' : '');?>> Returning/Repatriated OFW</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Student' ? 'checked' : '');?>> Student</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'TESDA Alumni' ? 'checked' : '');?>> TESDA Alumni</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'TVET Trainers' ? 'checked' : '');?>> TVET Trainers</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Uniformed Personnel' ? 'checked' : '');?>> Uniformed Personnel</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Victim of Natural Disasters and Calamities' ? 'checked' : '');?>> Victim of Natural Disasters and Calamities</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Wounded-in-Action AFP/PNP Personnel' ? 'checked' : '');?>> Wounded-in-Action AFP&PNP Personnel</div>
+              <div class="col-4"><input type="checkbox" name="res_lts[]" <?php echo ($rese['res_lts']== 'Others' ? 'checked' : '');?>> Others</div> 
           </div><hr>
           <b>Type of Disability(for Persons with Disability Only):</b>
           <div class="row">
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Mental/Intellectual' ? 'checked' : '');?> value="Mental/Intellectual"> Mental/Intellectual </div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Visual Disability' ? 'checked' : '');?>  value="Visual Disability"> Visual Disability</div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Orthopedic Disability' ? 'checked' : '');?>  value="Orthopedic Disability"> Orthopedic Disability</div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Hearing Disability' ? 'checked' : '');?>  value="Hearing Disability"> Hearing Disability </div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Speech Impairment' ? 'checked' : '');?>  value="Speech Impairment"> Speech Impairment</div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Multiple Disabilities, specify' ? 'checked' : '');?>  value="Multiple Disabilities, specify"> Multiple Disabilities, specify</div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Psychosocial Disability' ? 'checked' : '');?>  value="Psychosocial Disability"> Psychosocial Disability</div>
-              <div class="col-4"><input type="checkbox" name="res_td" <?php echo ($rese['res_td']== 'Disability Due to Chronic Illness' ? 'checked' : '');?>  value="Disability Due to Chronic Illness"> Disability Due to Chronic Illness</div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Mental/Intellectual' ? 'checked' : '');?> value="Mental/Intellectual"> Mental/Intellectual </div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Visual Disability' ? 'checked' : '');?>  value="Visual Disability"> Visual Disability</div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Orthopedic Disability' ? 'checked' : '');?>  value="Orthopedic Disability"> Orthopedic Disability</div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Hearing Disability' ? 'checked' : '');?>  value="Hearing Disability"> Hearing Disability </div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Speech Impairment' ? 'checked' : '');?>  value="Speech Impairment"> Speech Impairment</div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Multiple Disabilities, specify' ? 'checked' : '');?>  value="Multiple Disabilities, specify"> Multiple Disabilities, specify</div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Psychosocial Disability' ? 'checked' : '');?>  value="Psychosocial Disability"> Psychosocial Disability</div>
+              <div class="col-4"><input type="checkbox" name="res_td[]" <?php echo ($rese['res_td']== 'Disability Due to Chronic Illness' ? 'checked' : '');?>  value="Disability Due to Chronic Illness"> Disability Due to Chronic Illness</div>
           </div><hr>
           <b>Causes of Disability(for Persons with Disability Only)</b>
           <div class="row">
-              <div class="col-4"><input type="checkbox" name="res_cd" <?php echo ($rese['res_cd']== 'Congenital/Inbornl' ? 'checked' : '');?> value="Congenital/Inbornl"> Congenital/Inbornl </div>
-              <div class="col-4"><input type="checkbox" name="res_cd" <?php echo ($rese['res_cd']== 'Illness' ? 'checked' : '');?> value="Illness"> Illness</div>
-              <div class="col-4"><input type="checkbox" name="res_cd" <?php echo ($rese['res_cd']== 'Injury' ? 'checked' : '');?> value="Injury"> Injury</div>
+              <div class="col-4"><input type="checkbox" name="res_cd[]" <?php $cd = explode(",", $rese->res_cd);if(in_array("Congenital/Inbornl", $cd)){echo "checked";}?> value="Congenital/Inbornl"> Congenital/Inbornl </div>
+              <div class="col-4"><input type="checkbox" name="res_cd[]" <?php $cd = explode(",", $rese->res_cd);if(in_array("Illness", $cd)){echo "checked";}?> value="Illness"> Illness</div>
+              <div class="col-4"><input type="checkbox" name="res_cd[]" <?php $cd = explode(",", $rese->res_cd);if(in_array("Injury", $cd)){echo "checked";}?> value="Injury"> Injury</div>
           </div><hr>
           <b>If Scholar, What Type of Scholarship Package:</b>
           <div class="row">
@@ -205,7 +205,7 @@
           <div class="row">
               <div class="col-3"></div>
               <div class="col-6">
-                <input type="text" class="form-control">
+                <input type="text" class="form-control text-center" name="res_scholarship" value="{{$rese->res_scholarship}}">
               </div>
               <div class="col-3"></div>
           </div>

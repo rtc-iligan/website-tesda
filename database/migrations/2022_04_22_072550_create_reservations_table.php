@@ -36,14 +36,13 @@ class CreateReservationsTable extends Migration
             $table->string('res_addemp')->nullable();
             $table->string('res_datemp')->nullable();
             $table->string('res_salary')->nullable();
-        
+            $table->string('res_nc')->nullable();
             $table->string('res_daterec')->nullable();
             $table->string('res_dateaccom')->nullable();
             $table->string('res_scholarship')->nullable();
             $table->string('res_classworker')->nullable();
             $table->string('res_qualification');
             $table->string('res_educational')->nullable();
-            $table->string('res_nc')->nullable();
             $table->string('res_birthmonth');
             $table->string('res_birthday');
             $table->string('res_birthyear');

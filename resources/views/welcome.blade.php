@@ -43,7 +43,7 @@
 <section>
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-md-6 bc-design "><br>
+            <div class="col-md-6"><br>
                 <h5 class="text-center" ><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h5>
                 <p class="lead" style="font-size:15px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>

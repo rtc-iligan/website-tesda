@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use DB;
 use Session;
+use PDF;
 class ReservationController extends Controller
 {
     /**
@@ -18,6 +19,7 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::paginate(5);
         return view('backend.reservation.index',compact('reservation'));
+      
     }
 
     /**
@@ -71,7 +73,7 @@ class ReservationController extends Controller
         $data['res_birthprov'] = $request->res_birthprov;
         $data['res_birthreg'] = $request->res_birthreg;
         $data['res_parent'] = $request->res_parent;
-        $data['res_lts'] = $request->res_lts;
+        $data['res_lts'] =implode(',',  $request->res_lts);
         $data['res_ltsothers'] = $request->res_ltsothers;
         $data['res_parentmailbar'] = $request->res_parentmailbar;
         $data['res_parentmailcit'] = $request->res_parentmailcit;
@@ -152,9 +154,10 @@ class ReservationController extends Controller
         $data['res_extension'] = $request->res_extension;
         $data['res_dateaccom'] = $request->res_dateaccom;
         $data['res_daterec'] = $request->res_daterec;
-        $data['res_td'] = $request->res_td;
-        $data['res_dm'] = $request->res_dm;
-        $data['res_cd'] = $request->res_cd;
+        $data['res_lts'] = implode(',', $request->res_lts);
+        $data['res_td'] = implode(',', $request->res_td);
+        $data['res_dm'] = implode(',', $request->res_dm);
+        $data['res_cd'] = implode(',', $request->res_cd);
         $data['res_parentcon'] = $request->res_parentcon;
         $data['res_scholarship'] = $request->res_scholarship;
         
@@ -186,5 +189,13 @@ class ReservationController extends Controller
     public function destroy(Reservation $reservation)
     {
         //
+    }
+    public function LearnersProfile(Request $request,$res_id)
+    {
+        $reservation_all=DB::table('reservations')
+                    ->where('res_id', $res_id)
+                    ->first();
+        $pdf=PDF::loadView('pdf.LearnersProfile',compact('reservation_all'));
+         return $pdf->stream($res_id.'.pdf');
     }
 }

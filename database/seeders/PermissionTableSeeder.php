@@ -23,14 +23,14 @@ class PermissionTableSeeder extends Seeder
         Permission::create(['name' => 'export_users']);
         Permission::create(['name' => 'import_users']);
 
-        $role1 = Role::create(['name' => 'Super Admin']);
+        $role1 = Role::create(['name' => 'Admin']);
         $role1->givePermissionTo('create_users');
         $role1->givePermissionTo('update_users');
         $role1->givePermissionTo('view_users');
         $role1->givePermissionTo('delete_users');
         $role1->givePermissionTo('view_roles');
 
-        $role2 = Role::create(['name' => 'User']);
+        $role2 = Role::create(['name' => 'user']);
         $role2->givePermissionTo('view_users');
         $role2->givePermissionTo('view_roles');
         

@@ -50,7 +50,7 @@
                         <td>{{ $res->registeredDate }}</td>
                         <td class="text-center">
                             @if($res->res_update=='Confirm')<span class="badge badge-success">Confirm</span>
-                            @elseif (is_null($res->res_update))<span class="badge badge-light">No Remarks</span>
+                            @elseif (is_null($res->res_update))<span class="badge badge-light text-dark">No Remarks</span>
                             @elseif($res->res_update=='Undecided') <span class="badge badge-primary">Undecided</span>
                             @elseif($res->res_update=='Unattended') <span class="badge badge-secondary">Unattended</span>
                             @elseif($res->res_update=='Not Qualified') <span class="badge badge-info">Not Qualified</span>
@@ -68,6 +68,7 @@
                               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 80px;">
                                 <li><button class="dropdown-item btn-update" data-url="{{ route('reservation.edit',$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
                                 <li><button class="dropdown-item btn-remarks" data-url="{{ URL::to('/remarks/'.$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Remarks</button></li>
+                                <li><a class="dropdown-item" href="{{ URL::to('/LearnersProfile/'.$res->res_id) }}" target="_blank"><i class="fa-solid fa-print"></i> Learner's Profile</a></li>
                               </ul>
                             </div> 
                         </td>

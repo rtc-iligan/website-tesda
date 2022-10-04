@@ -18,11 +18,10 @@
         <div class="nav-container"> </div>
         <div class="main-container" >
             <section class="imageblock switchable feature-large height-100">
-                <div class="imageblock__content col-lg-6 col-md-4 pos-right">
-                    <div class="background-image-holder" style=""> <img alt="image" src="img/login.jpg" > </div>
-                </div>
-                <div class="container pos-vertical-center ">
+             
+                <div class="container pos-vertical-center">
                     <div class="row">
+                        <div class="col-lg-4"></div>
                         <div class="col-lg-4 col-md-7">
                             <div class="text-center">
                                  <img src="img/rtclogo.png" width="120" height="90"  alt="...">
@@ -39,6 +38,7 @@
                                 </div>
                             </form>
                         </div>
+                        <div class="col-lg-4"></div>
                     </div>
                 </div>
             </section>
