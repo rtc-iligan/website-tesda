@@ -693,7 +693,7 @@
                                             <option value="Pipefitting NC II">Pipefitting NC II</option>
                                             <option value="Plumbing NC II">Plumbing NC II</option>
                                             <option value="Tile Setting NC II">Tile Setting NC II</option>
-                                            <option value="Trainers Methodology Level I">Trainers Methodology Level I</option>
+                                            <option value="Trainers Methodology Level I" id="tm">Trainers Methodology Level I</option>
                                             <option value="Visual Graphic Design NC III">Visual Graphic Design NC III</option>
                                             <option value="LSI/Basic English Proficiency">LSI/Basic English Proficiency</option>
                                             <option value="LSI/Arabic Language and Saudi Gulf Culture">LSI/Arabic Language and Saudi Gulf Culture</option>
@@ -702,7 +702,7 @@
                                         </select>
                                         <div id="nct">
                                             <label>National Certificate Acquired (ex. Driving NC II) for Trainers Methodology Level I Applicant Only</label>
-                                            <input type="text" class="form-control" name="" id="nc">
+                                            <input type="text" class="form-control" name="" id="nc" placeholder="Ex. Driving NC II">
                                         </div>
                                         <input type="hidden" value="<?php echo date("d-m-Y") ?>" name="registeredDate">
                                     </div>
@@ -712,7 +712,7 @@
                                  <div class="col-12 mt-5">
                                         <div class="form-group">
                                             <div class="input-checkbox">
-                                                  <input type="checkbox" id="" name="agree" required>
+                                                  <input type="checkbox" id="checkboxxxxx" name="agree" required>
                                                   <label></label>
                                               </div> 
                                               <div style="font-size: 3vw !important; font-size: 12px !important;width: 100%;">Agree I hereby allow TESDA to use/post my contact details, name, email,cellphone/landline number and other information I provided which <br> maybe used for processing of my scholarship application, for employment opportunities and other purposes.</div>
@@ -737,5 +737,55 @@
 @endsection
 
 @section('scripts')
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+      
+      var success = "{{ session('success') }}";
+      if (success) {
+          swal ({
+              title: "Successfully submitted your reservation!",
+              text: success,
+              icon: 'success',
+              button: 'OK',
+          });
+      }
 
+      var deleted = "";
+      if (deleted) {
+          swal ({
+              text: deleted,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+      
+      var error = "";
+      if (error) {
+          swal ({
+              text: error,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var danger = "";
+      if (danger) {
+          swal ({
+              text: danger,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var warning = "";
+      if (warning) {
+          swal ({
+              text: warning,
+              icon: 'info',
+              button: 'OK',
+          });
+      }
+
+    
+        </script>
 @endsection

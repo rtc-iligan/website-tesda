@@ -22,6 +22,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']],function() {
     Route::group(['middleware' => ['role:Admin']],function() { 
         Route::group(['middleware' => ['role:Admin']],function() {
+            Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
             Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 
             Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
             Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);

@@ -69,6 +69,7 @@
                                 <li><button class="dropdown-item btn-update" data-url="{{ route('reservation.edit',$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Update</button></li>
                                 <li><button class="dropdown-item btn-remarks" data-url="{{ URL::to('/remarks/'.$res->res_id) }}"><i class="fa-solid fa-pen-to-square"></i> Remarks</button></li>
                                 <li><a class="dropdown-item" href="{{ URL::to('/LearnersProfile/'.$res->res_id) }}" target="_blank"><i class="fa-solid fa-print"></i> Learner's Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ URL::to('/EnrollmentForm/'.$res->res_id) }}" target="_blank"><i class="fa-solid fa-print"></i> Enrollment Form</a></li>
                               </ul>
                             </div> 
                         </td>

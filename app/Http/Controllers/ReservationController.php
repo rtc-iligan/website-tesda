@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Carbon\Carbon;
 use DB;
 use Session;
 use PDF;
+session_start();
 class ReservationController extends Controller
 {
     /**
@@ -15,8 +17,9 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+    
         $reservation = Reservation::paginate(5);
         return view('backend.reservation.index',compact('reservation'));
       
@@ -83,7 +86,7 @@ class ReservationController extends Controller
         $data['res_parentcon'] = $request->res_parentcon;
         DB::table('reservations')->insert($data);
         Session::put('exception', 'Well Done!');
-        return Redirect::to('/reservations')->with('success','\nPlease note that all application are subject for validation and in limited slots only. Thank you for visiting our webpage and GOD bless.');
+        return redirect()->back()->with('success','\nPlease note that all application are subject for validation and in limited slots only. Thank you for visiting our webpage and GOD bless.');
     }
 
     /**
@@ -196,6 +199,16 @@ class ReservationController extends Controller
                     ->where('res_id', $res_id)
                     ->first();
         $pdf=PDF::loadView('pdf.LearnersProfile',compact('reservation_all'));
+        return $pdf->stream($res_id.'.pdf');
+    }
+    public function EnrollmentForm(Request $request,$res_id)
+    {
+        $date = Carbon::now()->toDayDateTimeString(); 
+        $curYear = date('Y'); 
+        $reservation_all=DB::table('reservations')
+                    ->where('res_id', $res_id)
+                    ->first();
+        $pdf=PDF::loadView('pdf.EnrollmentForm',compact('reservation_all','date','curYear'));
          return $pdf->stream($res_id.'.pdf');
     }
 }

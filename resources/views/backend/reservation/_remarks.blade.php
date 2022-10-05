@@ -11,10 +11,20 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-6">
-                        <input type="text" class="form-control" name="res_update" value="{{ $rese->res_update }}">
+                        <select name="res_update"class="custom-select"required style="text-transform:uppercase;text-align:center;">
+                            <option value="{{$rese->res_update}}" >{{$rese->res_update}}</option>
+                            <option value="No Remarks">No-Remarks</option>
+                            <option value="Unattended">Unattended</option>
+                            <option value="Confirm">Confirm</option>
+                            <option value="No-Response">No-Response</option>
+                            <option value="Undecided">Undecided</option>
+                            <option value="Cancel">Cancel</option>
+                            <option value="Not Qualified">Not Qualified</option>
+                            <option value="Block">Block</option>
+                        </select>
                     </div>
                     <div class="col-6">
-                        <input type="date" class="form-control" name="res_updatedate" value="{{ $rese->res_updatedate }}">
+                        <input type="date" class="form-control" name="res_updatedate" value="<?php echo date('Y-m-d'); ?>">
                     </div>
                 </div>
             </div>

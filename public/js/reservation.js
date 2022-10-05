@@ -1,26 +1,29 @@
 
-
+ $('#checkboxxxxx').attr('required', true);
 $('#employ_stat1').hide();
 $('#employ_stat').change(function(){
     if($(this).val() == 'Employed'){
       $('#employ_stat1').show();
        $('#es1').attr('required', true);
         $('#es2').attr('required', true);
+        $('#es2').attr('value', '2000-05-05');  
          $('#es3').attr('required', true);
           $('#es4').attr('required', true);
            $('#es5').attr('required', true);
-    }else{
+    }
+    if($("#employ_stat").val() == 'Unemployed'){
+     
+      $('#es1').attr('value', 'N/A');  
+      $('#es1').attr('required', false);
+      $('#es2').attr('value', '2000-05-05');  
+      $('#es2').attr('required', false);
+      $('#es3').attr('value', 'N/A');  
+      $('#es3').attr('required', false);
+      $('#es4').attr('value', 'N/A');  
+      $('#es4').attr('required', false);
+      $('#es5').attr('value', 'N/A');  
+      $('#es5').attr('required', false);
       $('#employ_stat1').hide();
-      $('#es1').attr('value', ' ');  
-      $('#es1').prop('required', false);
-      $('#es2').attr('value', ' ');  
-      $('#es2').prop('required', false);
-      $('#es3').attr('value', ' ');  
-      $('#es3').prop('required', false);
-      $('#es4').attr('value', ' ');  
-      $('#es4').prop('required', false);
-      $('#es5').attr('value', ' ');  
-      $('#es5').prop('required', false);
     }
 });
 $("#nc").hide();
