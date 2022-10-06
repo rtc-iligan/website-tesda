@@ -23,7 +23,8 @@
                     <div class="row">
                         <div class="col-lg-4"></div>
                         <div class="col-lg-4 col-md-7">
-                            <div class="text-center">
+                           <div class="card">
+                           <div class="text-center">
                                  <img src="img/rtclogo.png" width="120" height="90"  alt="...">
                             </div>
                            
@@ -37,6 +38,7 @@
                                     <div class="col-12"> <span class="type--fine-print">By signing in, you agree to the <a href="#">Terms of Service</a></span> </div>
                                 </div>
                             </form>
+                           </div>
                         </div>
                         <div class="col-lg-4"></div>
                     </div>

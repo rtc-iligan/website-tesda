@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth']],function() {
             Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
             Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);
             Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
             Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_get'])->name('accounts.import_get');
             Route::post('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_post'])->name('accounts.import_post');
             Route::resource('/accounts', App\Http\Controllers\AccountsController::class);
@@ -51,7 +52,7 @@ Route::group(['middleware' => ['auth']],function() {
 
 
 
-
+    Route::get('/cac', [App\Http\Controllers\HomeController::class, 'cac'])->name('cac');
     Route::post('/addReservation', [App\Http\Controllers\ReservationController::class,'addReservation'])->name('addReservation');
     Route::get('/reservations', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
     Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');

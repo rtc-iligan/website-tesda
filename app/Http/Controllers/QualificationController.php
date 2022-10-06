@@ -135,4 +135,5 @@ class QualificationController extends Controller
         $qualification->delete();
         return redirect()->back()->with('success','Successfully Deleted Qualification!');
     }
+   
 }

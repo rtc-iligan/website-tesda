@@ -98,4 +98,8 @@ class HomeController extends Controller
     {
         return view('frontend.transparencys.citizencharter');
     }
+    public function cac()
+    {
+        return view('frontend.others.cac');
+    }
 }

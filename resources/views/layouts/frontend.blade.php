@@ -82,9 +82,10 @@
                                             <div class="dropdown__container">
                                                 <div class="container">
                                                     <div class="row">
-                                                        <div class="dropdown__content col-lg-2">
+                                                        <div class="dropdown__content col-lg-2" style="width:350px !important;">
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('utpras-directory')}}">UTPRAS Directory</a></li>
+                                                                <li> <a href="{{URL::to('cac')}}">Competency Assessment & Certification</a></li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -168,7 +169,7 @@
             @yield('content')
         </div>
             <footer class="footer-4 space--sm text-center-xs ft-ht" style="background-color: gray !important;">
-                <div class="container">
+                <div class="container"><br>
                     <div class="row" style="overflow-x:hidden !important;">
                         <div class="col-sm-2 tesda-md">
                            <img alt="Image" width="90" height="100" src="{{asset('img/tesdanew.png')}}" alt="">

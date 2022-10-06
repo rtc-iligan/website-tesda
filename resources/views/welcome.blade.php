@@ -2,7 +2,32 @@
 
 @section('content')
 <section class="cover cover-features imagebg space--lg" data-overlay="3">
-    <div class="background-image-holder"> <img alt="background" src="{{asset('stack/img/rtcpersonnel.jpg')}}"> </div>
+    <div class="background-image-holder">
+     <img alt="background" class="--hide-dsk" src="{{asset('stack/img/rtcpersonnel.jpg')}}"> 
+    <div class="--hide-mb">
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{asset('img/tesda2.jpg')}}" class="d-block w-100" alt="..." style="height:728px !important;">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('stack/img/rtcpersonnel.jpg')}}" class="d-block w-100" alt="..."  style="height:728px !important;">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{asset('img/tesda3.png')}}" class="d-block w-100" alt="..."  style="height:728px !important;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-lg-7 ">
@@ -40,28 +65,28 @@
         </div>
     </div>
 </section>
-<section>
-    <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-md-6"><br>
-                <h5 class="text-center" ><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h5>
-                <p class="lead" style="font-size:15px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <p style="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-               </p>
-               
-            </div>
-            <div class="col-md-6 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round">
-                    <h5>RTC-Iligan Employees Corporate Photo</h5>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
+
+<div class="container-fluid mt-5">
+    <div class="row justify-content-between">
+        <div class="col-md-6"><br><br><br>
+            <h5 class="text-center" ><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h5>
+            <p class="lead" style="font-size:15px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <p style="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            
+        </div>
+        <div class="col-md-6 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+            <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round">
+                <h5>RTC-Iligan Employees Corporate Photo</h5>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 <section class="space--sm unpad--bottom switchable text-center testimonial testimonial-1 imagebg" data-overlay="4">
     <div class="background-image-holder"> <img alt="background" src="{{asset('img/tesda2.jpg')}}"> </div>
     <div class="container">
@@ -76,48 +101,48 @@
         </div>
     </div>
 </section>
-<section>
-    <div class="container">
+
+    <div class="container-fluid mb-4 mt-4">
         <div class="row">
-            <div class="col-md-4 bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="feature">
+            <div class="col-md-4 bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;">
+                <div class="feature text-center"  >
                     <h4>Mission</h4>
-                    <p>The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </p>
+                    <h6>The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature text-center text-justify">
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;">
+                <div class="feature text-center">
                     <h4 class="">Vision</h4>
-                    <p> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </p>
+                    <h6> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="feature">
+            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;">
+                <div class="feature text-center">
                     <h4>Values Statement</h4>
-                    <p>We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </p>
+                    <h6>We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature text-center text-justify">
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;">
+                <div class="feature text-center ">
                     <h4>What is TWSP?</h4>
-                    <p> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </p>
+                    <h6> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                <div class="feature text-center text-justify">
+            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;">
+                <div class="feature text-center">
                     <h4>What is UAQETA?</h4>
-                    <p> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </p>
+                    <h6> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature text-center text-justify">
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;">
+                <div class="feature text-center ">
                     <h4>What is STEP?</h4>
-                    <p> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </p>
+                    <h6> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </h6>
                 </div>
             </div>
         </div>
     </div>
-</section>
+
 <section class="video video-1 text-center imagebg" data-overlay="4">
     <div class="background-image-holder"> <img alt="background" src="{{asset('stack/img/rtcpersonnel.jpg')}}"> </div>
     <div class="container">

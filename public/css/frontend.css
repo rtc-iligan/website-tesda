@@ -27,6 +27,9 @@
   	line-height: 1.1;
 }
 @media screen and (max-width: 600px) {
+  .--hide-mb{
+    display: none !important;
+  }
   .title_message {
     visibility: hidden;
     clear: both;
@@ -97,3 +100,8 @@
   color: #4285f4 !important;
 }
 
+@media screen and (max-width: 1200px) {
+  .--hide-dsk {
+  display: hidden !important;
+  }
+}

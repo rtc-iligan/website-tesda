@@ -750,7 +750,7 @@
           });
       }
 
-      var deleted = "";
+      var deleted = "{{ session('deleted') }}";
       if (deleted) {
           swal ({
               text: deleted,
@@ -759,7 +759,7 @@
           });
       }
       
-      var error = "";
+      var error = "{{ session('error') }}";
       if (error) {
           swal ({
               text: error,
@@ -768,7 +768,7 @@
           });
       }
 
-      var danger = "";
+      var danger = "{{ session('danger') }}";
       if (danger) {
           swal ({
               text: danger,
@@ -777,7 +777,7 @@
           });
       }
 
-      var warning = "";
+      var warning = "{{ session('warning') }}";
       if (warning) {
           swal ({
               text: warning,
