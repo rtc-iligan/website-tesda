@@ -70,11 +70,15 @@
     <div class="row justify-content-between">
         <div class="col-md-6"><br><br><br>
             <h5 class="text-center" ><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h5>
-            <p class="lead" style="font-size:15px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <p class="lead" style="font-size:15px;">
+                 RTC-Iligan is a clean and green training institution amd is well managed by competent and dedicated personnel. The center 
+                provides quality services to satisfy its client's specific needs.
             </p>
-            <p style="">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <p style="">
+                RTC-Iligan is ideally and well situated within the Iligan-Cagayan Corridor. It is 242 meters above sea level and has a sloping terrain from the southdowward. It is very accessible since it is only ten kilometers from the city proper and lies along the 
+                national highway. There is availabilty of sufficient electricity since it taps its power directly to the National Transmission
+                Corporation/National Power Corporation.
+              
             </p>
             
         </div>
@@ -102,42 +106,42 @@
     </div>
 </section>
 
-    <div class="container-fluid mb-4 mt-4">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;">
-                <div class="feature text-center"  >
-                    <h4>Mission</h4>
-                    <h6>The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
+            <div class="col-md-4 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
+                <div class="switchable__text text-center "  >
+                    <h4 style="font-weight: bold;font-size: 18px;">Mission</h4>
+                    <h6 style="font-size: 18px;">The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;">
-                <div class="feature text-center">
-                    <h4 class="">Vision</h4>
-                    <h6> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
+                <div class="switchable__text text-center">
+                    <h4 style="font-weight: bold;font-size: 18px;">Vision</h4>
+                    <h6 style="font-size: 18px;"> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;">
-                <div class="feature text-center">
-                    <h4>Values Statement</h4>
-                    <h6>We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
+            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
+                <div class="switchable__text text-center">
+                    <h4 style="font-weight: bold;font-size: 18px;">Values Statement</h4>
+                    <h6 style="font-size: 18px;">We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;">
-                <div class="feature text-center ">
-                    <h4>What is TWSP?</h4>
-                    <h6> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
+                <div class="switchable__text text-center ">
+                    <h4 style="font-weight: bold;font-size: 18px;">What is TWSP?</h4>
+                    <h6 style="font-size: 18px;"> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;">
-                <div class="feature text-center">
-                    <h4>What is UAQETA?</h4>
-                    <h6> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
+            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;height:auto !important;">
+                <div class="switchable__text text-center">
+                    <h4 style="font-weight: bold;font-size: 18px;">What is UAQETA?</h4>
+                    <h6 style="font-size: 18px;"> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;">
-                <div class="feature text-center ">
-                    <h4>What is STEP?</h4>
-                    <h6> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </h6>
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
+                <div class="switchable__text text-center ">
+                    <h4 style="font-weight: bold;font-size: 18px;">What is STEP?</h4>
+                    <h6 style="font-size: 18px;"> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </h6>
                 </div>
             </div>
         </div>
@@ -151,7 +155,7 @@
                 <div class="modal-instance">
                     <div class="video-play-icon video-play-icon--sm modal-trigger box-shadow"></div>
                     <div class="modal-container">
-                        <div class="modal-content bg-dark" data-width="60%" data-height="60%"> <iframe data-src="{{asset('video/tesda.mp4')}}" allowfullscreen="allowfullscreen"></iframe> </div>
+                        <div class="modal-content bg-dark" data-width="60%" data-height="60%"><iframe src="https://www.facebook.com/plugins/video.php?height=405&href=https%3A%2F%2Fwww.facebook.com%2Fmariaglaiza.m.sandoval%2Fvideos%2F361072082328266%2F&show_text=false&width=560&t=0" width="560" height="405" style="border:none;overflow:hidden" width="500" height="523" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
                     </div>
                 </div>
                 <h2> TESDA ANNIVERSARY CELEBRATION 2021 </h2>
