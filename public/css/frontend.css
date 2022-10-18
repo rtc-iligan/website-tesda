@@ -105,3 +105,12 @@
   display: hidden !important;
   }
 }
+
+.card-transition{
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.card-transition:hover{
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  transform: scale(1.1);
+}

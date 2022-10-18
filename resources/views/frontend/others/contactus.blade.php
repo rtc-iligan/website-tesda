@@ -4,10 +4,13 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">Contact US</span> 
+             <span class="lead" style="font-size: 22px;float: left;">Contact Us</span> 
             </div>
         </div>
     </div>
+</section>
+<section>
+   
 </section>
 @endsection
 @section('scripts')

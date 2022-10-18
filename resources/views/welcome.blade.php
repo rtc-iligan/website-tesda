@@ -17,14 +17,7 @@
                     <img src="{{asset('img/tesda3.png')}}" class="d-block w-100" alt="..."  style="height:728px !important;">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+           
             </div>
         </div>
     </div>
@@ -33,7 +26,7 @@
             <div class="col-md-9 col-lg-7 ">
                 <h1>Welcome to RTC-ILIGAN</h1>
                 <p class="lead">"You bring the effort, we deliver result"</p>
-                <p class="lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
+                <p class="lead">We hope you find what you're looking for and that you enjoy your stay, have a great day!  </p>
             </div>
         </div>
         <div class="row">
@@ -56,25 +49,93 @@
                 </a>
             </div>
             <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
-                <div class="feature feature-2 boxed boxed--border bg--white"> <i class="icon icon-Life-Jacket color--primary"></i>
-                    <div class="feature__body">
-                        <p> <b>Assessement</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.  </p>
+                <a href="{{URL::to('/cac')}}">
+                    <div class="feature feature-2 boxed boxed--border bg--white"> <i class="icon icon-Life-Jacket color--primary"></i>
+                        <div class="feature__body">
+                            <p> <b>Assessement</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.  </p>
+                        </div>
                     </div>
-                </div>
+                </a>    
             </div>
         </div>
     </div>
 </section>
 
-<div class="container-fluid mt-5">
+    <div class="contaier mt-5 mb-5">
+       <div class="row ml-3">
+            <div class="col-9">
+                <h1 class="ml-5">What's Happening</h1>
+                <h5 class="lead ml-5">Latest News and Updates</h5>
+            </div>
+            <div class="col-3">
+                <div class="mr-5 mb-5 float-right">
+                    <a id="previous"><i class="fa fa-arrow-circle-left " style="font-size:50px;"></i></a>
+                    <a id="next" ><i class="fa fa-arrow-circle-right " style="font-size:50px;"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="slider text-center" >
+                        <ul class="slides" id="slides">
+                            <li class="col-md-4"> 
+                              
+                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                                    <h4 class="text-left">Consultative meeting with the staff and trainers of RTC Iligan</h4>
+                                    <button class="btn btn-sm btn-primary rounded float-right" style="bottom: 0;"> >> See More </button>
+                            </li>
+                            <li class="col-md-4"> 
+                              
+                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                                    <h4 class="text-left">RTC- Iligan was conducted the Training Induction Program (TIP) facilitate by Mr. Ben Andrew J. Galindo MIS- focal</h4>
+                                    <button class="btn btn-sm btn-primary rounded float-right"> >> See More </button>
+                            </li>
+                            <li class="col-md-4"> 
+                              
+                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                                    <h4 class="text-left">1st General Assembly of all regular personnel of TESDA Lanao del Norte Cluster (RTC- Iligan, LNNAIS, STS)</h4>
+                                    <button class="btn btn-sm btn-primary rounded float-right"> >> See More </button>
+                             </li>
+                            <li class="col-md-4"> 
+                                    
+                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                                    <h4 class="text-left">Consultative meeting with the staff and trainers of RTC Iligan</h4>
+                                    <button class="btn btn-sm btn-primary rounded float-right"> >> See More </button>
+                            </li>
+                            <li class="col-md-4"> 
+                              
+                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                                    <h4 class="text-left">Orientation on safety was conducted and facilitate by Mr. Melbon A. Odal for the newly enrolled 100 UAQTE 2020 scholars</h4>
+                                    <button class="btn btn-sm btn-primary rounded float-right"> >> See More </button>
+                            </li>
+                            <li class="col-md-4"> 
+                              
+                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                                    <h4 class="text-left">Recently, a graduation ceremony under the UAQTE and TWSP was conducted at the Center</h4>
+                                    <button class="btn btn-sm btn-primary rounded float-right"> >> See More </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    
+<div class="container mt-5">
     <div class="row justify-content-between">
-        <div class="col-md-6"><br><br><br>
-            <h5 class="text-center" ><b>TESDA REGIONAL TRAINING CENTER - ILIGAN</b> </h5>
+        <div class="col-md-6">
+            <h2 class="" ><b>REGIONAL TRAINING CENTER - ILIGAN</b> </h2>
+            <br><br><br>
             <p class="lead" style="font-size:15px;">
-                 RTC-Iligan is a clean and green training institution amd is well managed by competent and dedicated personnel. The center 
+                 RTC-Iligan is a clean and green training institution and is well managed by competent and dedicated personnel. The center 
                 provides quality services to satisfy its client's specific needs.
             </p>
-            <p style="">
+            <p style="" class="mb-4">
                 RTC-Iligan is ideally and well situated within the Iligan-Cagayan Corridor. It is 242 meters above sea level and has a sloping terrain from the southdowward. It is very accessible since it is only ten kilometers from the city proper and lies along the 
                 national highway. There is availabilty of sufficient electricity since it taps its power directly to the National Transmission
                 Corporation/National Power Corporation.
@@ -83,9 +144,34 @@
             
         </div>
         <div class="col-md-6 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-            <div class="boxed boxed--lg boxed--border bg--secondary"> <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round">
-                <h5>RTC-Iligan Employees Corporate Photo</h5>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <div class="boxed boxed--lg boxed--border bg--secondary"> 
+                <!-- <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round"> -->
+                <div class="slider" data-paging="true">
+                    <ul class="slides">
+                        <li class="col-12">
+                            <div class="feature feature-3 text-center">
+                                <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                            </div>
+                        </li>
+                        <li class="col-12">
+                            <div class="feature feature-3 text-center">
+                                <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
+                            </div>
+                        </li>
+                        <li class="col-12">
+                            <div class="feature feature-3 text-center">
+                                <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
+                            </div>
+                        </li>
+                        <li class="col-12">
+                            <div class="feature feature-3 text-center">
+                                <img alt="image" src="{{asset('img/gp-4.jpg')}}" class="border--round" style="height: 290px !important;">
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <p class="lead fs-5 text-center">RTC-ILIGAN EMPLOYEES CORPORATE PHOTO</p>
             </div>
         </div>
     </div>
@@ -108,37 +194,37 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
+            <div class="col-md-4  card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
                 <div class="switchable__text text-center "  >
                     <h4 style="font-weight: bold;font-size: 18px;">Mission</h4>
                     <h6 style="font-size: 18px;">The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
+            <div class="col-md-4 card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
                 <div class="switchable__text text-center">
                     <h4 style="font-weight: bold;font-size: 18px;">Vision</h4>
                     <h6 style="font-size: 18px;"> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
+            <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
                 <div class="switchable__text text-center">
                     <h4 style="font-weight: bold;font-size: 18px;">Values Statement</h4>
                     <h6 style="font-size: 18px;">We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
+            <div class="col-md-4 card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
                 <div class="switchable__text text-center ">
                     <h4 style="font-weight: bold;font-size: 18px;">What is TWSP?</h4>
                     <h6 style="font-size: 18px;"> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;height:auto !important;">
+            <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;height:auto !important;">
                 <div class="switchable__text text-center">
                     <h4 style="font-weight: bold;font-size: 18px;">What is UAQETA?</h4>
                     <h6 style="font-size: 18px;"> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
                 </div>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
+            <div class="col-md-4 card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
                 <div class="switchable__text text-center ">
                     <h4 style="font-weight: bold;font-size: 18px;">What is STEP?</h4>
                     <h6 style="font-size: 18px;"> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </h6>
@@ -180,6 +266,29 @@
         </div>
     </div>
 </section>
+<section>
+   <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <div class="card card-transition" style="background-color: #EDF6FF !important;box-sizing: border-box;padding-right: 20px!important;padding-left: 20px!important;padding-top: 30px!important;border-radius: 30px !important;">
+        <div class="card-body">
+            <h1 class="card-title " style="font-size: 40px;font-weight: bold;">We're interested in hearing from you.
+                <a href="{{URL::to('contact-us')}}"><i class="fa fa-arrow-circle-right " style="font-size:50px;float: right;"></i></a>
+            </h1>
+            <p class="card-text " style="font-size: 15px;font-weight: bold;">Send us your feedback, comments and suggestions to help improve our service
+              
+            </p>
+            <p class="card-text text-right" style="font-size: 40px;font-weight: bold;opacity:0.3;">RTC-ILIGAN</p>
+
+        </div>
+        </div>
+    </div>
+    <div class="col-1"></div>
+   </div>
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- <div class="modal" tabindex="-1" id="simpleModal">
   <div class="modal-dialog">
     <div class="modal-content">
