@@ -114,3 +114,40 @@
   box-shadow: 5px 6px 6px 2px #e9ecef;
   transform: scale(1.1);
 }
+
+@font-face {
+  font-family: 'averta-bold';
+  src: url("../font/averta-extrabold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'averta-normal';
+  src: url("../font/averta-normal.otf") format("opentype");
+}
+.--avt-bold{
+  font-family: 'averta-bold';
+  font-size: 35px;
+}
+.--avt-fs6{
+  font-family: 'averta-normal';
+  font-size: 12px;
+}
+.--avt-fs5{
+  font-family: 'averta-normal';
+  font-size: 15px;
+}
+.--avt-fs4{
+  font-family: 'averta-normal';
+  font-size: 20px;
+}
+.--avt-fs3{
+  font-family: 'averta-normal';
+  font-size: 25px;
+}
+.--avt-fs2{
+  font-family: 'averta-normal';
+  font-size: 30px;
+}
+.--avt-fs1{
+  font-family: 'averta-normal';
+  font-size: 35px;
+}

@@ -198,13 +198,13 @@
                                 <li><a class="ftr-wht" href="#">Tesda Online Program</a></li>
                             </ul>
                         </div>
-                         <div class="row text-center">
-                        <div class="col-sm-12 text-white footer-gasa">
-                           <a href="http://ict.rtciligan.com" class="text-white">
-                                <span class="type--fine-print">© <span class="update-year"></span> ICT RTC-ILIGAN</span> 
-                           </a>
+                        <div class="row text-center">
+                            <div class="col-sm-12 text-white footer-gasa">
+                                <a href="http://ict.rtciligan.com" class="text-white">
+                                        <span class="type--fine-print">© <span class="update-year"></span> ICT RTC-ILIGAN</span> 
+                                </a>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </footer>

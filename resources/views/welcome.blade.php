@@ -64,18 +64,15 @@
     <div class="contaier mt-5 mb-5">
        <div class="row ml-3">
             <div class="col-9">
-                <h1 class="ml-5">What's Happening</h1>
-                <h5 class="lead ml-5">Latest News and Updates</h5>
+                <h1 class="ml-5 --avt-bold">What's Happening</h1>
+                <h5 class="lead ml-5 --avt-lighter">Latest News and Updates</h5>
             </div>
             <div class="col-3">
-                <div class="mr-5 mb-5 float-right">
-                    <a id="previous"><i class="fa fa-arrow-circle-left " style="font-size:50px;"></i></a>
-                    <a id="next" ><i class="fa fa-arrow-circle-right " style="font-size:50px;"></i></a>
-                </div>
+             
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="slider text-center" >
+                    <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
                         <ul class="slides" id="slides">
                             <li class="col-md-4"> 
                               
@@ -241,7 +238,7 @@
                 <div class="modal-instance">
                     <div class="video-play-icon video-play-icon--sm modal-trigger box-shadow"></div>
                     <div class="modal-container">
-                        <div class="modal-content bg-dark" data-width="60%" data-height="60%"><iframe src="https://www.facebook.com/plugins/video.php?height=405&href=https%3A%2F%2Fwww.facebook.com%2Fmariaglaiza.m.sandoval%2Fvideos%2F361072082328266%2F&show_text=false&width=560&t=0" width="560" height="405" style="border:none;overflow:hidden" width="500" height="523" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>
+                        <div class="modal-content bg-dark" data-width="60%" data-height="60%"><iframe width="932" height="524" src="https://www.youtube.com/embed/nkz_x6OvaAE" title="anniversary rtc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                     </div>
                 </div>
                 <h2> TESDA ANNIVERSARY CELEBRATION 2021 </h2>
