@@ -4,7 +4,7 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">Citizens Charter</span> 
+             <span class="--avt-bold --txt-r --fs25">Citizens Charter</span> 
             </div>
         </div>
     </div>
@@ -17,7 +17,8 @@
         <div class="card">
         <table>
 			
-            <tbody><tr>
+            <tbody class="--avt-normal">
+            <tr class="--avt-bold">
               <th>Annexes</th>
               <th>Attachment</th>
             </tr>

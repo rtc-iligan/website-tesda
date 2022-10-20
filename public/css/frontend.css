@@ -127,6 +127,9 @@
   font-family: 'averta-bold';
   font-size: 35px;
 }
+.--avt-normal{
+  font-family: 'averta-normal';
+}
 .--avt-fs6{
   font-family: 'averta-normal';
   font-size: 12px;
@@ -151,3 +154,25 @@
   font-family: 'averta-normal';
   font-size: 35px;
 }
+.--txt-r
+{
+  float: left !important;
+}
+.--fs25
+{
+  font-size: 25px;
+}
+.--fs15
+{
+  font-size: 15px;
+}
+.--fs20
+{
+  font-size: 20px;
+}
+.--center
+{
+  align-items: center;
+  justify-content: center;
+}
+

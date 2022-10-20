@@ -4,7 +4,7 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">Philgeps Posting</span> 
+             <span class="--avt-bold --txt-r --fs25">Philgeps Posting</span> 
             </div>
         </div>
     </div>

@@ -48,7 +48,7 @@
                             </div>
                             <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
                                 <div class="bar__module">
-                                    <ul class="menu-horizontal text-left">
+                                    <ul class="menu-horizontal text-left --avt-fs5">
                                         <li> 
                                             <a href="{{URL::to('/')}}">Home</a>
                                         </li>
@@ -169,7 +169,7 @@
             @yield('content')
         </div>
             <footer class="footer-4 space--sm text-center-xs ft-ht" style="background-color: gray !important;">
-                <div class="container"><br>
+                <div class="container --avt-fs5"><br>
                     <div class="row" style="overflow-x:hidden !important;">
                         <div class="col-sm-2 tesda-md">
                            <img alt="Image" width="90" height="100" src="{{asset('img/tesdanew.png')}}" alt="">
@@ -183,19 +183,19 @@
                         <div class="col-sm-3 col-md-3 col-xs-6 link1-md">
                             <h6 class="type--uppercase usl">USEFUL LINKS</h6>
                             <ul class="list--hover text-white">
-                                <li><a class="ftr-wht" href="#">Home</a></li>
-                                <li><a class="ftr-wht" href="#">About</a></li>
-                                <li><a class="ftr-wht" href="#">Program & Services</a></li>
-                                <li><a class="ftr-wht" href="#">Online Reservation</a></li>
+                                <li><a class="ftr-wht" href="rtciligan.com">Home</a></li>
+                                <li><a class="ftr-wht" href="rtciligan.com/mission-vision">About</a></li>
+                                <li><a class="ftr-wht" href="rtciligan.com/utpras-directory">Program & Services</a></li>
+                                <li><a class="ftr-wht" href="rtciligan.com/reservations">Online Reservation</a></li>
                             </ul>
                         </div>
                         <div class="col-sm-3 col-md-3 col-xs-4 link2-md">
                             <h6 class="type--uppercase">TESDA OTHER LINKS</h6>
                             <ul >
-                                <li><a class="ftr-wht" href="#">Quick Survey</a></li>
-                                <li><a class="ftr-wht" href="#">TTI Directory</a></li>
-                                <li><a class="ftr-wht" href="#">Assessment Center</a></li>
-                                <li><a class="ftr-wht" href="#">Tesda Online Program</a></li>
+                                <li><a class="ftr-wht" href="rtciligan.com/contact-us">Quick Survey</a></li>
+                                <li><a class="ftr-wht" href="https://tesda.gov.ph/Directory/TTI">TTI Directory</a></li>
+                                <li><a class="ftr-wht" href="https://www.tesda.gov.ph/AssessmentCenters/">Assessment Center</a></li>
+                                <li><a class="ftr-wht" href="https://e-tesda.gov.ph/">Tesda Online Program</a></li>
                             </ul>
                         </div>
                         <div class="row text-center">

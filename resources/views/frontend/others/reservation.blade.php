@@ -5,7 +5,7 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">Online Reservation</span> 
+             <span class="--avt-bold --txt-r --fs25">Online Reservation</span> 
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                      </div>
                      <div class="col-md-8">
                         <img src="{{asset('img/ABOTLAHAT.png')}}" alt="ABOTLAHAT" class="wllpr"style="width:200px;height:50px;position: absolute;left:0px;bottom: -20px;">
-                        <p style="max-width: 500px; margin-bottom: 40px;" class="mt-4 mx-auto text-center text-center text-muted">Welcome Visitor ! Let’s create your full reservation to get you started. <br>Please fill-in all necessary information accurately to complete your registration</p>
+                        <p style="max-width: 500px; margin-bottom: 40px;" class="mt-4 mx-auto text-center text-muted --avt-normal --fs15">Welcome Visitor ! Let’s create your full reservation to get you started. <br>Please fill-in all necessary information accurately to complete your registration</p>
                          <p class="text-center m-0 text-uppercase text-primary">STEP 1 / 6</p>
                          <div style="text-align:center;">
                                 <span class="step"></span>
@@ -31,7 +31,7 @@
                                 <span class="step"></span>
                                 <span class="step"></span>
                          </div>
-                         <form id="regForm" action="{{URL::to('/addReservation')}}" method="post" autocomplete="off" class="was-validated" novalidate>
+                         <form id="regForm" action="{{URL::to('/addReservation')}}" method="post" autocomplete="off" class="was-validated --avt-normal --fs15" novalidate>
                             @csrf
                               <div class="tab" id="tab1">
                                 <h5 class="rv-pi text-center font-weight-bold text-primary">PERSONAL INFORMATION</h5>
