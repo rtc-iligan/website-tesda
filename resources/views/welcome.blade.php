@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-lg-7 ">
-                <h1 class="--avt-bold">Welcome to RTC-ILIGAN</h1>
+                <h1 class="--avt-bold">Welcome to <br class="">RTC-ILIGAN</h1>
                 <p class="--avt-fs5">"You bring the effort, we deliver result"</p>
                 <p class="--avt-fs5">We hope you find what you're looking for and that you enjoy your stay, have a great day!  </p>
             </div>
@@ -64,8 +64,8 @@
     <div class="contaier mt-5 mb-5">
        <div class="row ml-3">
             <div class="col-12">
-                <h1 class="ml-5 --avt-bold">What's Happening</h1>
-                <h5 class="ml-5 --avt--fs6">Latest News and Updates <a class="--avt-fs5 mr-5"href="" style="float:right;">>> More News and Updates</a></h5>
+                <h1 class="ml-5 --avt-bold --blue-title">What's Happening</h1>
+                <h5 class="ml-5 --avt--fs6 --blue-title">Latest News and Updates <a class="--avt-fs5 mr-5"href="" style="float:right;">>> More News and Updates</a></h5>
                 
             </div>
             <div class="col-3">
@@ -183,7 +183,11 @@
             <div class="col-md-6"  data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                 <div class="switchable__text">
                     <p class="--avt-fs4"> 
-                        We are glad and thankful that you take the time to visit our website is a window to our institution. We hope that you will find the information here as useful as we believe it is. Here, we offer a place to connect us amidst todays challenges. We're proud of our hardworking team we have believe that together we can achieve our goal to deliver quality technical vocational education.<br><br>RTC-Iligan believes in the power in the power of education and we are very exicited to share our resources with you. Feel free to look around and don't hesitate to reach out if there's anything we can help you with. </p>
+                        We are glad and thankful that you take the time to visit our website is a window to our institution. 
+                        We hope that you will find the information here as useful as we believe it is. 
+                        Here, we offer a place to connect us amidst todays challenges. 
+                        We're proud of our hardworking team we have believe that together we can achieve our goal to deliver quality technical vocational education
+                        .<br><br>RTC-Iligan believes in the power in the power of education and we are very excited to share our resources with you. Feel free to look around and don't hesitate to reach out if there's anything we can help you with. </p>
                     <h5 class="--avt-fs5">Maynard C. Jumawan</h5> 
                     <span class="--avt-fs6">Acting Center Administrator of RTC-Iligan</span> </div>
             </div>
@@ -193,7 +197,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4  card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
+            <div class="col-md-4  card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #ecefff !important;">
                 <div class="switchable__text text-center "  >
                     <h4 class="--avt-fs4"><b>Mission</b></h4>
                     <h6 class="--avt-fs5">The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
@@ -205,7 +209,7 @@
                     <h6 class="--avt-fs5"> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;">
+            <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #ecefff !important;">
                 <div class="switchable__text text-center">
                     <h4 class="--avt-fs4"><b>Values Statement</b></h4>
                     <h6 class="--avt-fs5">We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
@@ -217,7 +221,7 @@
                     <h6 class="--avt-fs5"> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
                 </div>
             </div>
-            <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #EDF6FF !important;height:auto !important;">
+            <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #ecefff !important;height:auto !important;">
                 <div class="switchable__text text-center">
                     <h4 class="--avt-fs4"><b>What is UAQETA?</b></h4>
                     <h6 class="--avt-fs5"> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
@@ -249,51 +253,51 @@
     </div>
 </section>
 
-    <div class="row" style="height:580px;">
+    <div class="row " style="height:580px;">
         <div class="col-md-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600" style="z-index:1;">
-            <div class="card mt-3" style="background-color: #EDF6FF !important;position:absolute;top:30px;left:100px;width:700px;z-index:1;">
-                <p class="mt-5 ml-5 --avt-bold">Annoucements</p>
-                <div class="ml-5 mt-2">
+            <div class="card mt-3 " style="background-color: #1835a6 !important;position:absolute;top:30px;left:40px;width:700px;z-index:1;">
+                <p class="mt-5 ml-5 --avt-bold text-white">Annoucements</p>
+                <div class="ml-5 mt-2 text-white">
                   
                     <a class="--avt-fs3">33rd National Statistics Months</a><br>
                     <a class="--avt-fs5">12 October 2022</a><br>
                     <a class="--avt-fs5">"Boosting the Country's Recovery with Informed Decisions, Better Policies"</a><br>
                     <button class="btn btn-sm btn-outline-primary" style="width:100px;">Read More</button>     
                 </div>
-                <div class="ml-5 mt-2">
+                <div class="ml-5 mt-2 text-white">
                   
                     <a class="--avt-fs3">Warning to the Public: Beware of Fake National Certificate</a><br>
                     <a class="--avt-fs5">27 July 2022</a><br>
                     <a class="--avt-fs5">The National Certificates are issued ONLY by the Technical and Skills Development Authority (TESDA).</a><br>
                     <button class="btn btn-sm btn-outline-primary" style="width:100px;">Read More</button>     
                 </div>
-                <div class="text-right">
+                <div class="text-right text-white">
                     <a class="mr-5 mb-5" style="width:200px;">>> More Announcement</a><br><br>
                 </div>          
             </div>
         </div>
-        <div class="col-md-6"style="background-color: gray !important;">
+        <div class="col-md-6 "style="background-color: #e2e6fe !important;">
             <div class="col-md-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" style="position: absolute;left: 25%;top: 15%;">
-                     <p class="--avt-bold text-white ml-5">Success Stories</p>
+                     <p class="--avt-bold ml-5" style="color:#808080 !important;">Success Stories</p>
                     <div class="slider" data-paging="true">
                         <ul class="slides">
                             <li class="col-12">
                                 <div class="feature feature-3 text-center">
                                     <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
                                 </div>
-                                <p class="text-white text-center --avt-fs5 mt-2">- Michael G. Cuento -</p>
+                                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
                             </li>
                             <li class="col-12">
                                 <div class="feature feature-3 text-center">
                                     <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
                                 </div>
-                                <p class="text-white text-center --avt-fs5 mt-2">- Carlo A. Quiamco -</p>
+                                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
                             </li>
                             <li class="col-12">
                                 <div class="feature feature-3 text-center">
                                     <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
                                 </div>
-                                <p class="text-white text-center --avt-fs5 mt-2">- Ralph D. Pacapat -</p>
+                                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
                             </li>
                         </ul>
                     </div>
@@ -307,7 +311,7 @@
         <div class="row">
             <div class="col">
             <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
-            <p class="--avt-bold text-white">Partners</p>
+            <p class="--avt-bold text-white">Our Partners</p>
                 <ul class="slides">
                     <li class="col-md-3 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
                     <li class="col-md-3 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
@@ -343,7 +347,7 @@
    <div class="row">
     <div class="col-1"></div>
     <div class="col-10">
-        <div class="card card-transition" data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" style="background-color: #EDF6FF !important;box-sizing: border-box;padding-right: 20px!important;padding-left: 20px!important;padding-top: 30px!important;border-radius: 30px !important;">
+        <div class="card card-transition" data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" style="background-color: #ecefff !important;box-sizing: border-box;padding-right: 20px!important;padding-left: 20px!important;padding-top: 30px!important;border-radius: 30px !important;">
         <div class="card-body">
             <h1 class="card-title --avt-bold" >We're interested in hearing from you.
                 <a href="{{URL::to('contact-us')}}"><i class="fa fa-arrow-circle-right " style="font-size:50px;float: right;"></i></a>
@@ -360,7 +364,7 @@
    </div>
 </section>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 @endsection
 @section('scripts')

@@ -75,9 +75,20 @@
   	height: 480px !important;
   	overflow-y:hidden !important;
   }
-  .drp-attainment{
-
-  }
+ .--section-hdr-hidden-xs{
+  display: none !important;
+ }
+ .--hidden{
+  display: none !important;
+ }
+ .float-sm
+ {
+  float: right !important;
+ }
+.--wd
+{
+  width: 200px;
+}
 }
 .ftr-wht {
 	color: #ffffff !important;
@@ -100,9 +111,15 @@
   color: #4285f4 !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .--hide-dsk {
-  display: hidden !important;
+    display: hidden !important;
+  }
+  .--section-hdr-hidden-md{
+    display: none !important;
+  }
+  .--hidden-md{
+    display: none !important;
   }
 }
 
@@ -175,4 +192,27 @@
   align-items: center;
   justify-content: center;
 }
-
+.--theme-color{
+  background-color: #0038a8;
+}
+.--blue-color{
+  color: #0000ff;
+}
+.--blue-title{
+  color:#1835a6;
+}
+.--white-color{
+  color: #ffffff;
+}
+.--light-bg-color{
+  color: #f6f6f6;
+}
+.--yellow-btn{
+  color: #f8c825;
+}
+.--cp-ft{
+  color: #191919;
+}
+.--section-hdr{
+  height: 50px !important;
+}

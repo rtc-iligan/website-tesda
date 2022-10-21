@@ -21,9 +21,36 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.20.0/css/mdb.min.css">
         <link rel="stylesheet" type="text/css" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     </head>
    
     <body data-smooth-scroll-offset="77" oncontextmenu="return false">
+        <div class="container-fluid --theme-color --section-hdr">
+            <div class="row --section-hdr-hidden-xs">
+                <div class="col-md-9 col-sm-5 text-right">
+                    <i class="fa-brands fa-facebook-f --fs20 text-white mt-3 ml-3"></i>
+                    <i class="fa-brands fa-twitter --fs20 text-white mt-3 ml-3"></i>
+                    <i class="fa-brands fa-youtube --fs20 text-white mt-3 ml-3"></i>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <input type="text" placeholder=""class="form-control mt-2 --size-hdr-in" style="width:290px;height:35px;">
+                </div>
+              
+            </div>
+            <div class="row g-2">
+                <div class="col-sm-12 col-sm-5 text-right">
+                    <input type="text" class="form-control mt-2 " style="width:210px;height:35px;float:right;">
+                    <i class="fa-brands fa-facebook-f --fs20 text-white mt-3 ml-3"></i>
+                    <i class="fa-brands fa-twitter --fs20 text-white mt-3 ml-3"></i>
+                    <i class="fa-brands fa-youtube --fs20 text-white mt-3 ml-3 mr-3"></i>
+                   
+                </div>
+                <div class="col-md-3 col-sm-3">
+                  
+                </div>
+              
+            </div>
+        </div>
         <div class="nav-container">
             <div class="via-1641870894008" via="via-1641870894008" vio="Home">
                 <div class="bar bar--sm visible-xs">
@@ -143,7 +170,7 @@
                                         <li class="dropdown"> <span class="dropdown__trigger">
                                         Online Course
                                         </span>
-                                            <div class="dropdown__container">p
+                                            <div class="dropdown__container">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-2">
@@ -183,7 +210,7 @@
                         <div class="col-sm-3 col-md-3 col-xs-6 link1-md">
                             <h6 class="type--uppercase usl">USEFUL LINKS</h6>
                             <ul class="list--hover text-white">
-                                <li><a class="ftr-wht" href="rtciligan.com">Home</a></li>
+                                <li><a class="ftr-wht" href="httprtciligan.com">Home</a></li>
                                 <li><a class="ftr-wht" href="rtciligan.com/mission-vision">About</a></li>
                                 <li><a class="ftr-wht" href="rtciligan.com/utpras-directory">Program & Services</a></li>
                                 <li><a class="ftr-wht" href="rtciligan.com/reservations">Online Reservation</a></li>
