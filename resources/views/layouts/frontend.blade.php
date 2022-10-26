@@ -195,20 +195,20 @@
         <div class="main-container">
             @yield('content')
         </div>
-            <footer class="footer-4 space--sm text-center-xs ft-ht" style="background-color: gray !important;">
+            <footer class="footer-4 space--sm text-center-xs ft-ht" style="background-color: #1835a6 !important;">
                 <div class="container --avt-fs5"><br>
                     <div class="row" style="overflow-x:hidden !important;">
-                        <div class="col-sm-2 tesda-md">
-                           <img alt="Image" width="90" height="100" src="{{asset('img/tesdanew.png')}}" alt="">
+                        <div class="col-sm-4 tesda-md">
+                           <img alt="Image"  src="{{asset('img/footer.png')}}" alt="">
                         </div>
-                        <div class="col-sm-2 rtciligan-md">
+                        <!-- <div class="col-sm-2 rtciligan-md">
                            <img alt="Image" width="110" height="100" src="{{asset('img/rtciligan.png')}}" alt="">
-                        </div>
-                        <div class="col-sm-2 trans-md">
+                        </div> -->
+                        <!-- <div class="col-sm-2 trans-md">
                             <img alt="Image" width="100" height="100" src="{{asset('img/transparencyseal.png')}}" alt="">
-                        </div>
-                        <div class="col-sm-3 col-md-3 col-xs-6 link1-md">
-                            <h6 class="type--uppercase usl">USEFUL LINKS</h6>
+                        </div> -->
+                        <div class="col-sm-2 col-md-2 col-xs-4 link1-md">
+                            <h6 class="type--uppercase usl text-white --avt-bold --fs15">USEFUL LINKS</h6>
                             <ul class="list--hover text-white">
                                 <li><a class="ftr-wht" href="httprtciligan.com">Home</a></li>
                                 <li><a class="ftr-wht" href="rtciligan.com/mission-vision">About</a></li>
@@ -216,25 +216,28 @@
                                 <li><a class="ftr-wht" href="rtciligan.com/reservations">Online Reservation</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-3 col-md-3 col-xs-4 link2-md">
-                            <h6 class="type--uppercase">TESDA OTHER LINKS</h6>
-                            <ul >
+                        <div class="col-sm-2 col-md-2 col-xs-4 link2-md">
+                            <h6 class="type--uppercase text-white --avt-bold --fs15">OTHER LINKS</h6>
+                            <ul class="list--hover">
                                 <li><a class="ftr-wht" href="rtciligan.com/contact-us">Quick Survey</a></li>
                                 <li><a class="ftr-wht" href="https://tesda.gov.ph/Directory/TTI">TTI Directory</a></li>
                                 <li><a class="ftr-wht" href="https://www.tesda.gov.ph/AssessmentCenters/">Assessment Center</a></li>
-                                <li><a class="ftr-wht" href="https://e-tesda.gov.ph/">Tesda Online Program</a></li>
+                                <li><a class="ftr-wht" href="https://e-tesda.gov.ph/">Online Program</a></li>
                             </ul>
                         </div>
-                        <div class="row text-center">
-                            <div class="col-sm-12 text-white footer-gasa">
-                                <a href="http://ict.rtciligan.com" class="text-white">
-                                        <span class="type--fine-print">© <span class="update-year"></span> ICT RTC-ILIGAN</span> 
-                                </a>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
             </footer>
+            <div style="background-color: #191919 !important;height:65px !important;">
+                <div class="row text-center" style="">
+                    <div class="col-sm-12 text-white  mt-4">
+                        <a href="http://ict.rtciligan.com" class="text-white --avt-bold --fs20">
+                                <span class="type--fine-print">© Copyright 2022, ICT RTC-ILIGAN</span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
          @yield('scripts')
         <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>

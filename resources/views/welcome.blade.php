@@ -22,12 +22,14 @@
         </div>
     </div>
     <div class="container">
+      
         <div class="row">
             <div class="col-md-9 col-lg-7 ">
                 <h1 class="--avt-bold">Welcome to <br class="">RTC-ILIGAN</h1>
                 <p class="--avt-fs5">"You bring the effort, we deliver result"</p>
                 <p class="--avt-fs5">We hope you find what you're looking for and that you enjoy your stay, have a great day!  </p>
             </div>
+            
         </div>
         <div class="row">
             <div class="col-md-4 animated pulse infinite"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
@@ -244,7 +246,9 @@
                 <div class="modal-instance">
                     <div class="video-play-icon video-play-icon--sm modal-trigger box-shadow"></div>
                     <div class="modal-container">
-                        <div class="modal-content bg-dark" data-width="60%" data-height="60%"><iframe width="932" height="524" src="https://www.youtube.com/embed/nkz_x6OvaAE" title="anniversary rtc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                        <div class="modal-content bg-dark" data-width="60%" data-height="60%">
+                            <iframe  src="https://www.youtube.com/embed/ZUQOD0vQD68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <h2 class="--avt-bold"> TESDA ANNIVERSARY CELEBRATION 2021 </h2>
