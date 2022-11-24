@@ -31,8 +31,9 @@
             </div>
             
         </div>
-        <div class="row">
-            <div class="col-md-4 animated pulse infinite"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
+        <!-- animated pulse infinite -->
+        <div class="row"> 
+            <div class="col-md-4 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
                 <a href="{{URL::to('/reservations')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white" > <i class="icon icon-Clock-Back color--primary"></i>
                         <div class="feature__body">
@@ -62,69 +63,63 @@
         </div>
     </div>
 </section>
-
-    <div class="contaier mt-5 mb-5">
-       <div class="row ml-3">
-            <div class="col-12">
-                <h1 class="ml-5 --avt-bold --blue-title">What's Happening</h1>
-                <h5 class="ml-5 --avt--fs6 --blue-title">Latest News and Updates <a class="--avt-fs5 mr-5"href="" style="float:right;">>> More News and Updates</a></h5>
-                
-            </div>
-            <div class="col-3">
-             
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
-                        <ul class="slides" id="slides">
-                            <li class="col-md-4"> 
-                              
-                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                                    <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
-                                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6" style="bottom: 0;"> >> See More </button>
-                            </li>
-                            <li class="col-md-4"> 
-                              
-                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                                    <h4 class="text-left --avt-fs4">RTC- Iligan was conducted the Training Induction Program (TIP) facilitate by Mr. Ben Andrew J. Galindo MIS- focal</h4>
-                                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-                            </li>
-                            <li class="col-md-4"> 
-                              
-                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                                    <h4 class="text-left --avt-fs4">1st General Assembly of all regular personnel of TESDA Lanao del Norte Cluster (RTC- Iligan, LNNAIS, STS)</h4>
-                                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-                             </li>
-                            <li class="col-md-4"> 
-                                    
-                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                                    <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
-                                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-                            </li>
-                            <li class="col-md-4"> 
-                              
-                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                                    <h4 class="text-left --avt-fs4">Orientation on safety was conducted and facilitate by Mr. Melbon A. Odal for the newly enrolled 100 UAQTE 2020 scholars</h4>
-                                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-                            </li>
-                            <li class="col-md-4"> 
-                              
-                                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                                    <h4 class="text-left --avt-fs4">Recently, a graduation ceremony under the UAQTE and TWSP was conducted at the Center</h4>
-                                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-       </div>
+<div class="contaier mt-5 mb-5">
+    <div class="col-12 col-sm-5">
+        <h1 class="ml-5 --avt-bold --blue-title">What's Happening</h1>
+        <h5 class="ml-5 --avt--fs6 --blue-title">>> More Latest News and Updates 
+            <!-- <a class="--avt-fs5 mnu"href="" > More News and Updates</a></h5> -->
+        
     </div>
+</div>
+<div class="container-fluid">
+    <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
+        <ul class="slides" id="slides">
+            <li class="col-md-4"> 
+                
+                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                    <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6" style="bottom: 0;"> >> See More </button>
+            </li>
+            <li class="col-md-4"> 
+                
+                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                    <h4 class="text-left --avt-fs4">RTC- Iligan was conducted the Training Induction Program (TIP) facilitate by Mr. Ben Andrew J. Galindo MIS- focal</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
+            </li>
+            <li class="col-md-4"> 
+                
+                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                    <h4 class="text-left --avt-fs4">1st General Assembly of all regular personnel of TESDA Lanao del Norte Cluster (RTC- Iligan, LNNAIS, STS)</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
+                </li>
+            <li class="col-md-4"> 
+                    
+                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                    <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
+            </li>
+            <li class="col-md-4"> 
+                
+                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                    <h4 class="text-left --avt-fs4">Orientation on safety was conducted and facilitate by Mr. Melbon A. Odal for the newly enrolled 100 UAQTE 2020 scholars</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
+            </li>
+            <li class="col-md-4"> 
+                
+                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
+                    <h4 class="text-left --avt-fs4">Recently, a graduation ceremony under the UAQTE and TWSP was conducted at the Center</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
+            </li>
+        </ul>
+    </div>
+               
+</div>
     
 <div class="container mt-5">
     <div class="row justify-content-between">
@@ -247,7 +242,8 @@
                     <div class="video-play-icon video-play-icon--sm modal-trigger box-shadow"></div>
                     <div class="modal-container">
                         <div class="modal-content bg-dark" data-width="60%" data-height="60%">
-                            <iframe  src="https://www.youtube.com/embed/ZUQOD0vQD68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ObTpLuGzsWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                         
                         </div>
                     </div>
                 </div>
@@ -257,8 +253,8 @@
     </div>
 </section>
 
-    <div class="row " style="height:580px;">
-        <div class="col-md-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600" style="z-index:1;">
+    <div class="row --hide-mb" style="height:580px;">
+        <div class="col-md-6 " data-aos="fade-right" data-aos-duration="800" data-aos-delay="600" style="z-index:1;">
             <div class="card mt-3 " style="background-color: #1835a6 !important;position:absolute;top:30px;left:40px;width:700px;z-index:1;">
                 <p class="mt-5 ml-5 --avt-bold text-white">Annoucements</p>
                 <div class="ml-5 mt-2 text-white">
@@ -309,6 +305,54 @@
             </div>
         </div>
     </div>
+<div class="container-fluid --hide-dsk" style="background-color: #1835a6 !important;">
+    <div class="col-sm-12 ">
+            <h4 class="--avt-bold text-white" style="text-align: left !imporant;">Annoucements</h4>
+            <div class="ml-5 mt-2 text-white">
+                
+                <a class="--avt-fs4">33rd National Statistics Months</a><br>
+                <a class="--avt-fs6">12 October 2022</a><br>
+                <a class="--avt-fs5">"Boosting the Country's Recovery with Informed Decisions, Better Policies"</a><br>
+                <button class="btn btn-sm btn-outline-primary" style="width:100px;color:white !important;">Read More</button>     
+            </div>
+            <div class="ml-5 mt-2 text-white">
+                
+                <a class="--avt-fs4">Warning to the Public: Beware of Fake National Certificate</a><br>
+                <a class="--avt-fs6">27 July 2022</a><br>
+                <a class="--avt-fs5">The National Certificates are issued ONLY by the Technical and Skills Development Authority (TESDA).</a><br>
+                <button class="btn btn-sm btn-outline-primary" style="width:100px;color:white !important;">Read More</button>     
+            </div>
+            <div class="text-right text-white">
+                <a class="mr-1 mb-5" style="width:200px;">>> More Announcement</a><br><br>
+            </div>  
+    </div>
+    
+</div>
+<div class="col-sm-12 mb-5 --hide-dsk">
+    <p class="--avt-bold ml-3" style="">Success Stories</p>
+    <div class="slider">
+        <ul class="slides">
+            <li class="col-12">
+                <div class="feature feature-3 text-center">
+                    <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                </div>
+                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
+            </li>
+            <li class="col-12">
+                <div class="feature feature-3 text-center">
+                    <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
+                </div>
+                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
+            </li>
+            <li class="col-12">
+                <div class="feature feature-3 text-center">
+                    <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
+                </div>
+                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
+            </li>
+        </ul>
+    </div>
+</div>
 <div class="" data-overlay="4" style="height:160px;">
     <div class="background-image-holder"> <img alt="background" src="{{asset('img/tesda3.png')}}"> </div>
     <div class="container">
@@ -348,9 +392,9 @@
     </div>
 </div>
 <section>
-   <div class="row">
-    <div class="col-1"></div>
-    <div class="col-10">
+   
+   
+    <div class="col-12 --wd-int">
         <div class="card card-transition" data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" style="background-color: #ecefff !important;box-sizing: border-box;padding-right: 20px!important;padding-left: 20px!important;padding-top: 30px!important;border-radius: 30px !important;">
         <div class="card-body">
             <h1 class="card-title --avt-bold" >We're interested in hearing from you.
@@ -362,10 +406,9 @@
             <p class="card-text text-right" style="font-size: 40px;font-weight: bold;opacity:0.3;">RTC-ILIGAN</p>
 
         </div>
-        </div>
     </div>
-    <div class="col-1"></div>
-   </div>
+  
+   
 </section>
 
 

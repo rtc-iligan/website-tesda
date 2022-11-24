@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name='referrer' content='origin-when-cross-origin'/>
         <title>TESDA/RTC-Iligan</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{asset('stack/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all">
@@ -25,7 +26,7 @@
     </head>
    
     <body data-smooth-scroll-offset="77" oncontextmenu="return false">
-        <div class="container-fluid --theme-color --section-hdr">
+        <div class="container-fluid --theme-color --section-hdr" >
             <div class="row --section-hdr-hidden-xs">
                 <div class="col-md-9 col-sm-5 text-right">
                     <i class="fa-brands fa-facebook-f --fs20 text-white mt-3 ml-3"></i>
@@ -33,25 +34,21 @@
                     <i class="fa-brands fa-youtube --fs20 text-white mt-3 ml-3"></i>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <input type="text" placeholder=""class="form-control mt-2 --size-hdr-in" style="width:290px;height:35px;">
+                    <input type="text" placeholder=""class="form-control mt-2 --size-hdr-in" style="width:290px;height:35px;" placeholder="">
                 </div>
               
             </div>
-            <div class="row g-2">
+            <div class="row g-2 --hide-dsk">
                 <div class="col-sm-12 col-sm-5 text-right">
-                    <input type="text" class="form-control mt-2 " style="width:210px;height:35px;float:right;">
+                    <input type="text" class="form-control mt-2" style="width:210px;height:35px;float:right;">
                     <i class="fa-brands fa-facebook-f --fs20 text-white mt-3 ml-3"></i>
                     <i class="fa-brands fa-twitter --fs20 text-white mt-3 ml-3"></i>
                     <i class="fa-brands fa-youtube --fs20 text-white mt-3 ml-3 mr-3"></i>
                    
                 </div>
-                <div class="col-md-3 col-sm-3">
-                  
-                </div>
-              
             </div>
         </div>
-        <div class="nav-container">
+        <div class="nav-container " >
             <div class="via-1641870894008" via="via-1641870894008" vio="Home">
                 <div class="bar bar--sm visible-xs">
                     <div class="container">
@@ -196,15 +193,15 @@
             @yield('content')
         </div>
             <footer class="footer-4 space--sm text-center-xs ft-ht" style="background-color: #1835a6 !important;">
-                <div class="container --avt-fs5"><br>
+                <div class="container --avt-fs5">
                     <div class="row" style="overflow-x:hidden !important;">
-                        <div class="col-sm-4 tesda-md">
+                        <div class="col-sm-4 tesda-md ">
                            <img alt="Image"  src="{{asset('img/footer.png')}}" alt="">
                         </div>
                         <!-- <div class="col-sm-2 rtciligan-md">
                            <img alt="Image" width="110" height="100" src="{{asset('img/rtciligan.png')}}" alt="">
-                        </div> -->
-                        <!-- <div class="col-sm-2 trans-md">
+                        </div>
+                        <div class="col-sm-2 trans-md">
                             <img alt="Image" width="100" height="100" src="{{asset('img/transparencyseal.png')}}" alt="">
                         </div> -->
                         <div class="col-sm-2 col-md-2 col-xs-4 link1-md">
@@ -216,7 +213,7 @@
                                 <li><a class="ftr-wht" href="rtciligan.com/reservations">Online Reservation</a></li>
                             </ul>
                         </div>
-                        <div class="col-sm-2 col-md-2 col-xs-4 link2-md">
+                        <div class="col-sm-2 col-md-2 col-xs-4 link2-md mb-ot">
                             <h6 class="type--uppercase text-white --avt-bold --fs15">OTHER LINKS</h6>
                             <ul class="list--hover">
                                 <li><a class="ftr-wht" href="rtciligan.com/contact-us">Quick Survey</a></li>
@@ -229,16 +226,16 @@
                     </div>
                 </div>
             </footer>
-            <div style="background-color: #191919 !important;height:65px !important;">
-                <div class="row text-center" style="">
-                    <div class="col-sm-12 text-white  mt-4">
-                        <a href="http://ict.rtciligan.com" class="text-white --avt-bold --fs20">
-                                <span class="type--fine-print">© Copyright 2022, ICT RTC-ILIGAN</span> 
+            <div style="background-color: #191919 !important;height:65px !important;" >
+                <div class="text-center" style="">
+                    <div class="col-sm-12 text-white  "><br>
+                        <a href="http://ict.rtciligan.com" class="text-white --avt-bold --fs20 " >
+                                <span class="type--fine-print" >© Copyright 2022, ICT RTC-ILIGAN</span> 
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        
          @yield('scripts')
         <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

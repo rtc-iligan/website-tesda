@@ -30,6 +30,10 @@
   .--hide-mb{
     display: none !important;
   }
+  .mb-ot{
+    margin-top: -25px !important;
+  }
+
   .title_message {
     visibility: hidden;
     clear: both;
@@ -39,9 +43,9 @@
     display: none;
   }
   .tesda-md{
-    position: relative !important;
-    bottom: 5px;
-    left: -120px;
+   
+    margin-bottom:250px !important;
+
   }
   .rtciligan-md{
   	position: relative !important;
@@ -111,17 +115,7 @@
   color: #4285f4 !important;
 }
 
-@media screen and (max-width: 1400px) {
-  .--hide-dsk {
-    display: hidden !important;
-  }
-  .--section-hdr-hidden-md{
-    display: none !important;
-  }
-  .--hidden-md{
-    display: none !important;
-  }
-}
+
 
 .card-transition{
   transition: all 0.2s ease;
@@ -215,4 +209,32 @@
 }
 .--section-hdr{
   height: 50px !important;
+}
+@media screen and (max-width: 320px) and (max-width: 480px) {
+  .--hide-mobile {
+    display: none !important;
+  }
+  .tesda-logo{
+    margin-left:100px !important;
+  }
+
+ 
+}
+@media screen and (min-width: 1300px) {
+  .--hide-dsk {
+    display: none !important;
+  }
+  .--section-hdr-hidden-md{
+    display: none !important;
+  }
+  .--hidden-md{
+    display: none !important;
+  }
+  .--wd-int{
+    width:1200px !important;
+    margin-left: 100px !important;
+  }
+  .mnu{
+   right: 0 !important;
+  }
 }

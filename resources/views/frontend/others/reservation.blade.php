@@ -89,25 +89,25 @@
                                 <div class="form-row ml-3">
                                     <div class="form-group col-md-4">
                                         <label for="sasa">Region</label>
-                                        <select type="text" id="region" class="custom-select" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="region" class="form-control" required style="text-transform:uppercase;text-align:center;"></select>
                                         <div class="invalid-feedback"></div>
                                         <input type="hidden" name="res_region" id="textFieldTextJQ">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="last_name">Province</label>
-                                        <select type="text" id="province" class="custom-select" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="province" class="form-control" required style="text-transform:uppercase;text-align:center;"></select>
                                         <input type="hidden" name="res_province" id="textFieldTextJQ1">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="first_name">City/Municipality</label>
-                                        <select type="text" id="city" class="custom-select"required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="cities" class="form-control"required style="text-transform:uppercase;text-align:center;"></select>
                                         <input type="hidden" name="res_city" id="textFieldTextJQ2">
                                     </div>
                                 </div> 
                                 <div class="form-row ml-3">
                                     <div class="form-group col-md-4">
                                         <label for="last_name">Barangay</label>
-                                        <select type="text" id="barangay" class="custom-select" required style="text-transform:uppercase;text-align:center;"></select>
+                                        <select type="text" id="barangays" class="form-control" required style="text-transform:uppercase;text-align:center;"></select>
                                         <input type="hidden" name="res_barangay"id="textFieldTextJQ3">
                                     </div>
                                     <div class="form-group col-md-3">
@@ -737,6 +737,8 @@
 @endsection
 
 @section('scripts')
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="http://cdn.jsdelivr.net/gh/michaeldegraciacuento/ph-locations-jquery/location.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script type="text/javascript">
       
