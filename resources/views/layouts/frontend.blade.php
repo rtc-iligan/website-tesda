@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name='referrer' content='origin-when-cross-origin'/>
         <title>TESDA/RTC-Iligan</title>
+        <link rel="icon" href="https://rtciligan.com/asset/img/core-img/tesdalogofinal.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{asset('stack/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all">
         <link href="{{asset('stack/css/socicon.css')}}" rel="stylesheet" type="text/css" media="all" />
@@ -35,12 +36,13 @@
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <input type="text" placeholder=""class="form-control mt-2 --size-hdr-in" style="width:290px;height:35px;" placeholder="">
+                    <!-- <i class="fa fa-universal-access" aria-hidden="true" style="font-size:40px;color:white;"></i> -->
                 </div>
-              
+               
             </div>
             <div class="row g-2 --hide-dsk">
                 <div class="col-sm-12 col-sm-5 text-right">
-                    <input type="text" class="form-control mt-2" style="width:210px;height:35px;float:right;">
+                    <input type="text" class="form-control mt-2" style="width:210px;height:32px;float:right;">
                     <i class="fa-brands fa-facebook-f --fs20 text-white mt-3 ml-3"></i>
                     <i class="fa-brands fa-twitter --fs20 text-white mt-3 ml-3"></i>
                     <i class="fa-brands fa-youtube --fs20 text-white mt-3 ml-3 mr-3"></i>
@@ -54,7 +56,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-3 col-md-2">
-                                <a href="{{URL::to('/')}}"> <img class="logo logo-dark " alt="logo" src="{{asset('img/logoheader.png')}}"> <img class="logo logo-light " alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
+                                <a href="{{URL::to('/')}}"> <img class="logo logo-dark " alt="logo" src="{{asset('img/logoheader.png')}}" > <img class="logo logo-light " alt="logo" src="{{asset('img/logoheader.png')}}"> </a>
                             </div>
                             <div class="col-9 col-md-10 text-right">
                                 <a href="{{URL::to('/')}}" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>

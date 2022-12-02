@@ -210,17 +210,23 @@
 .--section-hdr{
   height: 50px !important;
 }
-@media screen and (max-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 390px) {
   .--hide-mobile {
     display: none !important;
   }
   .tesda-logo{
     margin-left:100px !important;
   }
+  .align-wh-mb{
+    margin-left: -20px !important;
+    /* display: none !important; */
+  }
+  .line-height{
+    line-height: 1;
+  }
 
- 
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 768px) {
   .--hide-dsk {
     display: none !important;
   }
@@ -232,9 +238,12 @@
   }
   .--wd-int{
     width:1200px !important;
-    margin-left: 100px !important;
+    
   }
   .mnu{
    right: 0 !important;
+  }
+  .align-wh-dsk{
+    margin-left: 50px;
   }
 }

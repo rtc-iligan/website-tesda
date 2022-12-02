@@ -33,7 +33,7 @@
         </div>
         <!-- animated pulse infinite -->
         <div class="row"> 
-            <div class="col-md-4 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" >
+            <div class="col-md-4 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" >
                 <a href="{{URL::to('/reservations')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white" > <i class="icon icon-Clock-Back color--primary"></i>
                         <div class="feature__body">
@@ -42,7 +42,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <a href="{{URL::to('/requirements')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white"> <i class="icon icon-Duplicate-Window color--primary"></i>
                         <div class="feature__body">
@@ -51,7 +51,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+            <div class="col-md-4"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                 <a href="{{URL::to('/cac')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white"> <i class="icon icon-Life-Jacket color--primary"></i>
                         <div class="feature__body">
@@ -63,19 +63,17 @@
         </div>
     </div>
 </section>
-<div class="contaier mt-5 mb-5">
-    <div class="col-12 col-sm-5">
-        <h1 class="ml-5 --avt-bold --blue-title">What's Happening</h1>
-        <h5 class="ml-5 --avt--fs6 --blue-title">>> More Latest News and Updates 
-            <!-- <a class="--avt-fs5 mnu"href="" > More News and Updates</a></h5> -->
+<div class="contaier mt-5 mb-5 ">
+    <div class="col-12 col-sm-5 align-wh-dsk">
+        <h1 class="--avt-bold --blue-title">What's Happening</h1>
+        <h5 class="--avt--fs6 --blue-title">>> More Latest News and Updates
         
     </div>
 </div>
 <div class="container-fluid">
     <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
-        <ul class="slides" id="slides">
-            <li class="col-md-4"> 
-                
+        <ul class="slides align-wh-mb" id="slides">
+            <li class="col-md-4" > 
                     <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
                     <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
                     <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
@@ -123,7 +121,7 @@
     
 <div class="container mt-5">
     <div class="row justify-content-between">
-        <div class="col-md-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="600">
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
             <h6 class="--avt-bold" >REGIONAL TRAINING CENTER - ILIGAN</h6>
             
             <p class="--avt-fs5">
@@ -138,14 +136,13 @@
             </p>
             
         </div>
-        <div class="col-md-6 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-            <div class="boxed boxed--lg boxed--border bg--secondary"> 
-                <!-- <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round"> -->
-                <div class="slider" data-paging="true">
-                    <ul class="slides">
+        <div class="col-md-6 mb-5"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+            <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
+                <div class="slider">
+                    <ul class="slides align-wh-mb">
                         <li class="col-12">
                             <div class="feature feature-3 text-center">
-                                <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                                <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round " style="height: 290px !important;">
                             </div>
                         </li>
                         <li class="col-12">
@@ -158,7 +155,7 @@
                                 <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
                             </div>
                         </li>
-                        <li class="col-12">
+                        <li class="col-12 ">
                             <div class="feature feature-3 text-center">
                                 <img alt="image" src="{{asset('img/gp-4.jpg')}}" class="border--round" style="height: 290px !important;">
                             </div>
@@ -166,8 +163,8 @@
                         
                     </ul>
                 </div>
-                <p class="lead text-center --avt-fs4">RTC-ILIGAN EMPLOYEES CORPORATE PHOTO</p>
             </div>
+                <p class="lead text-center --avt-fs4 mt-4">RTC-ILIGAN EMPLOYEES CORPORATE PHOTO</p>
         </div>
     </div>
 </div>
@@ -179,7 +176,7 @@
             <div class="col-md-6 col-lg-5"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="400"> <img alt="Image" src="{{asset('img/mcj.png')}}"> </div>
             <div class="col-md-6"  data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                 <div class="switchable__text">
-                    <p class="--avt-fs4"> 
+                    <p class="--avt-fs4 line-height"> 
                         We are glad and thankful that you take the time to visit our website is a window to our institution. 
                         We hope that you will find the information here as useful as we believe it is. 
                         Here, we offer a place to connect us amidst todays challenges. 
@@ -278,35 +275,39 @@
         </div>
         <div class="col-md-6 "style="background-color: #e2e6fe !important;">
             <div class="col-md-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" style="position: absolute;left: 25%;top: 15%;">
-                     <p class="--avt-bold ml-5" style="color:#808080 !important;">Success Stories</p>
-                    <div class="slider" data-paging="true">
-                        <ul class="slides">
-                            <li class="col-12">
-                                <div class="feature feature-3 text-center">
-                                    <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
-                                </div>
-                                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
-                            </li>
-                            <li class="col-12">
-                                <div class="feature feature-3 text-center">
-                                    <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
-                                </div>
-                                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
-                            </li>
-                            <li class="col-12">
-                                <div class="feature feature-3 text-center">
-                                    <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
-                                </div>
-                                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
-                            </li>
-                        </ul>
+                    <p class="--avt-bold ml-5" style="color:#808080 !important;">Success Stories</p>
+                    <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
+                        <div class="slider">
+                            <ul class="slides">
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center">
+                                        <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                                    </div>
+                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
+                                </li>
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center">
+                                        <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
+                                    </div>
+                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
+                                </li>
+                                <li class="col-12">
+                                    <div class="feature feature-3 text-center">
+                                        <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
+                                    </div>
+                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                    
             </div>
         </div>
     </div>
+<!-- mobile -->
 <div class="container-fluid --hide-dsk" style="background-color: #1835a6 !important;">
     <div class="col-sm-12 ">
+        <br class="--hide-dsk">
             <h4 class="--avt-bold text-white" style="text-align: left !imporant;">Annoucements</h4>
             <div class="ml-5 mt-2 text-white">
                 
@@ -329,30 +330,34 @@
     
 </div>
 <div class="col-sm-12 mb-5 --hide-dsk">
-    <p class="--avt-bold ml-3" style="">Success Stories</p>
-    <div class="slider">
-        <ul class="slides">
-            <li class="col-12">
-                <div class="feature feature-3 text-center">
-                    <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
-                </div>
-                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
-            </li>
-            <li class="col-12">
-                <div class="feature feature-3 text-center">
-                    <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
-                </div>
-                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
-            </li>
-            <li class="col-12">
-                <div class="feature feature-3 text-center">
-                    <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
-                </div>
-                <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
-            </li>
-        </ul>
+<br class="--hide-dsk">
+    <h4 class="--avt-bold ml-3" style="">Success Stories</h4>
+    <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
+        <div class="slider" style="margin-left: -20px;">
+            <ul class="slides">
+                <li class="col-12">
+                    <div class="feature feature-3 text-center">
+                        <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                    </div>
+                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
+                </li>
+                <li class="col-12">
+                    <div class="feature feature-3 text-center">
+                        <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
+                    </div>
+                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
+                </li>
+                <li class="col-12">
+                    <div class="feature feature-3 text-center">
+                        <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
+                    </div>
+                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+<!-- end mobile -->
 <div class="" data-overlay="4" style="height:160px;">
     <div class="background-image-holder"> <img alt="background" src="{{asset('img/tesda3.png')}}"> </div>
     <div class="container">
@@ -368,7 +373,6 @@
                     <li class="col-md-3 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
                     <li class="col-md-3 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
                 </ul>
-                
             </div>
             </div>
         </div>
@@ -394,8 +398,8 @@
 <section>
    
    
-    <div class="col-12 --wd-int">
-        <div class="card card-transition" data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" style="background-color: #ecefff !important;box-sizing: border-box;padding-right: 20px!important;padding-left: 20px!important;padding-top: 30px!important;border-radius: 30px !important;">
+    <div class="col-12 d-flex justify-content-center align-items-center" style=";">
+        <div class="card card-transition" data-aos="fade-in" data-aos-duration="800" data-aos-delay="1000" style="background-color: #ecefff !important;box-sizing: border-box;padding-right: 20px!important;padding-left: 20px!important;padding-top: 30px!important;border-radius: 30px !important; width:1200px !important">
         <div class="card-body">
             <h1 class="card-title --avt-bold" >We're interested in hearing from you.
                 <a href="{{URL::to('contact-us')}}"><i class="fa fa-arrow-circle-right " style="font-size:50px;float: right;"></i></a>
@@ -410,8 +414,9 @@
   
    
 </section>
-
-
+<!-- <button type="button" id="scroll" class="btn btn-outline-primary"></button> -->
+<a id="scroll" style="position:fixed;right:10px;bottom:10px;cursor:pointer;">
+<i class="fa-solid fa-circle-up" style="font-size:40px;"></i></a>
 
 @endsection
 @section('scripts')
