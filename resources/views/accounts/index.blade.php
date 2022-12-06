@@ -9,9 +9,12 @@
             
 
             <div class="card">
+                <div class="card-header text-white --avt-normal --color-bb">
+                <i class="fa-solid fa-align-justify"></i> {{ __('Account Management') }}
+                   
+                </div>
                 <div class="card-header">
-                    {{ __('Accounts') }}
-                    <div class="float-right mb-2 ml-5">
+                <div class="float-right mb-2 ml-5">
                         @can('create_users')
                             <button type="button" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#createUser">Add User</button>
                         @endcan
@@ -26,7 +29,6 @@
                         @endcan
                     </div>
                 </div>
-            
                 <div class="card-body">
                     <table class="table">
                         <thead>

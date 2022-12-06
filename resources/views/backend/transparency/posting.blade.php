@@ -16,11 +16,25 @@
           
             <div class="card">
               
-                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Posting Management for ') }}{{$getTransparencySealID->title}}
-                <button type="submit" class="btn btn-secondary float-end " id="buttonref"><i class="fa-solid fa-sort"></i></i> Sort</button>
-                <button type="submit" class="btn btn-primary float-end mr-2" data-bs-toggle="modal" data-bs-target="#createModalPosting"><i class="fa-solid fa-plus"></i></i> Create</button>
+                <div class="card-header text-white --avt-normal" style="background-color: #202937 !important;"><i class="fa-solid fa-align-justify"></i>{{ __(' Posting Management for ') }}{{$getTransparencySealID->title}}
+               
+               
                 </div>
-             
+                <div class="card-header">
+                <div class="row">
+      
+                       <div class="col-md-4">
+                            <input type="text" class="form-control">
+                       </div>
+                       <div class="col-md-2 ">
+                           <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                       </div>
+                       <div class="col-md-6 ">
+                        <button type="submit" class="btn btn-secondary float-end " id="buttonref"><i class="fa-solid fa-sort"></i></i> Sort</button>
+                          <button type="submit" class="btn text-white float-end mr-2" data-bs-toggle="modal" data-bs-target="#createModalPosting" style="background-color: #202937 !important;"><i class="fa-solid fa-plus"></i></i> Create</button>
+                       </div>
+                       </div>
+                   </div>
                     <table class="table table-bordered" id="table">
                       <thead class="text-center">
                         <tr>
@@ -52,7 +66,7 @@
                             </td>
                             <td>
                               <div class="dropdown">
-                                  <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <a class="btn text-white dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202937 !important;">
                                     <i class="fa fa-cog"></i>
                                   </a>
 

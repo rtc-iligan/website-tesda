@@ -66,54 +66,21 @@
 <div class="contaier mt-5 mb-5 ">
     <div class="col-12 col-sm-5 align-wh-dsk">
         <h1 class="--avt-bold --blue-title">What's Happening</h1>
-        <h5 class="--avt--fs6 --blue-title">>> More Latest News and Updates
+        <a href="{{ URL::to('newsupdates') }}"><h5 class="--avt--fs6 --blue-title">>> More Latest News and Updates</a>
         
     </div>
 </div>
 <div class="container-fluid">
     <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
         <ul class="slides align-wh-mb" id="slides">
-            <li class="col-md-4" > 
-                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                    <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
-                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6" style="bottom: 0;"> >> See More </button>
+           @foreach($news as $news)
+           <li class="col-md-4" > 
+                    <img alt="Image" class="rounded" src="{{asset('storage/'.$news->image)}}" style="height:250px !important;">
+                    <h6 class="lead text-left fs-6">{{ $news->date }} - News</h6>
+                    <h4 class="text-left --avt-fs4">{{ $news->content}}</h4>
+                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6" style="bottom: 0;"> <a href="{{URL::to('newsupdates')}}" class="text-white">>> See More</a> </button>
             </li>
-            <li class="col-md-4"> 
-                
-                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                    <h4 class="text-left --avt-fs4">RTC- Iligan was conducted the Training Induction Program (TIP) facilitate by Mr. Ben Andrew J. Galindo MIS- focal</h4>
-                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-            </li>
-            <li class="col-md-4"> 
-                
-                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                    <h4 class="text-left --avt-fs4">1st General Assembly of all regular personnel of TESDA Lanao del Norte Cluster (RTC- Iligan, LNNAIS, STS)</h4>
-                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-                </li>
-            <li class="col-md-4"> 
-                    
-                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                    <h4 class="text-left --avt-fs4">Consultative meeting with the staff and trainers of RTC Iligan</h4>
-                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-            </li>
-            <li class="col-md-4"> 
-                
-                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                    <h4 class="text-left --avt-fs4">Orientation on safety was conducted and facilitate by Mr. Melbon A. Odal for the newly enrolled 100 UAQTE 2020 scholars</h4>
-                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-            </li>
-            <li class="col-md-4"> 
-                
-                    <img alt="Image" class="rounded" src="{{asset('img/tesda2.jpg')}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">October 14,2022 - News</h6>
-                    <h4 class="text-left --avt-fs4">Recently, a graduation ceremony under the UAQTE and TWSP was conducted at the Center</h4>
-                    <button class="btn btn-sm btn-primary rounded float-right --avt-fs6"> >> See More </button>
-            </li>
+           @endforeach
         </ul>
     </div>
                
@@ -254,20 +221,15 @@
         <div class="col-md-6 " data-aos="fade-right" data-aos-duration="800" data-aos-delay="600" style="z-index:1;">
             <div class="card mt-3 " style="background-color: #1835a6 !important;position:absolute;top:30px;left:40px;width:700px;z-index:1;">
                 <p class="mt-5 ml-5 --avt-bold text-white">Annoucements</p>
+                @foreach($announcement as $an)
                 <div class="ml-5 mt-2 text-white">
                   
-                    <a class="--avt-fs3">33rd National Statistics Months</a><br>
-                    <a class="--avt-fs5">12 October 2022</a><br>
-                    <a class="--avt-fs5">"Boosting the Country's Recovery with Informed Decisions, Better Policies"</a><br>
-                    <button class="btn btn-sm btn-outline-primary" style="width:100px;">Read More</button>     
-                </div>
-                <div class="ml-5 mt-2 text-white">
-                  
-                    <a class="--avt-fs3">Warning to the Public: Beware of Fake National Certificate</a><br>
-                    <a class="--avt-fs5">27 July 2022</a><br>
-                    <a class="--avt-fs5">The National Certificates are issued ONLY by the Technical and Skills Development Authority (TESDA).</a><br>
-                    <button class="btn btn-sm btn-outline-primary" style="width:100px;">Read More</button>     
-                </div>
+                  <a class="--avt-fs3">{{ $an->title ?? '' }}</a><br>
+                  <a class="--avt-fs5">{{ $an->date ?? '' }}</a><br>
+                  <a class="--avt-fs5">{{ $an->content ?? '' }}</a><br>
+                  <button class="btn btn-sm btn-outline-primary" style="width:100px;">Read More</button>     
+              </div>
+                @endforeach
                 <div class="text-right text-white">
                     <a class="mr-5 mb-5" style="width:200px;">>> More Announcement</a><br><br>
                 </div>          
@@ -279,24 +241,14 @@
                     <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
                         <div class="slider">
                             <ul class="slides">
+                               @foreach($ss as $ss)
                                 <li class="col-12">
                                     <div class="feature feature-3 text-center">
-                                        <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                                        <img alt="image" src="{{asset('storage/'.$ss->image)}}" class="border--round" style="height: 290px !important;">
                                     </div>
-                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
+                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- {{ $ss->name }} -</p>
                                 </li>
-                                <li class="col-12">
-                                    <div class="feature feature-3 text-center">
-                                        <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
-                                    </div>
-                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
-                                </li>
-                                <li class="col-12">
-                                    <div class="feature feature-3 text-center">
-                                        <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
-                                    </div>
-                                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -309,20 +261,14 @@
     <div class="col-sm-12 ">
         <br class="--hide-dsk">
             <h4 class="--avt-bold text-white" style="text-align: left !imporant;">Annoucements</h4>
+            @foreach($announcement as $announcement)
             <div class="ml-5 mt-2 text-white">
-                
-                <a class="--avt-fs4">33rd National Statistics Months</a><br>
-                <a class="--avt-fs6">12 October 2022</a><br>
-                <a class="--avt-fs5">"Boosting the Country's Recovery with Informed Decisions, Better Policies"</a><br>
+                <a class="--avt-fs4">{{ $announcement->title }}</a><br>
+                <a class="--avt-fs6">{{ $announcement->date }}</a><br>
+                <a class="--avt-fs5">{{ $announcement->content }}</a><br>
                 <button class="btn btn-sm btn-outline-primary" style="width:100px;color:white !important;">Read More</button>     
             </div>
-            <div class="ml-5 mt-2 text-white">
-                
-                <a class="--avt-fs4">Warning to the Public: Beware of Fake National Certificate</a><br>
-                <a class="--avt-fs6">27 July 2022</a><br>
-                <a class="--avt-fs5">The National Certificates are issued ONLY by the Technical and Skills Development Authority (TESDA).</a><br>
-                <button class="btn btn-sm btn-outline-primary" style="width:100px;color:white !important;">Read More</button>     
-            </div>
+            @endforeach
             <div class="text-right text-white">
                 <a class="mr-1 mb-5" style="width:200px;">>> More Announcement</a><br><br>
             </div>  

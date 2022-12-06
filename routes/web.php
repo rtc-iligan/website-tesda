@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting, News, Announcement,SuccessStories};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $news = News::get();
+    $announcement = Announcement::take(2)->get();
+    $ss = SuccessStories::get();
+    return view('welcome',compact('news','announcement','ss'));
 });
 
 Auth::routes();

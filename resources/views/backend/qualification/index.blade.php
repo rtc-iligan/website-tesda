@@ -6,20 +6,20 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Qualification Management') }}</div>
+                <div class="card-header text-white --avt-normal" style="background-color: #202937 !important;"><i class="fa-solid fa-align-justify"></i>{{ __(' Qualification Management') }}</div>
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md-2">
-                             <select class="form-select"></select>
+                        <div class="col-md-3">
+                             <input type="text" class="form-control">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                              <select class="form-select"></select>
                         </div>
                         <div class="col-md-2 ">
                             <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
                         </div>
-                        <div class="col-md-6 ">
-                            <button type="submit" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn float-end text-white" data-bs-toggle="modal" data-bs-target="#createModal" style="background-color: #202937 !important;"><i class="fa-solid fa-plus"></i></i> Create</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <td>{{ $ql->hrs }} hours</td>
                         <td>
                            <div class="dropdown">
-                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                              <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202937 !important;">
                                 <i class="fa fa-cog"></i>
                               </a>
 

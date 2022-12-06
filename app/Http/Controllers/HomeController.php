@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting};
+use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting, News, SuccessStories};
 class HomeController extends Controller
 {
     /**
@@ -25,6 +25,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
+   
     public function reservation()
     {
         return view('frontend.others.reservation');
@@ -62,7 +63,8 @@ class HomeController extends Controller
     }
     public function achiever()
     {
-        return view('frontend.others.successtories');
+        $ss = SuccessStories::paginate(2);
+        return view('frontend.others.successtories', compact('ss'));
     }
     public function requirements()
     {

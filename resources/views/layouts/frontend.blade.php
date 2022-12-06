@@ -124,7 +124,7 @@
                                             <div class="dropdown__container">
                                                 <div class="container">
                                                     <div class="row">
-                                                        <div class="dropdown__content col-lg-2">
+                                                        <div class="dropdown__content col-lg-2" style="width:250px !important;">
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('/transparencyseals')}}">Transparency Seal</a> </li>
                                                             </ul>
@@ -167,14 +167,26 @@
                                             </div>
                                         </li>
                                         <li class="dropdown"> <span class="dropdown__trigger">
-                                        Online Course
+                                        Links
                                         </span>
                                             <div class="dropdown__container">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="dropdown__content col-lg-2">
                                                             <ul class="menu-vertical">
-                                                                <li> <a href="#">Single Link</a> </li>
+                                                                <li> <a href="https://www.tesda.gov.ph/">TESDA</a> </li>
+                                                            </ul>
+                                                            <ul class="menu-vertical">
+                                                                <li> <a href="https://tesdaregion10.ph/">TESDA X</a> </li>
+                                                            </ul>
+                                                            <ul class="menu-vertical">
+                                                                <li> <a href="https://e-tesda.gov.ph/">e-TESDA</a> </li>
+                                                            </ul>
+                                                            <ul class="menu-vertical">
+                                                                <li> <a href="https://bsrs.tesda.gov.ph/">BSRS</a> </li>
+                                                            </ul>
+                                                            <ul class="menu-vertical">
+                                                                <li> <a href="https://s2sacademy.com/">S2S Academy</a> </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -224,7 +236,13 @@
                                 <li><a class="ftr-wht" href="https://e-tesda.gov.ph/">Online Program</a></li>
                             </ul>
                         </div>
-                       
+                        <div class="col-md-4 --hide-mobile" style="float:right;">
+                            <div class="row">
+                            <img src="{{asset('img/transparencyseal.png')}}" alt="" style="height:150px;width:170px;">
+                            <img src="{{asset('img/seal.png')}}" alt="" style="height:150px;width:170px;">
+                            </div>
+                            <!-- <h4 class="ftr-wht  --avt-bold --fs20">Transparency Seal</h4> -->
+                        </div>
                     </div>
                 </div>
             </footer>

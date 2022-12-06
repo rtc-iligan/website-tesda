@@ -20,7 +20,7 @@ class ReservationController extends Controller
     public function index(Request $request)
     {
     
-        $reservation = Reservation::paginate(5);
+        $reservation = Reservation::paginate(25);
         return view('backend.reservation.index',compact('reservation'));
       
     }

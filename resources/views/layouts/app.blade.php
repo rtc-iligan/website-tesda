@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/frontend.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/> --}}
@@ -41,6 +42,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                                 </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('qualification.index') }}">{{ __('Qualification') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link "  href="{{ route('reservation.index') }}">{{ __('Reservation') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('announcement.index') }}">{{ __('Announcement') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
+                                </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ __('Media') }}
@@ -60,18 +74,6 @@
                                             {{ __('Success Stories') }}
                                         </a>
                                     </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ route('qualification.index') }}">{{ __('Qualification') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link "  href="{{ route('reservation.index') }}">{{ __('Reservation') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ route('announcement.index') }}">{{ __('Announcement') }}</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

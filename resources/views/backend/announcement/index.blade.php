@@ -6,21 +6,21 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Announcement Management') }}</div>
+                <div class="card-header text-white --avt-normal" style="background-color: #202937 !important;"><i class="fa-solid fa-align-justify"></i>{{ __(' Announcement Management') }}</div>
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-md-2">
-                             <input type="date" name="date" class="form-control">
+                        <div class="col-md-3">
+                             <input type="text" name="date" class="form-control">
                         </div>
-                        <div class="col-md-2">
-                             <input type="text" name="name" class="form-control">
+                        <div class="col-md-3">
+                             <input type="date" name="name" class="form-control">
                         </div>
                         <div class="col-md-2 ">
                             <button type="submit"  class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
                         </div>
                         </form>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn float-end text-white" data-bs-toggle="modal" data-bs-target="#createModal" style="background-color: #202937 !important;"><i class="fa-solid fa-plus"></i></i> Create</button>
                         </div>
                     </div>
                 </div>
@@ -28,9 +28,8 @@
                     <table class="table table-hover">
                       <tr>
                         <th width="5%">#</th>
-                        <th width="10%">Title</th>
-                        <th>Subject</th>
-                        <th>Content</th>
+                        <th width="40%">Title</th>
+                     
                         <th>Location</th>
                         <th>Date</th>
                         <th width="7%">Action</th>
@@ -39,13 +38,13 @@
                       <tr>
                         <td>{{ ++$i}}</td>
                         <td>{{ $ann->title }}</td>
-                        <td>{{ $ann->subject }}</td>
-                        <td>{{ $ann->content }}</td>
+                       
+                       
                         <td>{{ $ann->location }}</td>
                         <td>{{ $ann->date }}</td>
                         <td>
                            <div class="dropdown">
-                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                              <a class="btn dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202937 !important;">
                                 <i class="fa fa-cog"></i>
                               </a>
 

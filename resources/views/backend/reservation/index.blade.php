@@ -6,10 +6,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header h4">
-                    <i class="fa-solid fa-align-justify"></i>{{ __(' Reservation Management') }}
+              <div class="card-header text-white --avt-normal" style="background-color: #202937 !important;"><i class="fa-solid fa-align-justify"></i>{{ __(' Reservation Management') }}</div>
 
-                    <button class="btn btn-sm btn-primary float-right"><i class="fa-solid fa-file-export"></i> Export</button>
+                  
                 
                 </div>
                 <div class="card-header">
@@ -18,13 +17,18 @@
                         <div class="col-md-3">
                             <input type="text" class="form-control text-center" name="res_lname" placeholder="Last Name">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                              <select class="form-select text-center">
                                 <option value=" " selected disabled>Select Qualification</option>
                              </select>
                         </div>
-                        <div class="col-md-5 text-right">
-                            <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                        <div class="col-md-2">
+                        <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                        </div>
+                        <div class="col-md-4 text-right">
+                        <button class="btn btn-sm text-white" style="background-color: #202937 !important;"><i class="fa-solid fa-file-export"></i> Export</button>
+                           
+                            
                         </div>
                        
                     </div>
@@ -61,7 +65,7 @@
                         </td>
                         <td>
                            <div class="dropdown">
-                              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                              <a class="btn dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202937 !important;">
                                 <i class="fa fa-cog"></i>
                               </a>
 

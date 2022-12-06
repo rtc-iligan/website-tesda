@@ -6,23 +6,21 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' Transparency Management') }}
+                <div class="card-header text-white --avt-normal"  style="background-color: #202937 !important;"><i class="fa-solid fa-align-justify"></i>{{ __(' Transparency Management') }}
                     <!-- <button class="btn btn-outline-info float-right"><i class="fa-solid fa-sort"></i> Sort</button> -->
                 </div>
               <div class="card-header">
                     <div class="row">
-                        <div class="col-md-2">
-                             <select class="form-select"></select>
-                        </div>
-                        <div class="col-md-2">
-                             <select class="form-select"></select>
+                       
+                        <div class="col-md-4">
+                             <input type="text" class="form-control">
                         </div>
                         <div class="col-md-2 ">
                             <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
                         </div>
                         <div class="col-md-6 ">
                             <button type="submit" class="btn btn-secondary float-end " id="buttonref"><i class="fa-solid fa-sort"></i></i> Sort</button>
-                            <button type="submit" class="btn btn-primary float-end mr-2" data-bs-toggle="modal" data-bs-target="#createModal"><i class="fa-solid fa-plus"></i></i> Create</button>
+                            <button type="submit" class="btn float-end mr-2 text-white" data-bs-toggle="modal" data-bs-target="#createModal" style="background-color: #202937 !important;"><i class="fa-solid fa-plus"></i></i> Create</button>
                         </div>
                     </div>
                 </div>
@@ -44,7 +42,7 @@
                             <td>{{ $i->updated_at }}</td>
                             <td>
                               <div class="dropdown">
-                                  <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <a class="btn dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202937 !important;">
                                     <i class="fa fa-cog"></i>
                                   </a>
 
