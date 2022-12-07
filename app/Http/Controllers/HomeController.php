@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting, News, SuccessStories};
+use Carbon\Carbon;
+use DB;
+use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting, News, SuccessStories, Reservation, User};
 class HomeController extends Controller
 {
     /**
@@ -23,9 +25,39 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $getQualification = Qualification::count();
+        $getReservation = Reservation::count();
+        $getUser = User::count();
+    
+        return view('home', compact('getQualification','getReservation','getUser'));
     }
-   
+    public function getReservePerMonth()
+    {
+        $users = Reservation::select('res_id', 'registeredDate')
+            ->get()
+            ->groupBy(function ($date) {
+                return Carbon::parse($date->registeredDate)->format('m');
+        });
+
+        $usermcount = [];
+        $userArr = [];
+
+        foreach ($users as $key => $value) {
+            $usermcount[(int)$key] = count($value);
+        }
+
+        $month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+        for ($i = 1; $i <= 12; $i++) {
+            if (!empty($usermcount[$i])) {
+                $userArr[$i]['count'] = $usermcount[$i];
+            } else {
+                $userArr[$i]['count'] = 0;
+            }
+            $userArr[$i]['month'] = $month[$i - 1];
+        }
+        return response()->json(array_values($userArr));
+    }
     public function reservation()
     {
         return view('frontend.others.reservation');

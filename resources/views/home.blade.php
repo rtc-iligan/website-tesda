@@ -12,7 +12,7 @@
             <div class="card ml-5" style="border-radius: 15px;">
                 <div class="card-body">
                     <h6 class="text-center --avt-normal "style="font-size:20px;">Registered Qualification</h6>
-                    <h6 class="text-center --avt-bold "style="font-size:30px;">28</h6>
+                    <h6 class="text-center --avt-bold "style="font-size:30px;">{{ $getQualification }}</h6>
                     <h6 class="text-center --avt-normal text-teal-500"style="font-size:15px;">Total number of registered qualification</h6>
                 </div>
             </div>
@@ -21,7 +21,7 @@
             <div class="card" style="border-radius: 15px;">
                 <div class="card-body">
                     <h4 class="text-center --avt-normal "style="font-size:20px;">Online Reservation</h4>
-                    <h6 class="text-center --avt-bold "style="font-size:30px;">14,358</h6>
+                    <h6 class="text-center --avt-bold "style="font-size:30px;">{{ $getReservation }}</h6>
                     <h6 class="text-center --avt-normal text-teal-500"style="font-size:15px;">Total number of online reservation</h6>
                 </div>
             </div>
@@ -30,7 +30,7 @@
             <div class="card mr-5" style="border-radius: 15px;">
                 <div class="card-body">
                     <h4 class="text-center --avt-normal "style="font-size:20px;">User</h4>
-                    <h6 class="text-center --avt-bold "style="font-size:30px;">28</h6>
+                    <h6 class="text-center --avt-bold "style="font-size:30px;">{{ $getUser }}</h6>
                     <h6 class="text-center --avt-normal text-teal-500"style="font-size:15px;">Total number of user</h6>
                 </div>
             </div>
@@ -69,7 +69,7 @@
     <div class="container-fluid ">
         <div class="card ml-5 mr-5">
             <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
-                List of Reserved Applicant per Qualification
+               LIST OF RESERVED APPLICANT PER QUALIFICATION
             </div>
             <div class="card-body">
               <button class="btn btn-success mb-2" style="float:right;">
@@ -129,27 +129,37 @@
     </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
 <script>
-  const ctx = document.getElementById('myChart-month');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-      datasets: [{
-        label: '# of Reserve Applicants',
-        data: [12, 19, 3, 5, 2, 3,12, 19, 8, 20, 8, 3],
-        borderWidth: 1,
-      }]
-    },
-    options: {
-      aspectRatio:2.5,
-      scales: {
-        y: {
-          beginAtZero: true,
-        }
-      }
+   $.ajax({
+        url: "{{url('getReservePerMonth')}}",
+        type: "GET",
+        async: false,
+        success:function(data){
+            
+                const ctx = document.getElementById('myChart-month');
+                new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.[1] ,
+                    datasets: [{
+                    label: '# of Reserve Applicants',
+                    data: data.[0],
+                    borderWidth: 1,
+                    }]
+                },
+                options: {
+                    aspectRatio:2.5,
+                    scales: {
+                    y: {
+                        beginAtZero: true,
+                    }
+                    }
+                }
+        });
     }
-  });
+});
+   
 </script>
 <script>
 

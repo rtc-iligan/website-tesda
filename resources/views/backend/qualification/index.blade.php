@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-white --avt-normal" style="background-color: #202937 !important;"><i class="fa-solid fa-align-justify"></i>{{ __(' Qualification Management') }}</div>
+                <div class="card-header text-white --avt-normal --color-bb"><i class="fa-solid fa-align-justify"></i>{{ __(' Qualification Management') }}</div>
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-3">
@@ -43,7 +43,7 @@
                         <td>{{ $ql->hrs }} hours</td>
                         <td>
                            <div class="dropdown">
-                              <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #202937 !important;">
+                              <a class="btn dropdown-toggle text-white --color-bb" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-cog"></i>
                               </a>
 

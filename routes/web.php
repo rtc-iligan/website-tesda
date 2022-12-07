@@ -15,7 +15,7 @@ use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting, Ne
 
 Route::get('/', function () {
     $news = News::get();
-    $announcement = Announcement::take(2)->get();
+    $announcement = Announcement::take(2)->latest();
     $ss = SuccessStories::get();
     return view('welcome',compact('news','announcement','ss'));
 });
@@ -25,6 +25,8 @@ Auth::routes();
 Route::group(['middleware' => ['auth']],function() {
     Route::group(['middleware' => ['role:Admin']],function() { 
         Route::group(['middleware' => ['role:Admin']],function() {
+           
+            Route::get('/getReservePerMonth',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth'); 
             Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
             Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 
             Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
