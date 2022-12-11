@@ -28,12 +28,19 @@ class HomeController extends Controller
         $getQualification = Qualification::count();
         $getReservation = Reservation::count();
         $getUser = User::count();
+      
+        $countGender = DB::table('reservations')
+        ->select(DB::raw('res_gender, count(*) as count'))
+        ->groupBy('res_gender')
+        ->get();
+        $genderFemale = $countGender[0]->count;
+        $genderMale = $countGender[1]->count;
     
-        return view('home', compact('getQualification','getReservation','getUser'));
+        return view('home', compact('getQualification','getReservation','getUser','countGender','genderFemale','genderMale'));
     }
     public function getReservePerMonth()
     {
-        $users = Reservation::select('res_id', 'registeredDate')
+         $users = Reservation::select('res_id', 'registeredDate')
             ->get()
             ->groupBy(function ($date) {
                 return Carbon::parse($date->registeredDate)->format('m');
@@ -54,10 +61,11 @@ class HomeController extends Controller
             } else {
                 $userArr[$i]['count'] = 0;
             }
-            $userArr[$i]['month'] = $month[$i - 1];
+           $userArr[$i]['month'] = $month[$i - 1];
         }
         return response()->json(array_values($userArr));
     }
+  
     public function reservation()
     {
         return view('frontend.others.reservation');

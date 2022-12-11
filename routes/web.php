@@ -25,7 +25,8 @@ Auth::routes();
 Route::group(['middleware' => ['auth']],function() {
     Route::group(['middleware' => ['role:Admin']],function() { 
         Route::group(['middleware' => ['role:Admin']],function() {
-           
+          
+            Route::get('/chartPerResYear/{year}',[App\Http\Controllers\HomeController::class, 'chartPerResYear'])->name('chartPerResYear'); 
             Route::get('/getReservePerMonth',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth'); 
             Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
             Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 

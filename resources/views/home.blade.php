@@ -45,7 +45,7 @@
                 <div class="card ml-5" >
                     <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
                     ONLINE RESERVATION COUNT (CURRENT YEAR)
-                     <!-- <input type="text" style="width:60px;float:right;"> -->
+                     <input type="text" class="yearpicker text-center"  style="width:80px;float:left;" id="year" data-url="{{ URL::to("/chartPerResYear/") }}">
                     </div>
                     <div class="card-body" style="height:350px;">
                         <canvas style="width: 400px;"id="myChart-month"></canvas>
@@ -130,21 +130,29 @@
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
+<link rel='stylesheet' href="{{asset('css/yearpicker.css')}}"/>
+<script src="{{asset('js/yearpicker.js')}}"></script>
+<script>$(".yearpicker").yearpicker()</script>
 <script>
    $.ajax({
         url: "{{url('getReservePerMonth')}}",
         type: "GET",
         async: false,
         success:function(data){
-            
+
+            const jsonArray =  data ;
+            const counts = jsonArray.map(obj => obj.count);
+            const months = jsonArray.map(obj => obj.month);
+
+            console.log(counts)
                 const ctx = document.getElementById('myChart-month');
                 new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: data.[1] ,
+                    labels:  months,
                     datasets: [{
                     label: '# of Reserve Applicants',
-                    data: data.[0],
+                    data: counts,
                     borderWidth: 1,
                     }]
                 },
@@ -164,7 +172,7 @@
 <script>
 
   var xValues = ["Male", "Female"];
-        var yValues = [55, 49];
+        var yValues = [{{ $genderMale }}, {{ $genderFemale }}];
         var barColors = [
             "#a4d0f4",
         "#f4a4d2",
