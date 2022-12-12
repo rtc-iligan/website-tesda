@@ -45,7 +45,7 @@
                 <div class="card ml-5" >
                     <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
                     ONLINE RESERVATION COUNT (CURRENT YEAR)
-                     <!-- <input type="text" style="width:60px;float:right;"> -->
+                     <input type="text" class="yearpicker text-center"  style="width:80px;float:left;" id="year" data-url="{{ URL::to('/chartPerResYear/') }}">
                     </div>
                     <div class="card-body" style="height:350px;">
                         <canvas style="width: 400px;"id="myChart-month"></canvas>
@@ -79,48 +79,19 @@
                 <thead>
                     <tr>
                         <th style="width:90%">Qualification</th>
-                        <th style="">Male</th>
-                        <th style="">Female</th>
+                        <th style="">Remarks</th>
+                       
                         <th style="" >Total</th>
                     </tr>
                 </thead>
                 <tbody >
+                @foreach($getResByRemarks as $getS)
                     <tr>
-                        <th>Trainers Methodology Level I</th>
-                        <td>134</td>
-                        <td>247</td>
-                        <td>381</td>
+                        <th>{{ $getS->res_qualification }}</th>
+                        <td>{{ $getS->res_update }}</td>
+                        <td>{{ $getS->res_update }}</td>
                     </tr>
-                    <tr>
-                        <th>Automotive Servicing NC I</th>
-                        <td>431</td>
-                        <td>58</td>
-                        <td>489</td>
-                    </tr> 
-                    <tr>
-                        <th>Automotive Servicing NC II</th>
-                        <td>194</td>
-                        <td>8</td>
-                        <td>202</td>
-                    </tr>
-                        <tr>
-                        <th>Bread and Pastry Production NC II</th>
-                        <td>135</td>
-                        <td>854</td>
-                        <td>989</td>
-                    </tr>
-                        <tr>
-                        <th>Construction Painting NC II</th>
-                        <td>20</td>
-                        <td>9</td>
-                        <td>29</td>
-                    </tr>
-                        <tr>
-                        <th>Computer Systems Servicing NC II</th>
-                        <td>390</td>
-                        <td>662</td>
-                        <td>1052</td>
-                    </tr> 
+                @endforeach  
                    
                 </tbody>
             </table>
@@ -130,6 +101,9 @@
 </section>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
+<link rel='stylesheet' href="{{asset('css/yearpicker.css')}}"/>
+<script src="{{asset('js/yearpicker.js')}}"></script>
+<script>$(".yearpicker").yearpicker()</script>
 <script>
    $.ajax({
         url: "{{url('getReservePerMonth')}}",
@@ -137,21 +111,19 @@
         async: false,
         success:function(data){
 
-let userData = null;
-try {
-    userData = JSON.parse(data); 
-} catch (e) {
-    userData = data;
-}
+            const jsonArray =  data;
+            const counts = jsonArray.map(obj => obj.count);
+            const months = jsonArray.map(obj => obj.month);
 
+            //console.log(counts)
                 const ctx = document.getElementById('myChart-month');
                 new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] ,
+                    labels:  months,
                     datasets: [{
                     label: '# of Reserve Applicants',
-                    data: [],
+                    data: counts,
                     borderWidth: 1,
                     }]
                 },
@@ -171,7 +143,7 @@ try {
 <script>
 
   var xValues = ["Male", "Female"];
-        var yValues = [55, 49];
+        var yValues = [{{ $genderMale }}, {{ $genderFemale }}];
         var barColors = [
             "#a4d0f4",
         "#f4a4d2",
@@ -194,6 +166,14 @@ try {
         }
         });
 </script>
-
-
+<script>
+$.ajax({
+    url: "{{url('getResByRemarks')}}",
+    type: "GET",
+    async: false,
+    success:function(data){
+        console.log(data);
+    }
+});
+</script>
 @endsection

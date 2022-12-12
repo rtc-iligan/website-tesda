@@ -1,9 +1,11 @@
-const yearPickerVersion = "1.0.0";
-const yearPickerAppName = "YearPicker";
+const version = "1.1.0";
+const namespace = "yearpicker";
 
-var defaults = {
-  // Auto Hide
-  autoHide: true,
+if (!jQuery) {
+  alert(`${namespace} ${version} requires jQuery`);
+}
+
+let defaults = {
   // The Initial Date
   year: null,
   // Start Date
@@ -17,7 +19,6 @@ var defaults = {
   // css class disabled
   disabledClass: "disabled",
   hideClass: "hide",
-  highlightedClass: "highlighted",
   template: `<div class="yearpicker-container">
                     <div class="yearpicker-header">
                         <div class="yearpicker-prev" data-view="yearpicker-prev">&lsaquo;</div>
@@ -32,64 +33,70 @@ var defaults = {
 `,
 
   // Event shortcuts
-  show: null,
-  hide: null,
-  pick: null
+  onShow: null,
+  onHide: null,
+  onChange: null,
 };
 
-var window = typeof window !== "undefained" ? window : {};
+const event_click = "click.";
+const event_focus = "focus.";
+const event_keyup = "keyup.";
+const event_selected = "selected.";
+const event_show = "show.";
+const event_hide = "hide.";
 
-var event_click = "click.";
-var event_focus = "focus.";
-var event_keyup = "keyup.";
-var event_selected = "selected.";
-var event_show = "show.";
-var event_hide = "hide.";
-
-var methods = {
+const methods = {
   // Show datepicker
   showView: function showView() {
-    if (!this.build) {
-      this.init();
+    const $this = this;
+
+    if (!$this.build) {
+      $this.init();
     }
 
-    if (this.show) {
+    if ($this.show) {
       return;
     }
 
-    if (this.trigger(event_show).isDefaultPrevented()) {
-      return;
-    }
-    this.show = true;
-    var $template = this.$template,
-      options = this.options;
+    $this.show = true;
+    const $template = $this.$template,
+      options = $this.options;
 
     $template
       .removeClass(options.hideClass)
-      .on(event_click, $.proxy(this.click, this));
+      .on(event_click, $.proxy($this.click, $this));
     $(document).on(
       event_click,
-      (this.onGlobalClick = proxy(this.globalClick, this))
+      (this.onGlobalClick = $.proxy($this.globalClick, $this))
     );
-    this.place();
+
+    if (options.onShow && $.isFunction(options.onShow)) {
+      options.onShow($this.year);
+    }
   },
 
   // Hide the datepicker
   hideView: function hideView() {
-    if (!this.show) {
+    const $this = this;
+
+    if (!$this.show) {
       return;
     }
 
-    if (this.trigger(event_hide).isDefaultPrevented()) {
-      return;
+    // if ($this.trigger(event_hide).isDefaultPrevented()) {
+    //   return;
+    // }
+
+    const $template = $this.$template,
+      options = $this.options;
+
+    $template.addClass(options.hideClass).off(event_click, $this.click);
+    $(document).off(event_click, $this.onGlobalClick);
+    $this.show = false;
+
+    if (options.onHide && $.isFunction(options.onHide)) {
+      options.onHide($this.year);
     }
-
-    var $template = this.$template,
-      options = this.options;
-
-    $template.addClass(options.hideClass).off(event_click, this.click);
-    $(document).off(event_click, this.onGlobalClick);
-    this.show = false;
   },
   // toggle show and hide
   toggle: function toggle() {
@@ -99,30 +106,18 @@ var methods = {
       this.show();
     }
   },
-  setStartYear: function setStartYear(year) {
-    this.startYear = year;
-
-    if (this.build) {
-      this.render();
-    }
-  },
-  setEndYear: function setEndYear(year) {
-    this.endYear = year;
-    if (this.build) {
-      this.render();
-    }
-  }
 };
 
-var handlers = {
+const handlers = {
   click: function click(e) {
-    var $target = $(e.target);
-    var options = this.options;
-    var viewYear = this.viewYear;
+    const $target = $(e.target),
+      viewYear = this.viewYear;
+
     if ($target.hasClass("disabled")) {
       return;
     }
-    var view = $target.data("view");
+
+    const view = $target.data("view");
     switch (view) {
       case "yearpicker-prev":
         var year = viewYear - 12;
@@ -144,9 +139,9 @@ var handlers = {
     }
   },
   globalClick: function globalClick(_ref) {
-    var target = _ref.target;
-    var element = this.element;
-    var hidden = true;
+    let target = _ref.target;
+    let element = this.element;
+    let hidden = true;
 
     if (target !== document) {
       while (
@@ -163,34 +158,32 @@ var handlers = {
     if (hidden) {
       this.hideView();
     }
-  }
+  },
 };
 
-var render = {
+const render = {
   renderYear: function renderYear() {
-    var options = this.options,
+    const $this = this,
+      options = this.options,
       startYear = options.startYear,
       endYear = options.endYear;
-    var disabledClass = options.disabledClass;
 
-    // viewed year in the calenter
-    var viewYear = this.viewYear;
-    // selected year
-    var selectedYear = this.year;
-    var now = new Date();
-    // current year
-    var thisYear = now.getFullYear();
+    const disabledClass = options.disabledClass,
+      viewYear = $this.viewYear,
+      selectedYear = $this.year,
+      now = new Date(),
+      thisYear = now.getFullYear(),
+      start = -5,
+      end = 6,
+      items = [];
 
-    var start = -5;
-    var end = 6;
-    var items = [];
-    var prevDisabled = false;
-    var nextDisabled = false;
-    var i = void 0;
+    let prevDisabled = false;
+    let nextDisabled = false;
+    let i = void 0;
 
     for (i = start; i <= end; i++) {
-      var year = viewYear + i;
-      var disabled = false;
+      let year = viewYear + i;
+      let disabled = false;
 
       if (startYear) {
         disabled = year < startYear;
@@ -207,266 +200,175 @@ var render = {
       }
 
       // check for this is a selected year
-      var isSelectedYear = year === selectedYear;
-      var view = isSelectedYear ? "yearpicker-items" : "yearpicker-items";
+      const isSelectedYear = year === selectedYear;
+      const view = isSelectedYear ? "yearpicker-items" : "yearpicker-items";
       items.push(
-        this.createItem({
+        $this.createItem({
           selected: isSelectedYear,
           disabled: disabled,
           text: viewYear + i,
           //view: disabled ? "yearpicker disabled" : view,
           view: disabled ? "yearpicker-items disabled" : view,
-          highlighted: year === thisYear
+          highlighted: year === thisYear,
         })
       );
     }
 
-    this.yearsPrev.toggleClass(disabledClass, prevDisabled);
-    this.yearsNext.toggleClass(disabledClass, nextDisabled);
-    this.yearsCurrent.html(selectedYear);
-    this.yearsBody.html(items.join(" "));
-    this.setValue();
-  }
+    $this.yearsPrev.toggleClass(disabledClass, prevDisabled);
+    $this.yearsNext.toggleClass(disabledClass, nextDisabled);
+    $this.yearsCurrent.html(selectedYear);
+    $this.yearsBody.html(items.join(" "));
+    $this.setValue();
+  },
 };
 
-function isString(value) {
-  return typeof value === "string";
-}
+const Yearpicker = (function () {
+  function YearPicker(element, options) {
+    const $this = this;
 
-function isNumber(value) {
-  return typeof value === "number" && value !== "NaN";
-}
+    $this.options = $.extend({}, defaults, options);
+    $this.$element = $(element);
+    $this.element = element;
+    $this.build = false;
+    $this.show = false;
+    $this.startYear = null;
+    $this.endYear = null;
+    $this.$template = $($this.options.template);
 
-function isUndefained(value) {
-  return typeof value === "undefined";
-}
-
-function proxy(fn, context) {
-  for (
-    var len = arguments.length, args = Array(len > 2 ? len - 2 : 0), key = 2;
-    key < len;
-    key++
-  ) {
-    args[key - 2] = arguments[key];
+    $this.init();
   }
 
-  return function() {
-    for (
-      var len2 = arguments.length, args2 = Array(len2), key2 = 0;
-      key2 < len2;
-      key2++
-    ) {
-      args2[key2] = arguments[key2];
-    }
-
-    return fn.apply(context, args.concat(args2));
-  };
-}
-
-("use strict");
-
-var _setupError = "YearPicker Error";
-if (isUndefained(jQuery)) {
-  alert(`${yearPickerAppName} ${yearPickerVersion} requires jQuery`);
-}
-
-var classCheck = function(instance, constractor) {
-  if (!(instance instanceof constractor)) {
-    alert("cannot call a class as instance of function!!!");
-  }
-};
-
-var class_top_left = yearPickerAppName + "-top-left";
-var class_top_right = yearPickerAppName + "-top-right";
-var class_bottom_left = yearPickerAppName + "-bottom-left";
-var class_bottom_right = yearPickerAppName + "-bottom-right";
-var class_placements = [
-  class_top_left,
-  class_top_right,
-  class_bottom_left,
-  class_bottom_right
-].join(" ");
-
-var Yearpicker = (function() {
-  function Yearpicker(element) {
-    var options =
-      arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-    classCheck(this, Yearpicker);
-
-    this.$element = $(element);
-    this.element = element;
-    this.options = $.extend({}, defaults, options);
-    this.build = false;
-    this.show = false;
-    this.startYear = null;
-    this.endYear = null;
-
-    this.create();
-  }
-
-  // yearpicker
-  Yearpicker.prototype = {
-    create: function() {
-      var $this = this.$element,
+  YearPicker.prototype = {
+    /**
+     * constructor
+     * configure the yearpicker before initialize
+     * @returns {null}
+     */
+    init: function () {
+      const $this = this,
+        $element = this.$element,
         options = this.options;
-      var startYear = options.startYear,
-        endYear = options.endYear,
-        year = options.year;
 
-      //this.trigger = $(options.trigger);
-      this.isInput = $this.is("input") || $this.is("textarea");
-      initialValue = this.getValue();
-      this.initialValue = initialValue;
-      this.oldValue = initialValue;
-      year = year || initialValue || new Date().getFullYear();
-
-      if (startYear) {
-        if (year < startYear) {
-          year = startYear;
-        }
-        this.startYear = startYear;
-      }
-
-      if (endYear) {
-        if (year > endYear) {
-          year = endYear;
-        }
-        this.endYear = endYear;
-      }
-
-      this.year = year;
-      this.viewYear = year;
-      this.initialYear = year;
-      this.bind();
-      this.init();
-    },
-    init: function() {
       if (this.build) {
         return;
       }
-      this.build = true;
+      $this.build = true;
 
-      var $this = this.$element,
-        options = this.options;
-      var $template = $(options.template);
-      this.$template = $template;
+      const startYear = options.startYear,
+        endYear = options.endYear,
+        defaultYear = $this.getValue(),
+        $template = $this.$template;
 
-      this.yearsPrev = $template.find(".yearpicker-prev");
-      this.yearsCurrent = $template.find(".yearpicker-current");
-      this.yearsNext = $template.find(".yearpicker-next");
-      this.yearsBody = $template.find(".yearpicker-year");
+      let year = options.year;
+
+      $this.isInput = $element.is("input") || $element.is("textarea");
+      $this.initialValue = defaultYear;
+      $this.oldValue = defaultYear;
+
+      const currentYear = new Date().getFullYear();
+      // set the defaultyear
+      year = year || defaultYear || null;
+
+      // set the startyear
+      if (startYear) {
+        if (year && year < startYear) {
+          year = startYear;
+        }
+        $this.startYear = startYear;
+      }
+
+      // set the endyear
+      if (endYear) {
+        if (year && year > endYear) {
+          year = endYear;
+        }
+        $this.endYear = endYear;
+      }
+
+      $this.year = year;
+      $this.viewYear = year || currentYear;
+      $this.initialYear = year || currentYear;
+
+      $this.bind();
+
+      $this.yearsPrev = $template.find(".yearpicker-prev");
+      $this.yearsCurrent = $template.find(".yearpicker-current");
+      $this.yearsNext = $template.find(".yearpicker-next");
+      $this.yearsBody = $template.find(".yearpicker-year");
 
       $template.addClass(options.hideClass);
-      $(document.body).append(
-        $template.addClass(yearPickerAppName + "-dropdown")
-      );
-      this.renderYear();
-    },
-    unbuild: function() {
-      if (!this.build) {
-        return;
-      }
-      this.build = false;
-      this.$template.remove();
+      $element.after($template.addClass(namespace + "-dropdown"));
+      $this.renderYear();
     },
     // assign a events
-    bind: function() {
-      var $this = this.$element,
+    bind: function () {
+      const $this = this,
+        $element = this.$element,
         options = this.options;
 
       if ($.isFunction(options.show)) {
-        $this.on(event_show, options.show);
+        $element.on(event_show, options.show);
       }
       if ($.isFunction(options.hide)) {
-        $this.on(event_hide, options.hide);
+        $element.on(event_hide, options.hide);
       }
       if ($.isFunction(options.click)) {
-        $this.on(event_click, options.click);
+        $element.on(event_click, options.click);
       }
-      if (this.isInput) {
-        $this.on(event_focus, $.proxy(this.showView, this));
+      if ($this.isInput) {
+        $element.on(event_focus, $.proxy($this.showView, $this));
       } else {
-        $this.on(event_click, $.proxy(this.showView, this));
+        $element.on(event_click, $.proxy($this.showView, $this));
       }
     },
-    getValue: function() {
-      var $this = this.$element;
-      var value = this.isInput ? $this.val() : $this.text();
-      value = parseInt(value);
-      return this.isInput ? parseInt($this.val()) : $this.text();
+    getValue: function () {
+      const $this = this,
+        $element = this.$element;
+
+      const value = $this.isInput ? $element.val() : $element.text();
+      return parseInt(value);
     },
-    setValue: function() {
-      var $this = this.$element;
-      var value = this.year;
-      if (this.isInput) {
-        $this.val(value);
+    setValue: function () {
+      const $this = this,
+        $element = this.$element,
+        options = this.options,
+        value = this.year;
+      const previousValue = $this.isInput ? $element.val() : $element.text();
+
+      if ($this.isInput) {
+        $element.val(value);
       } else {
-        $this.html(value);
+        $element.html(value);
       }
+
+      if (previousValue != value) {
+        if (options.onChange && $.isFunction(options.onChange)) {
+          options.onChange($this.year);
+        }
+      }
+
+      $element.trigger("change");
+
     },
-    trigger: function(type, data) {
-      var e = $.Event(type, data);
+    trigger: function (type, data) {
+      data = data || this.year;
+      const e = $.Event(type, data);
       this.$element.trigger(e);
       return e;
     },
-    place: function() {
-      var $this = this.$element,
-        options = this.options,
-        $template = this.$template;
+    createItem: function (data) {
+      const options = this.options,
+        itemTag = options.itemTag,
+        classes = [];
 
-      var containerWidth = $(document).outerWidth(),
-        containerHeight = $(document).outerHeight(),
-        elementWidth = $this.outerWidth(),
-        elementHeight = $this.outerHeight(),
-        width = $template.width(),
-        height = $template.height();
-
-      var elementOffset = $this.offset(),
-        top = elementOffset.top,
-        left = elementOffset.left;
-
-      var offset = parseFloat(options.offset);
-      var placements = class_top_left;
-
-      offset = isNaN(offset) ? 10 : offset;
-
-      // positioning the y axis
-      if (top > height && top + elementHeight + height > containerHeight) {
-        top -= height + offset;
-        placements = class_bottom_left;
-      } else {
-        top += elementHeight + offset;
-      }
-
-      // positioning the x axis
-      if (left + width > containerWidth) {
-        left += elementWidth - width;
-        placements = placements.replace("left", "right");
-      }
-
-      $template
-        .removeClass(class_placements)
-        .addClass(placements)
-        .css({
-          top: top,
-          left: left,
-          zIndex: parseInt(this.zIndex, 10)
-        });
-    },
-    createItem: function(data) {
-      var options = this.options;
-      var itemTag = options.itemTag;
-
-      var items = {
+      const items = {
         text: "",
         view: "",
         selected: false,
         disabled: false,
-        highlighted: false
+        highlighted: false,
       };
 
-      var classes = [];
       $.extend(items, data);
       if (items.selected) {
         classes.push(options.selectedClass);
@@ -476,17 +378,13 @@ var Yearpicker = (function() {
         classes.push(options.disabledClass);
       }
 
-      if (items.highlighted) {
-        classes.push(options.highlightedClass);
-      }
-
       return `<${itemTag} class="${items.view} ${classes.join(
         " "
       )}" data-view="${items.view}">${items.text}</${itemTag}>`;
-    }
+    },
   };
 
-  return Yearpicker;
+  return YearPicker;
 })();
 
 if ($.extend) {
@@ -494,47 +392,35 @@ if ($.extend) {
 }
 
 if ($.fn) {
-  $.fn.yearpicker = function jQueryYearpicker(option) {
-    for (
-      var len = arguments.length, args = Array(len > 1 ? len - 1 : 0), key = 1;
-      key < len;
-      key++
-    ) {
-      args[key - 1] = arguments[key];
-    }
+  $.fn.yearpicker = function jQueryYearpicker(options) {
     var result = void 0;
 
-    this.each(function(i, element) {
+    this.each(function (index, element) {
       var $element = $(element);
-      var isDestory = option === "destroy";
-      var yearpicker = $element.data(yearPickerAppName);
+      var isDestory = options === "destroy";
+      var yearpicker = $element.data(namespace);
 
       if (!yearpicker) {
         if (isDestory) {
           return;
         }
-        var options = $.extend(
-          {},
-          $element.data(),
-          $.isPlainObject(option) && option
-        );
         yearpicker = new Yearpicker(element, options);
-        $element.data(yearPickerAppName, yearpicker);
+        $element.data(namespace, yearpicker);
       }
-      if (isString(option)) {
-        var fn = yearpicker[option];
+      if (typeof options === "string") {
+        var fn = yearpicker[options];
 
         if ($.isFunction(fn)) {
           result = fn.apply(yearpicker, args);
 
           if (isDestory) {
-            $element.removeData(yearPickerAppName);
+            $element.removeData(namespace);
           }
         }
       }
     });
 
-    return !isUndefained(result) ? result : this;
+    return !result ? result : this;
   };
   $.fn.yearpicker.constractor = Yearpicker;
 }

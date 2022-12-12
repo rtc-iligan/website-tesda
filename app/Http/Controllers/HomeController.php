@@ -28,36 +28,60 @@ class HomeController extends Controller
         $getQualification = Qualification::count();
         $getReservation = Reservation::count();
         $getUser = User::count();
-    
-        return view('home', compact('getQualification','getReservation','getUser'));
+      
+         $countGender = DB::table('reservations')
+        ->select(DB::raw('res_gender, count(*) as count'))
+        ->groupBy('res_gender')
+        ->get();
+        $genderFemale = $countGender[0]->count;
+        $genderMale = $countGender[1]->count;
+
+        $getResByRemarks=DB::select("SELECT res_qualification,res_update,COUNT(*)
+        FROM reservations 
+        WHERE res_update IS NOT NULL
+        GROUP BY res_qualification,res_update
+        ORDER BY res_qualification");
+
+        return view('home', compact('getQualification','getReservation','getUser','countGender','genderFemale','genderMale','getResByRemarks'));
+    }
+    public function getResByRemarks()
+    {
+        $getResByRemarks=DB::select("SELECT res_qualification,res_update,COUNT(*)
+        FROM reservations 
+        WHERE res_update IS NOT NULL
+        GROUP BY res_qualification,res_update
+        ORDER BY res_qualification");
+        
+        return response()->json(array_values($getResByRemarks));
     }
     public function getReservePerMonth()
     {
         $users = Reservation::select('res_id', 'registeredDate')
-            ->get()
-            ->groupBy(function ($date) {
-                return Carbon::parse($date->registeredDate)->format('m');
-        });
+        ->get()
+        ->groupBy(function ($date) {
+            return Carbon::parse($date->registeredDate)->format('m');
+    });
 
-        $usermcount = [];
-        $userArr = [];
+    $usermcount = [];
+    $userArr = [];
 
-        foreach ($users as $key => $value) {
-            $usermcount[(int)$key] = count($value);
-        }
-   
-        $month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-        for ($i = 1; $i <= 12; $i++) {
-            if (!empty($usermcount[$i])) {
-                $userArr[$i]['count'] = $usermcount[$i];
-            } else {
-                $userArr[$i]['count'] = 0;
-            }
-        }
-        return response()->json($userArr);
+    foreach ($users as $key => $value) {
+        $usermcount[(int)$key] = count($value);
     }
-    
+
+    $month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    for ($i = 1; $i <= 12; $i++) {
+        if (!empty($usermcount[$i])) {
+            $userArr[$i]['count'] = $usermcount[$i];
+        } else {
+            $userArr[$i]['count'] = 0;
+        }
+       $userArr[$i]['month'] = $month[$i - 1];
+    }
+    return response()->json(array_values($userArr));
+    }
+  
     public function reservation()
     {
         return view('frontend.others.reservation');
