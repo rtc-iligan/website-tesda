@@ -136,15 +136,22 @@
         type: "GET",
         async: false,
         success:function(data){
-            
+
+let userData = null;
+try {
+    userData = JSON.parse(data); 
+} catch (e) {
+    userData = data;
+}
+
                 const ctx = document.getElementById('myChart-month');
                 new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: data.[1] ,
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] ,
                     datasets: [{
                     label: '# of Reserve Applicants',
-                    data: data.[0],
+                    data: [],
                     borderWidth: 1,
                     }]
                 },

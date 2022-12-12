@@ -45,7 +45,7 @@ class HomeController extends Controller
         foreach ($users as $key => $value) {
             $usermcount[(int)$key] = count($value);
         }
-
+   
         $month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
         for ($i = 1; $i <= 12; $i++) {
@@ -54,10 +54,10 @@ class HomeController extends Controller
             } else {
                 $userArr[$i]['count'] = 0;
             }
-            $userArr[$i]['month'] = $month[$i - 1];
         }
-        return response()->json(array_values($userArr));
+        return response()->json($userArr);
     }
+    
     public function reservation()
     {
         return view('frontend.others.reservation');
