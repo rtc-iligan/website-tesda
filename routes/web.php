@@ -26,7 +26,8 @@ Route::group(['middleware' => ['auth']],function() {
     Route::group(['middleware' => ['role:Admin']],function() { 
         Route::group(['middleware' => ['role:Admin']],function() {
             Route::get('/getResByRemarks',[App\Http\Controllers\HomeController::class, 'getResByRemarks'])->name('getResByRemarks');
-            Route::get('/chartPerResYear/{year}',[App\Http\Controllers\HomeController::class, 'chartPerResYear'])->name('chartPerResYear'); 
+
+            Route::get('/getReservePerYearMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerYearMonth'])->name('getReservePerYearMonth'); 
             Route::get('/getReservePerMonth',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth'); 
             Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
             Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 

@@ -45,7 +45,7 @@
                 <div class="card ml-5" >
                     <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
                     ONLINE RESERVATION COUNT (CURRENT YEAR)
-                     <input type="text" class="yearpicker text-center"  style="width:80px;float:left;" id="year" data-url="{{ URL::to('/chartPerResYear/') }}">
+                     <input type="text" class="yearpicker text-center" value="2022" style="width:80px;float:left;" id="year" data-url="{{ URL::to('/getReservePerYearMonth/') }}" autocomplete="off">
                     </div>
                     <div class="card-body" style="height:350px;">
                         <canvas style="width: 400px;"id="myChart-month"></canvas>
@@ -105,6 +105,44 @@
 <script src="{{asset('js/yearpicker.js')}}"></script>
 <script>$(".yearpicker").yearpicker()</script>
 <script>
+    $("#year").on('change', function(){   
+        var yearSelected = $('#year').val();
+        var url = $('#year').data('url');
+       // console.log(yearSelected);
+        $.ajax({
+        url: url+"/"+yearSelected,
+        success:function(data){
+
+            const jsonArray =  data;
+            const counts = jsonArray.map(obj => obj.user_count);
+            const months = jsonArray.map(obj => obj.month);
+
+            //console.log(counts)
+                const ctx = document.getElementById('myChart-month');
+                new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels:  ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                    label: '# of Reserve Applicants',
+                    data: counts,
+                    borderWidth: 1,
+                    }]
+                },
+                options: {
+                    aspectRatio:2.5,
+                    scales: {
+                    y: {
+                        beginAtZero: true,
+                    }
+                    }
+                }
+        });
+    }
+});
+    }); 
+</script>
+<!-- <script>
    $.ajax({
         url: "{{url('getReservePerMonth')}}",
         type: "GET",
@@ -139,7 +177,7 @@
     }
 });
    
-</script>
+</script> -->
 <script>
 
   var xValues = ["Male", "Female"];

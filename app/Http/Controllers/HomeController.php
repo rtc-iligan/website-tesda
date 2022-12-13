@@ -54,6 +54,16 @@ class HomeController extends Controller
         
         return response()->json(array_values($getResByRemarks));
     }
+    public function getReservePerYearMonth($year)
+    {
+         $getReservePerYearMonth = DB::table('reservations')
+        ->select(DB::raw('count(*) as user_count, year(registeredDate) as year, month(registeredDate) as month'))
+        ->whereYear('registeredDate', '=', $year)
+        ->groupBy('year', 'month')
+        ->get();
+
+       return response()->json($getReservePerYearMonth);
+    }
     public function getReservePerMonth()
     {
         $users = Reservation::select('res_id', 'registeredDate')
