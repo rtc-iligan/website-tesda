@@ -81,13 +81,19 @@
                       @endforeach
                     </table>
                 </div>
-                <div style="margin: 0 auto !important;">
+                <div class="d-flex justify-content-center" style="margin: 0 auto !important;">
                     {{ $reservation->links() }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+<style>
+    .pagination .page-link {
+    background: #202937 !important;
+    color: white !important;
+}
+</style>
 <div class="append-reservation"></div>
 @endsection
 @section('scripts')

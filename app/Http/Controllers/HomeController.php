@@ -36,37 +36,43 @@ class HomeController extends Controller
         $genderFemale = $countGender[0]->count;
         $genderMale = $countGender[1]->count;
 
-        $getResByRemarks=DB::select("SELECT res_qualification,res_update,COUNT(*)
-        FROM reservations 
-        WHERE res_update IS NOT NULL
-        GROUP BY res_qualification,res_update
-        ORDER BY res_qualification");
-
-        return view('home', compact('getQualification','getReservation','getUser','countGender','genderFemale','genderMale','getResByRemarks'));
+        
+        
+        return view('home', compact('getQualification','getReservation','getUser','countGender','genderFemale','genderMale'));
     }
     public function getResByRemarks()
     {
-        $getResByRemarks=DB::select("SELECT res_qualification,res_update,COUNT(*)
-        FROM reservations 
-        WHERE res_update IS NOT NULL
-        GROUP BY res_qualification,res_update
-        ORDER BY res_qualification");
-        
-        return response()->json(array_values($getResByRemarks));
+        // $dataGetResByRemarks=Reservation::select(['res_qualification', 'res_update', DB::raw('COUNT(*)')])
+        // ->groupBy('res_qualification', 'res_update')
+        // ->orderBy('res_qualification')
+        // ->get()
+        // ->groupBy('res_qualification');
+
+        $dataGetResByRemarks=Reservation::select(['res_qualification', 'res_update', DB::raw('COUNT(*)')])
+        ->where('res_qualification','Automotive Servicing NC I')
+        ->groupBy('res_qualification', 'res_update')
+        ->orderBy('res_qualification')
+        ->get()
+        ->groupBy('res_qualification');
+
+
+        return response()->json($dataGetResByRemarks);
     }
-    public function getReservePerYearMonth($year)
+    public function getReservePerYearMonth()
     {
-         $getReservePerYearMonth = DB::table('reservations')
+        return $getReservePerYearMonth = DB::table('reservations')
         ->select(DB::raw('count(*) as user_count, year(registeredDate) as year, month(registeredDate) as month'))
-        ->whereYear('registeredDate', '=', $year)
+        ->whereYear('registeredDate', '=', 2021)
         ->groupBy('year', 'month')
         ->get();
 
        return response()->json($getReservePerYearMonth);
     }
-    public function getReservePerMonth()
+  
+    public function getReservePerMonth($year)
     {
         $users = Reservation::select('res_id', 'registeredDate')
+        ->whereYear('registeredDate', '=', $year)
         ->get()
         ->groupBy(function ($date) {
             return Carbon::parse($date->registeredDate)->format('m');
@@ -91,7 +97,34 @@ class HomeController extends Controller
     }
     return response()->json(array_values($userArr));
     }
-  
+    public function getResPerMonth()
+    {
+        $users = Reservation::select('res_id', 'registeredDate')
+        ->whereYear('registeredDate', '=', 2022)
+        ->get()
+        ->groupBy(function ($date) {
+            return Carbon::parse($date->registeredDate)->format('m');
+    });
+
+    $usermcount = [];
+    $userArr = [];
+
+    foreach ($users as $key => $value) {
+        $usermcount[(int)$key] = count($value);
+    }
+
+    $month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    for ($i = 1; $i <= 12; $i++) {
+        if (!empty($usermcount[$i])) {
+            $userArr[$i]['count'] = $usermcount[$i];
+        } else {
+            $userArr[$i]['count'] = 0;
+        }
+       $userArr[$i]['month'] = $month[$i - 1];
+    }
+    return response()->json(array_values($userArr));
+    }
     public function reservation()
     {
         return view('frontend.others.reservation');

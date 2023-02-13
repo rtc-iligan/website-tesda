@@ -45,11 +45,12 @@
                 <div class="card ml-5" >
                     <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
                     ONLINE RESERVATION COUNT (CURRENT YEAR)
-                     <input type="text" class="yearpicker text-center" value="2022" style="width:80px;float:left;" id="year" data-url="{{ URL::to('/getReservePerYearMonth/') }}" autocomplete="off">
+                     <input type="text" class="yearpicker text-center" placeholder="2022" style="width:80px;float:left;" id="year" data-url="{{ URL::to('/getReservePerMonth/') }}" autocomplete="off">
                     </div>
-                    <div class="card-body" style="height:350px;">
-                        <canvas style="width: 400px;"id="myChart-month"></canvas>
+                    <div class="card-body append-again" >
+                        
                     </div>
+                    <canvas style="width: 400px;"id="myChart-month" ></canvas>
                 </div>
             </div>
             <div class="col-md-4">
@@ -57,7 +58,7 @@
                     <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
                     RESERVATION GENDER COUNT
                     </div>
-                    <div class="card-body" style="height:350px;">
+                    <div class="card-body" style="height:315px;">
                         <canvas id="myChart-gender"></canvas>
                     </div>
                 </div>
@@ -69,32 +70,22 @@
     <div class="container-fluid ">
         <div class="card ml-5 mr-5">
             <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
-               LIST OF RESERVED APPLICANT PER QUALIFICATION
+               TOTAL LIST OF RESERVED APPLICANT PER QUALIFICATION REMARKS
             </div>
             <div class="card-body">
-              <button class="btn btn-success mb-2" style="float:right;">
+            <button class="btn btn-success mb-2" style="float:right;">
                 <i> Export</i>
               </button>
-            <table class="table table-bordered" style="height:400px !important;width:100%;display: inline-block;overflow-y: scroll;">
-                <thead>
-                    <tr>
-                        <th style="width:90%">Qualification</th>
-                        <th style="">Remarks</th>
-                       
-                        <th style="" >Total</th>
-                    </tr>
-                </thead>
-                <tbody >
-                @foreach($getResByRemarks as $getS)
-                    <tr>
-                        <th>{{ $getS->res_qualification }}</th>
-                        <td>{{ $getS->res_update }}</td>
-                        <td>{{ $getS->res_update }}</td>
-                    </tr>
-                @endforeach  
-                   
-                </tbody>
-            </table>
+            </div>
+            <div class="card-body">
+                <!-- <div class="col-md-12">
+                    <div class="card mr-5" >
+                    
+                        <div class="card-body" style="height:400px;">
+                            <canvas id="myChart-remarks"></canvas>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -114,15 +105,16 @@
         success:function(data){
 
             const jsonArray =  data;
-            const counts = jsonArray.map(obj => obj.user_count);
+            const counts = jsonArray.map(obj => obj.count);
             const months = jsonArray.map(obj => obj.month);
-
-            //console.log(counts)
+            //console.log(data)
+            $("#myChart-month").remove();
+            $(".append-again").append('<canvas id="myChart-month"></canvas>');
                 const ctx = document.getElementById('myChart-month');
                 new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels:  ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    labels:  months,
                     datasets: [{
                     label: '# of Reserve Applicants',
                     data: counts,
@@ -142,9 +134,9 @@
 });
     }); 
 </script>
-<!-- <script>
+<script>
    $.ajax({
-        url: "{{url('getReservePerMonth')}}",
+        url: "{{url('getResPerMonth')}}",
         type: "GET",
         async: false,
         success:function(data){
@@ -177,7 +169,7 @@
     }
 });
    
-</script> -->
+</script>
 <script>
 
   var xValues = ["Male", "Female"];
@@ -210,7 +202,28 @@ $.ajax({
     type: "GET",
     async: false,
     success:function(data){
-        console.log(data);
+      var someObj = data;
+
+                const ctx = document.getElementById('myChart-remarks');
+                new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels:  [],
+                    datasets: [{
+                    label: 'Confirm',
+                    data: [],
+                    borderWidth: 1,
+                    }]
+                },
+                options: {
+                    aspectRatio:2.5,
+                    scales: {
+                    y: {
+                        beginAtZero: true,
+                    }
+                    }
+                }
+        });
     }
 });
 </script>

@@ -26,9 +26,9 @@ Route::group(['middleware' => ['auth']],function() {
     Route::group(['middleware' => ['role:Admin']],function() { 
         Route::group(['middleware' => ['role:Admin']],function() {
             Route::get('/getResByRemarks',[App\Http\Controllers\HomeController::class, 'getResByRemarks'])->name('getResByRemarks');
-
-            Route::get('/getReservePerYearMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerYearMonth'])->name('getReservePerYearMonth'); 
-            Route::get('/getReservePerMonth',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth'); 
+            Route::get('/getReservePerYearMonth',[App\Http\Controllers\HomeController::class, 'getReservePerYearMonth'])->name('getReservePerYearMonth');
+            Route::get('/getResPerMonth',[App\Http\Controllers\HomeController::class, 'getResPerMonth'])->name('getResPerMonth'); 
+            Route::get('/getReservePerMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth'); 
             Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
             Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 
             Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
