@@ -203,4 +203,8 @@ class HomeController extends Controller
     {
         return view('frontend.others.cac');
     }
+    public function org()
+    {
+         return view('frontend.others._modalOrgStructure');
+    }
 }

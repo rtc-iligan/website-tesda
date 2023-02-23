@@ -89,7 +89,7 @@
                             <div class="tab__content">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-7"> <img alt="Image" src="img/login.jpg"> </div>
+                                        <div class="col-md-7"> <img alt="Image" src="img/grad1.jpg"> </div>
                                         <div class="col-md-5 col-lg-4">
                                             <div class="mt--1">
                                                 <h3 class="--avt-bold --fs20">Requirements</h3>

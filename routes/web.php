@@ -23,37 +23,53 @@ Route::get('/', function () {
 Auth::routes();
 //Route::get('/addPosting/{id}', App\Http\Controllers\PostingController::class,'index')->name('index');
 Route::group(['middleware' => ['auth']],function() {
-    Route::group(['middleware' => ['role:Admin']],function() { 
-        Route::group(['middleware' => ['role:Admin']],function() {
-            Route::get('/getResByRemarks',[App\Http\Controllers\HomeController::class, 'getResByRemarks'])->name('getResByRemarks');
-            Route::get('/getReservePerYearMonth',[App\Http\Controllers\HomeController::class, 'getReservePerYearMonth'])->name('getReservePerYearMonth');
-            Route::get('/getResPerMonth',[App\Http\Controllers\HomeController::class, 'getResPerMonth'])->name('getResPerMonth'); 
-            Route::get('/getReservePerMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth'); 
-            Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
-            Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 
-            Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
-            Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);
-            Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+        Route::get('/getReservePerYearMonth',[App\Http\Controllers\HomeController::class, 'getReservePerYearMonth'])->name('getReservePerYearMonth');
+        Route::get('/getResPerMonth',[App\Http\Controllers\HomeController::class, 'getResPerMonth'])->name('getResPerMonth'); 
+        Route::get('/getReservePerMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth');
+        Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
+
+
+        Route::group(['middleware' => ['role:Admin']],function() { 
             Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_get'])->name('accounts.import_get');
             Route::post('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_post'])->name('accounts.import_post');
             Route::resource('/accounts', App\Http\Controllers\AccountsController::class);
             Route::resource('/roles', App\Http\Controllers\RolesController::class);
-            Route::get('/post-sortable', [App\Http\Controllers\TransparencySealController::class, 'updateOrder']);
+            
+    });
+         Route::group(['middleware' => ['role:Admin|Registrar Assistant']],function() {
+            Route::get('/res-cities', [App\Http\Controllers\ReservationController::class, 'getResCities']);
+            Route::get('/getResByRemarks',[App\Http\Controllers\HomeController::class, 'getResByRemarks'])->name('getResByRemarks');
+            Route::get('/EnrollmentForm/{res_id}',[App\Http\Controllers\ReservationController::class, 'EnrollmentForm'])->name('EnrollmentForm'); 
+            Route::get('/LearnersProfile/{res_id}',[App\Http\Controllers\ReservationController::class, 'LearnersProfile'])->name('LearnersProfile'); 
+            Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
+            Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);
             Route::get('/remarks/{res_id}', [App\Http\Controllers\ReservationController::class,'remarks'])->name('remarks');
             Route::post('/addremarks/{res_id}', [App\Http\Controllers\ReservationController::class,'addremarks'])->name('addremarks');
+            Route::resource('/reservation', App\Http\Controllers\ReservationController::class);
+    }); 
+    Route::group(['middleware' => ['role:Admin|Posting']],function() {
+            Route::get('/addPosting/{id}', [App\Http\Controllers\PostingController::class, 'index'])->name('index');
+            Route::get('/sortable-post', [App\Http\Controllers\PostingController::class, 'updateOrders']);
+            Route::get('/post-sortable', [App\Http\Controllers\TransparencySealController::class, 'updateOrder']);
+            Route::resource('/posting', App\Http\Controllers\PostingController::class);
+            Route::resource('/transparencyseal', App\Http\Controllers\TransparencySealController::class);
+    });
+    Route::group(['middleware' => ['role:Admin|Communication']],function() {
             Route::resource('/gallery', App\Http\Controllers\GalleryController::class);
             Route::resource('/news', App\Http\Controllers\NewsController::class);
             Route::resource('/personnel', App\Http\Controllers\PersonnelController::class);
-            Route::resource('/transparencyseal', App\Http\Controllers\TransparencySealController::class);
             Route::resource('/successstories', App\Http\Controllers\SuccessStoriesController::class);
             Route::resource('/qualification', App\Http\Controllers\QualificationController::class);
             Route::resource('/announcement', App\Http\Controllers\AnnouncementController::class);
             Route::resource('/accredited', App\Http\Controllers\AccreditedController::class);
             Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
-            Route::resource('/posting', App\Http\Controllers\PostingController::class);
-            Route::resource('/reservation', App\Http\Controllers\ReservationController::class);
-        }); 
     });
+    Route::group(['middleware' => ['role:Assessment']],function() {
+        Route::resource('/accredited', App\Http\Controllers\AccreditedController::class);
+        Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
+    });
+    
 }); 
 
     Route::get('/cac', [App\Http\Controllers\HomeController::class, 'cac'])->name('cac');

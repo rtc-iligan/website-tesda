@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Maatwebsite\Excel\Concerns\FromView;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\{ReservationExport};
 use Carbon\Carbon;
 use DB;
 use Session;
@@ -20,9 +23,52 @@ class ReservationController extends Controller
     public function index(Request $request)
     {
     
-        $reservation = Reservation::paginate(25);
-        return view('backend.reservation.index',compact('reservation'));
-      
+        if($request){
+            $request->all();
+            }
+        $reservation_all=Reservation::latest();
+        if($request->res_lname)
+        {
+            $reservation_all = $reservation_all->where('res_lname', 'LIKE' ,'%'.$request->res_lname .'%');
+        }
+        if($request->res_qualification)
+        {
+            $reservation_all = $reservation_all->where('res_qualification', 'LIKE' ,'%'.$request->res_qualification .'%');
+            $reservation_all = $reservation_all->orderBy('res_update','ASC');
+        }
+
+        $reservation_all = $reservation_all->orderBy('registeredDate','ASC');
+        $reservation_all = $reservation_all->paginate(50);
+        $reservation_all = $reservation_all->appends($request->except('page'));
+     
+        
+        $res=Reservation::latest();
+        $statuses = $request->input('status', []);
+        $term = $request->input('term');
+       
+        if(count($statuses) > 0){
+           $res->whereIn('res_update', $statuses);
+        }if($request->qualification){
+            $res = $res->where('res_qualification', 'LIKE' ,'%'.$request->qualification .'%');
+            $res = $res->orderBy('res_update','ASC');
+        }if($request->term){
+            $res = $res->where('res_city', 'LIKE', '%'.$term.'%');
+        }
+       
+
+        if (isset($request->reservation_excel))
+        {
+            $reservation = $res->orderBy('registeredDate','ASC')->get();
+           
+            ob_end_clean();
+            ob_start();
+
+            return Excel::download(new ReservationExport($reservation, $request),'Reservation_Report'.'.xlsx');
+        }
+    
+        $res = $res->get();
+       
+        return view('backend.reservation.index',compact('request','reservation_all','res'));
     }
 
     /**
@@ -210,5 +256,12 @@ class ReservationController extends Controller
                     ->first();
         $pdf=PDF::loadView('pdf.EnrollmentForm',compact('reservation_all','date','curYear'));
          return $pdf->stream($res_id.'.pdf');
+    }
+    public function getResCities(Request $request)
+    {
+        $term = $request->input('term');
+        $resCities = Reservation::where('res_city', 'LIKE', '%'.$term.'%')->distinct()->pluck('res_city');
+        return response()->json($resCities);
+      
     }
 }

@@ -250,3 +250,8 @@
 .--color-bb{
   background-color: #202937 !important;
 }
+.d-none{
+  display: none !important;
+}
+
+

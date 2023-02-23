@@ -51,28 +51,88 @@
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header --avt-bold --fs15 text-center">{{ __('ASSESSMENT FEE') }}</div>
+                        <div class="card-header --avt-bold --fs15 text-center ass-fee mt-1">{{ __('ASSESSMENT FEE') }}</div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" >
-                        <div class="card-header --avt-bold --fs15 text-center">{{ __('ACCREDITED ASSESSOR') }}</div>
+                        <div class="card-header --avt-bold --fs15 text-center acc-ass mt-1">{{ __('ACCREDITED ASSESSOR') }}</div>
 
                     
                     </div>
                 </div>
                 <div class="col-md-4"> 
-                    <div class="card" style="">
-                        <div class="card-header --avt-bold --fs15 text-center">{{ __('ORGANIZATIONAL STRUCTURE') }}</div>
-
+                    <div class="card " style="">
+                        <div class="card-header --avt-bold --fs15 text-center org-struc mt-1">{{ __('ORGANIZATIONAL STRUCTURE') }}</div>
                     </div>
                 </div>
             
             </div>
         </div>
   
-
+        <div class="modal fade" id="view_org" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                        
+                <div class="modal-header">
+                    <h4 class="modal-title --avt-bold --fs20">CAC ORGANIZATIONAL STRUCTURE</h4> 
+                </div>
+                <div class="modal-body">
+                    <img src="{{ asset('img/cac.jpg') }}" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width:100px;">Close</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        <div class="modal fade" id="acc_ass" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                        
+                <div class="modal-header text-center">
+                    <h4 class="modal-title --avt-bold --fs20">ACCREDITED ASSESSOR</h4> 
+                </div>
+                <div class="modal-body">
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width:100px;">Close</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
+        <div class="modal fade" id="ass_fee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title --avt-bold --fs20">ASSESSMENT FEE</h4> 
+                </div>
+                <div class="modal-body">
+                <img src="{{ asset('img/fee.png') }}" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width:100px;">Close</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        </div>
 @endsection
 @section('scripts')
-   
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script>
+   $('.org-struc').click(function(){
+         $('#view_org').modal('show');
+    });
+    $('.ass-fee').click(function(){
+         $('#ass_fee').modal('show');
+    });
+    $('.acc-ass').click(function(){
+         $('#acc_ass').modal('show');
+    });
+</script>
 @endsection

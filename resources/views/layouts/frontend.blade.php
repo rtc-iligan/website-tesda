@@ -149,12 +149,12 @@
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('/reservations')}}">Online Reservation</a> </li>
                                                             </ul>
-                                                            <!-- <ul class="menu-vertical">
-                                                                <li> <a href="{{URL::to('/contact-us')}}">Contact Us</a> </li>
-                                                            </ul> -->
+                                                            <ul class="menu-vertical">
+                                                                <li> <a href="{{URL::to('/requirements')}}">Requirements</a> </li>
+                                                            </ul>
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('/galleries')}}">Gallery</a> </li>
-                                                            </ul>
+                                                           </ul>
                                                             <ul class="menu-vertical">
                                                                 <li> <a href="{{URL::to('/newsupdates')}}">News and Updates</a> </li>
                                                             </ul>

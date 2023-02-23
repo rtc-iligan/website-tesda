@@ -58,7 +58,7 @@
                     <div class="card-header text-white text-center --avt-normal" style="background-color: #202937 !important;">
                     RESERVATION GENDER COUNT
                     </div>
-                    <div class="card-body" style="height:315px;">
+                    <div class="card-body" style="height:315px;display: flex;justify-content: center;">
                         <canvas id="myChart-gender"></canvas>
                     </div>
                 </div>

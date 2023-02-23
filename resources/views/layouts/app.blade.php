@@ -27,7 +27,7 @@
 <body>
     <div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container mt-2 mb-2">
                 <a class="navbar-brand" href="{{ url('/home') }}" >
                     <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}" height="25"> 
                 </a>
@@ -43,19 +43,28 @@
                                     <a class="nav-link" href="{{ url('/home') }}">{{ __('Home') }}</a>
                                 </li>
                                 
-                                <li class="nav-item">
+                               @can('view_qualification')
+                               <li class="nav-item">
                                     <a class="nav-link " href="{{ route('qualification.index') }}">{{ __('Qualification') }}</a>
                                 </li>
-                                <li class="nav-item">
+                               @endcan
+                               @can('view_reservation') 
+                               <li class="nav-item">
                                     <a class="nav-link "  href="{{ route('reservation.index') }}">{{ __('Reservation') }}</a>
                                 </li>
-                                <li class="nav-item">
+                               @endcan
+                               @can('view_announcement')
+                               <li class="nav-item">
                                     <a class="nav-link " href="{{ route('announcement.index') }}">{{ __('Announcement') }}</a>
                                 </li>
-                                <li class="nav-item">
+                               @endcan
+                               @can('view_transparency')
+                                 <li class="nav-item">
                                     <a class="nav-link " href="{{ route('transparencyseal.index') }}">{{ __('Transparency') }}</a>
                                 </li>
-                                <li class="nav-item dropdown">
+                               @endcan
+                               @can('view_media')
+                               <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ __('Media') }}
                                     </a>
@@ -75,7 +84,9 @@
                                         </a>
                                     </div>
                                 </li>
-                                <li class="nav-item dropdown">
+                               @endcan
+                               @can('view_assessment')
+                               <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ __('Assessment') }}
                                     </a>
@@ -89,6 +100,8 @@
                                         </a>
                                     </div>
                                 </li>
+                               @endcan
+                                
                             </ul>
                         </ul>
                     <!-- Right Side Of Navbar -->
@@ -113,7 +126,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @can('view_users')
+                                    @can('view_accounts')
                                         <a class="dropdown-item" href="{{ route('accounts.index') }}">
                                             {{ __('Accounts') }}
                                         </a>
@@ -140,44 +153,70 @@
         </main>
     </div>
 
- <!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     @yield('scripts')
+    <script type="text/javascript">      
+      var success = "{{ Session::get('success') }}";
+      if (success) {
+          swal ({
+              text: success,
+              icon: 'success',
+              button: 'OK',
+          });
+      }
 
-   <!--   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+      var deleted = "{{ Session::get('deleted') }}";
+      if (deleted) {
+          swal ({
+              text: deleted,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-toaster@4.0.1/js/bootstrap-toaster.min.js"></script>
-  
- -->
-    
-    <script type="text/javascript">
+      var error = "{{ Session::get('error') }}";
+      if (error) {
+          swal ({
+              text: error,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
 
-            let success = "{{ Session::get('success') }}"
-            if(success) {
-                // Toast.setTheme(TOAST_THEME.DARK);
-                // Toast.create('Success', success,TOAST_STATUS.SUCCESS, 10000);
-                alert(success);
-            }
-            let error = "{{ Session::get('error') }}"
-            if(error) {
-                Toast.setTheme(TOAST_THEME.DARK);
-                Toast.create('Error', error,TOAST_STATUS.DANGER, 10000);
-            }
-            let info = "{{ Session::get('info') }}"
-            if(info) {
-                Toast.setTheme(TOAST_THEME.DARK);
-                Toast.create('Warning', info,TOAST_STATUS.WARNING, 10000);
-            }
-            $(document).on('click','.close', function(e) {
-                $('.modal').modal('hide');
-            })
-        </script>
+      var danger = "{{ Session::get('flash_danger') }}";
+      if (danger) {
+          swal ({
+              text: danger,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var warning = "{{ Session::get('warning') }}";
+      if (warning) {
+          swal ({
+              text: warning,
+              icon: 'info',
+              button: 'OK',
+          });
+      }
+
+      var errors = $('.alert-errors').length;
+      var html_errors = $('#html_errors').val();
+      if(errors){
+          swal ({
+              text: html_errors,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      $('.logout-link').on('click', function(e) {
+        $(this).closest('form').submit();
+      })
+    </script>
 </body>
 </html>

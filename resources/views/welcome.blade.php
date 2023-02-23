@@ -31,7 +31,6 @@
             </div>
             
         </div>
-        <!-- animated pulse infinite -->
         <div class="row"> 
             <div class="col-md-4 "  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" >
                 <a href="{{URL::to('/reservations')}}">
@@ -140,7 +139,7 @@
     <div class="background-image-holder"> <img alt="background" src="{{asset('img/tesda2.jpg')}}"> </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-5"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="400"> <img alt="Image" src="{{asset('img/mcj.png')}}"> </div>
+            <div class="col-md-6 col-lg-5"  data-aos="fade-right" data-aos-duration="800" data-aos-delay="400"> <img alt="Image" src="{{asset('img/vem.png')}}"> </div>
             <div class="col-md-6"  data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                 <div class="switchable__text">
                     <p class="--avt-fs4 line-height"> 
@@ -149,8 +148,8 @@
                         Here, we offer a place to connect us amidst todays challenges. 
                         We're proud of our hardworking team we have believe that together we can achieve our goal to deliver quality technical vocational education
                         .<br><br>RTC-Iligan believes in the power in the power of education and we are very excited to share our resources with you. Feel free to look around and don't hesitate to reach out if there's anything we can help you with. </p>
-                    <h5 class="--avt-fs5">Maynard C. Jumawan</h5> 
-                    <span class="--avt-fs6">Acting Center Administrator of RTC-Iligan</span> </div>
+                    <h5 class="--avt-fs5">Vitoria E. Mirador</h5> 
+                    <span class="--avt-fs6">Supervising TESDS/ Office Caretaker of RTC-Iligan</span> </div>
             </div>
         </div>
     </div>
@@ -160,38 +159,38 @@
         <div class="row">
             <div class="col-md-4  card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #ecefff !important;">
                 <div class="switchable__text text-center "  >
-                    <h4 class="--avt-fs4"><b>Mission</b></h4>
-                    <h6 class="--avt-fs5">The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
+                    <h4 class="--avt-fs2"><b>Mission</b></h4>
+                    <h6 class="--avt-fs4">The transformational leader in the Techinical Education and Skills Development of the filipino workforce. </h6>
                 </div>
             </div>
             <div class="col-md-4 card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
                 <div class="switchable__text text-center">
-                    <h4 class="--avt-fs4"><b>Vision</b></h4>
-                    <h6 class="--avt-fs5"> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
+                    <h4 class="--avt-fs2"><b>Vision</b></h4>
+                    <h6 class="--avt-fs4"> TESDA sets direction, promulgates relevant standards, and implements programs geared towards a quality-assured and inclusive Technical Education and Skills Development and Certification System. </h6>
                 </div>
             </div>
             <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #ecefff !important;">
                 <div class="switchable__text text-center">
-                    <h4 class="--avt-fs4"><b>Values Statement</b></h4>
-                    <h6 class="--avt-fs5">We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
+                    <h4 class="--avt-fs2"><b>Values Statement</b></h4>
+                    <h6 class="--avt-fs4">We believe in demonstrated competence, institutional integrity, personal commitment, culture of innovativeness and a deep sense of nationalism. </h6>
                 </div>
             </div>
             <div class="col-md-4 card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
                 <div class="switchable__text text-center ">
-                    <h4 class="--avt-fs4"><b>What is TWSP?</b></h4>
-                    <h6 class="--avt-fs5"> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
+                    <h4 class="--avt-fs2"><b>What is TWSP?</b></h4>
+                    <h6 class="--avt-fs4"> Training for Work Scholarship Programor TWSP, is a TESDA-initiative that is geared towards “filling up the skills gap and job requirements of priority industries and sectors with high employment demand (i.e. IT, semiconductor and electronics, automotive, etc.)—supportive of the government’s thrust of rapid, inclusive and sustained economic growth.” </h6>
                 </div>
             </div>
             <div class="col-md-4  bg-light card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="400" style="align-items: center !important;display:flex !important;height:300px !important;background-color: #ecefff !important;height:auto !important;">
                 <div class="switchable__text text-center">
-                    <h4 class="--avt-fs4"><b>What is UAQETA?</b></h4>
-                    <h6 class="--avt-fs5"> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
+                    <h4 class="--avt-fs2"><b>What is UAQETA?</b></h4>
+                    <h6 class="--avt-fs4"> RA 10931: "Universal Access to Quality Tertiary Education Act" An Act promoting Universal Access to Quality Tertiary Education by providing for FREE tuition and other school fees in State Universities and Colleges , Local Universities and Colleges and State-run Technical-Vocational Institutions, Establishing the Tertiary Education Subsidy and Student loan program, strengthening the Unified Student Financial Assistance System for Tertiary Education, and appropriating fund thereof. </h6>
                 </div>
             </div>
             <div class="col-md-4 card-transition"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="800" style="align-items: center !important;display:flex !important;height:300px !important;">
                 <div class="switchable__text text-center ">
-                    <h4 class="--avt-fs4"><b>What is STEP?</b></h4>
-                    <h6 class="--avt-fs5"> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </h6>
+                    <h4 class="--avt-fs2"><b>What is STEP?</b></h4>
+                    <h6 class="--avt-fs4"> Special Training for Employment Program or STEP, it is a community-based specialty training program that seeks to address the specific needs of the communities and promote employment, particularly, through entrepreneurial, self-employment and service oriented activities. </h6>
                 </div>
             </div>
         </div>
@@ -312,12 +311,12 @@
             <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
             <p class="--avt-bold text-white">Our Partners</p>
                 <ul class="slides">
-                    <li class="col-md-3 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
-                    <li class="col-md-3 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
-                    <li class="col-md-3 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
-                    <li class="col-md-3 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
-                    <li class="col-md-3 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
-                    <li class="col-md-3 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
+                    <li class="col-md-2 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"></li>
+                    <li class="col-md-2 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
+                    <li class="col-md-2 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
+                    <li class="col-md-2 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
+                    <li class="col-md-2 col-6"> <img alt="Image" class="" width="50" height="60" src="{{asset('img/tesdanew.png')}}"> </li>
+                    <li class="col-md-2 col-6"> <img alt="Image" class="" width="60" height="60" src="{{asset('img/rtciligan.png')}}"> </li>
                 </ul>
             </div>
             </div>

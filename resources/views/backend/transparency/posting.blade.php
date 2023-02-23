@@ -24,10 +24,10 @@
                 <div class="row">
       
                        <div class="col-md-4">
-                            <input type="text" class="form-control">
+                           
                        </div>
                        <div class="col-md-2 ">
-                           <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                          
                        </div>
                        <div class="col-md-6 ">
                         <button type="submit" class="btn btn-secondary float-end " id="buttonref"><i class="fa-solid fa-sort"></i></i> Sort</button>

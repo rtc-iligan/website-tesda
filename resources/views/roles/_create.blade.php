@@ -17,7 +17,10 @@
               <div class=" mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-sm">Permissions</span>
                 @foreach ($perms as $i => $item)
-                    <input value="{{ $item->id }}" type="checkbox" name="permission[{{ $i }}]">{{ $item->name }}
+                    <div class="col-md-12">
+                     
+                      <div> <input value="{{ $item->id }}" type="checkbox" name="permission[{{ $i }}]"> {{ $item->name }}</div>
+                    </div>
                 @endforeach
               </div>
             </div>
