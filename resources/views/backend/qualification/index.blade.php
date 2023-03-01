@@ -8,39 +8,52 @@
             <div class="card">
                 <div class="card-header text-white --avt-normal --color-bb"><i class="fa-solid fa-align-justify"></i>{{ __(' Qualification Management') }}</div>
                 <div class="card-header">
-                    <div class="row">
-                        <div class="col-md-3">
-                             <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-3">
-                             <select class="form-select"></select>
-                        </div>
-                        <div class="col-md-2 ">
-                            <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn float-end text-white" data-bs-toggle="modal" data-bs-target="#createModal" style="background-color: #202937 !important;"><i class="fa-solid fa-plus"></i></i> Create</button>
-                        </div>
-                    </div>
+                   
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" name="title" value="{{ $request->title ?? '' }}">
+                                </div>
+                                <div class="col-md-3">
+                                    <select name="sector" class="form-select">
+                                    <option value="" class="text-center" selected>------> Choose Here <------</option>
+                                    @foreach(config('global.sector') as $sector)
+                                        <option value="{{ $sector['name'] }}">{{ $sector['name'] }}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-md-2 ">
+                                    <button type="submit" class="btn btn-outline-secondary"><i class="fa-solid fa-filter"></i> Filter</button>
+                                </div>
+                            </div>
+                        </form>
+                       <div class="row">
+                            <div class="col-md-4 text-left">
+                                Active:
+                            </div>
+                            <div class="col-md-8 text-right">
+                                <button type="submit" class="btn btn-sm float-end text-white" data-bs-toggle="modal" data-bs-target="#createModal" style="background-color: #202937 !important;"><i class="fa-solid fa-plus"></i></i> Create</button>
+                            </div>
+                       </div>
+                   
                 </div>
                 <div class="card-body">
                     <table class="table table-hover">
                       <tr>
                         <th width="5%">#</th>
                         <th >Title</th>
-                        <th width="15%">CPTR #</th>
-                        <th width="15%">Date Accredited</th>
-                        <th width="10%">Nominal Hrs</th>
+                        <th width="20%">Sector</th>
+                        <th width="20%">CPTR #</th>
+                        <th width="10%">Date Accredited</th>
                         <th width="7%">Action</th>
                       </tr>
-                       @foreach($qualis as $i => $ql)
+                       @foreach($qualification as $i => $ql)
                       <tr>
                         <td>{{ ++$i}}</td>
-                     
                         <td>{{ $ql->title }}</td>
+                        <td>{{ $ql->sector }}</td>
                         <td>{{ $ql->cptr }}</td>
                         <td>{{ date(' F d, Y', strtotime($ql->date)) }}</td>
-                        <td>{{ $ql->hrs }} hours</td>
                         <td>
                            <div class="dropdown">
                               <a class="btn dropdown-toggle text-white --color-bb" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

@@ -46,7 +46,7 @@
             <div class="col-md-6">
             <span class="">Sector</span>
             <select class="form-select" name="sector" required>
-              <option value="" selected>------> Choose Here <------</option>
+              <option value="" class="text-center" selected>------> Choose Here <------</option>
               @foreach(config('global.sector') as $sector)
               <option value="{{ $sector['name'] }}">{{ $sector['name'] }}</option>
               @endforeach
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-6"> <span class="">Type</span>
             <select class="form-select" name="type" required>
-              <option value="" selected>------> Choose Here <------</option>
+              <option value="" class="text-center" selected>------> Choose Here <------</option>
                @foreach(config('global.mode') as $mode)
               <option value="{{ $mode['name'] }}">{{ $mode['name'] }}</option>
               @endforeach

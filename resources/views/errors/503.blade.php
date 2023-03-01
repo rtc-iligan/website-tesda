@@ -1,20 +1,90 @@
-<!doctype html>
-<title>Site Maintenance</title>
-<style>
-  body { text-align: center; padding: 150px; }
-  h1 { font-size: 50px; }
-  body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-  a { color: #dc8100; text-decoration: none; }
-  a:hover { color: #333; text-decoration: none; }
-</style>
-
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:#">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-        <a href="http://ict.rtciligan.com">
-            <p>&mdash; RTC-Iligan ICT Team</p>
-        </a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Site Maintenance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+      body {
+        background: url('{{asset('img/tesda2.jpg')}}') no-repeat center center fixed;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+      }
+      
+      .overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      
+      h1 {
+        color: #fff;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      p {
+        color: #fff;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .fa {
+        color: #fff;
+        font-size: 5rem;
+        margin-bottom: 2rem;
+      }
+      
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2rem;
+        }
+        
+        p {
+          font-size: 1.5rem;
+        }
+        
+        .fa {
+          font-size: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="container">
+        <i class="fas fa-tools"></i>
+        <h1>Under Maintenance</h1>
+        <p>We're sorry, but our site is currently undergoing maintenance.</p>
+        <p>Please check back soon.</p>
+      </div>
     </div>
-</article>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

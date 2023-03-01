@@ -13,10 +13,25 @@ class QualificationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {   
-        $qualis = Qualification::paginate(25);
-        return view('backend.qualification.index',compact('qualis'));
+        if($request){
+            $request->all();
+            }
+        $qualification=Qualification::latest();
+        if($request->title)
+        {
+            $qualification = $qualification->where('title', 'LIKE' ,'%'.$request->title .'%');
+        }
+        if($request->sector)
+        {
+            $qualification = $qualification->where('sector', 'LIKE' ,'%'.$request->sector .'%');
+        }
+
+        $qualification = $qualification->paginate(10);
+        $qualification = $qualification->appends($request->except('page'));
+
+        return view('backend.qualification.index',compact('qualification'));
     }
 
     /**
