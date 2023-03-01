@@ -126,7 +126,7 @@
                                             Confirm
                                         </label>
                                         <label>
-                                            <input type="checkbox" name="status[]" class="my-checkboxes" value="NULL" {{ in_array('NULL', request('status', [])) ? 'checked' : '' }}>
+                                            <input type="checkbox" name="status[]" class="my-checkboxes" value="No-Remarks" {{ in_array('No-Remarks', request('status', [])) ? 'checked' : '' }}>
                                             No-Remarks
                                         </label>
                                         <label>
@@ -201,7 +201,7 @@
                         <td>{{ $res->registeredDate }}</td>
                         <td class="text-center">
                             @if($res->res_update=='Confirm')<span class="badge badge-success">Confirm</span>
-                            @elseif (is_null($res->res_update))<span class="badge badge-light text-dark">No-Remarks</span>
+                            @elseif($res->res_update=='No-Remarks')<span class="badge badge-light text-dark">No-Remarks</span>
                             @elseif($res->res_update=='Undecided') <span class="badge badge-primary">Undecided</span>
                             @elseif($res->res_update=='Unattended') <span class="badge badge-secondary">Unattended</span>
                             @elseif($res->res_update=='Not Qualified') <span class="badge badge-info">Not-Qualified</span>
@@ -236,7 +236,7 @@
                         <td>{{ $res->registeredDate }}</td>
                         <td class="text-center">
                             @if($res->res_update=='Confirm')<span class="badge badge-success">Confirm</span>
-                            @elseif (is_null($res->res_update))<span class="badge badge-light text-dark">No-Remarks</span>
+                            @elseif($res->res_update=='No-Remarks')<span class="badge badge-light text-dark">No-Remarks</span>
                             @elseif($res->res_update=='Undecided') <span class="badge badge-primary">Undecided</span>
                             @elseif($res->res_update=='Unattended') <span class="badge badge-secondary">Unattended</span>
                             @elseif($res->res_update=='Not Qualified') <span class="badge badge-info">Not-Qualified</span>

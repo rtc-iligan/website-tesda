@@ -4,15 +4,15 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">News and Updates</span> 
+             <span class="--avt-bold --txt-r --fs25">News and Updates</span> 
             </div>
         </div>
     </div>
 </section>
 <section>
-    <div class="container">
+    <div class="container-fluid">
         <div class="masonry">
-            <div class="masonry-filter-container text-center d-flex flex-wrap justify-content-center align-items-center"> <span>Category:</span>
+            <!-- <div class="masonry-filter-container text-center d-flex flex-wrap justify-content-center align-items-center"> <span>Category:</span>
                 <div class="masonry-filter-holder">
                     <div class="masonry__filters" data-filter-all-text="All Categories">
                         <ul>
@@ -21,45 +21,27 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="masonry__container row masonry--active">
-                <div class="masonry__item col-md-6 text-center filter-print" data-masonry-filter="Print">
-                    <div class="project-thumb">
-                        <a href="#"> <img alt="Image" class="border--round" src="img/tesdabuilding.png" style="height: 335px;"> </a>
-                        <h4>TESDA</h4> <span>Brief History of TESDA</span> <a class="d-flex justify-content-end" href="http://127.0.0.1:8000/newsupdates"> >>See More</a></div>
+            </div> -->
+            <div class="row">
+                @foreach($newss as $news)
+                    <div class="masonry__item col-md-6 text-center filter-print" data-masonry-filter="Print">
+                            <div class="project-thumb">
+                                <a href="#"> <img alt="Image" class="border--round" src="{{asset('storage/'.$news->image) }}" style="height: 335px;"> </a>
+                                <h4>{{ $news->title }}</h4>
+                                <span>{{ $news->location }} / {{ $news->date }}</span> 
+                                <!-- <a class="d-flex justify-content-end" href="http://127.0.0.1:8000/newsupdates"> >>See More</a></div> -->
+                                <p class="--fs20">{{$news->content}}</p>    
+                            </div>
+                    </div>
+                @endforeach
+                <div class="d-flex justify-content-center" id="link-st" style="margin: 0 auto !important;">
+                    {{ $newss->links() }}
                 </div>
-                <div class="masonry__item col-md-6 text-center filter-print" data-masonry-filter="Print">
-                    <div class="project-thumb">
-                        <a href="#"> <img alt="Image" class="border--round" src="img/building.jpg" style="height: 335px;"> </a>
-                        <h4>Central Office</h4> <span>CO</span> <a class="d-flex justify-content-end" href="http://127.0.0.1:8000/newsupdates"> >>See More</a></div>
-                </div>
-            </div>
-        </div>
+            </div> 
     </div>
-</section>
-<section class="d-flex justify-content-center">
-	<nav aria-label="Page navigation example ">
-	  <ul class="pagination">
-	    <li class="page-item">
-	      <a class="page-link" href="#" aria-label="Previous">
-	        <span aria-hidden="true">&laquo;</span>
-	        <span class="sr-only">Previous</span>
-	      </a>
-	    </li>
-	    <li class="page-item"><a class="page-link" href="#">1</a></li>
-	    <li class="page-item"><a class="page-link" href="#">2</a></li>
-	    <li class="page-item"><a class="page-link" href="#">3</a></li>
-	    <li class="page-item">
-	      <a class="page-link" href="#" aria-label="Next">
-	        <span aria-hidden="true">&raquo;</span>
-	        <span class="sr-only">Next</span>
-	      </a>
-	    </li>
-	  </ul>
-	</nav>
 </section>
 <br><br><br>
 @endsection
-@section('scripts')
+@section('scripts') 
    
 @endsection

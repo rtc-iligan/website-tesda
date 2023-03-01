@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Redirect;
 use DB;
 use App\Models\{Personnel, Gallery, Qualification, TransparencySeal, Posting, News, SuccessStories, Reservation, User};
 class HomeController extends Controller
@@ -151,14 +152,17 @@ class HomeController extends Controller
     {
         return view('frontend.others.contactus');
     }
-    public function images()
+    public function images(Request $request)
     {
-        $gallery = Gallery::get();
-        return view('frontend.others.images',compact('gallery'));
+        $gallery = Gallery::paginate(6);
+        $gallerys = $gallery->appends($request->except('page'));
+        return view('frontend.others.images',compact('gallerys'));
     }
-    public function newsupdates()
+    public function newsupdates(Request $request)
     {
-        return view('frontend.others.newsupdates');
+        $news=\App\Models\News::paginate(4);
+        $newss = $news->appends($request->except('page'));
+        return view('frontend.others.newsupdates',compact('newss'));
     }
     public function achiever()
     {

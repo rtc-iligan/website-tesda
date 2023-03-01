@@ -40,6 +40,7 @@ class ReservationExport implements FromView, ShouldAutoSize, WithDrawings
 
         return $drawing;
     }
+    
     public function view(): View
     {
         // take time to load with double foreach. loading time = 10-15 mins

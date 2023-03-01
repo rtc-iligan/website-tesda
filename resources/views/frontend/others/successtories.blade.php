@@ -4,7 +4,7 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">Success Stories</span> 
+             <span class="--avt-bold --txt-r --fs25">Success Stories</span> 
             </div>
         </div>
     </div>

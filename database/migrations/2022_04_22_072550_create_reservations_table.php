@@ -69,7 +69,7 @@ class CreateReservationsTable extends Migration
             $table->string('res_cd')->nullable();
             $table->string('res_dm')->nullable();
             $table->string('res_update')->nullable();
-            $table->string('res_updatedate')->nullable();
+            $table->string('res_updatedate')->default('No-Remarks');
             $table->string('qualification_id')->nullable();
             $table->timestamps();
         });

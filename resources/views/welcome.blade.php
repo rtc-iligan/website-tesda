@@ -26,8 +26,8 @@
         <div class="row">
             <div class="col-md-9 col-lg-7 ">
                 <h1 class="--avt-bold">Welcome to <br class="">RTC-ILIGAN</h1>
-                <p class="--avt-fs5">"You bring the effort, we deliver result"</p>
-                <p class="--avt-fs5">We hope you find what you're looking for and that you enjoy your stay, have a great day!  </p>
+                <p class="--avt-fs3">"You bring the effort, we deliver result"</p>
+                <p class="--avt-fs4">We hope you find what you're looking for and that you enjoy your stay, have a great day!  </p>
             </div>
             
         </div>
@@ -36,7 +36,7 @@
                 <a href="{{URL::to('/reservations')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white" > <i class="icon icon-Clock-Back color--primary"></i>
                         <div class="feature__body">
-                            <p class="--avt--fs5"> <b>Online Reservation</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <p class=""> <b class="--fs20">Online Reservation</b> refers to the process of reserving a product or service through the internet, typically through a website or mobile application.</p>
                         </div>
                     </div>
                 </a>
@@ -45,7 +45,7 @@
                 <a href="{{URL::to('/requirements')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white"> <i class="icon icon-Duplicate-Window color--primary"></i>
                         <div class="feature__body">
-                            <p class="--avt--fs5"> <b>Enrollment Requirements</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                            <p> <b class="--fs20">Enrollment Requirements</b> typically include completing an application form, providing proof of identity, residency, and age, submitting transcripts.</p>
                         </div>
                     </div>
                 </a>
@@ -54,7 +54,7 @@
                 <a href="{{URL::to('/cac')}}">
                     <div class="feature feature-2 boxed boxed--border bg--white"> <i class="icon icon-Life-Jacket color--primary"></i>
                         <div class="feature__body">
-                            <p class="--avt--fs5"> <b>Assessement</b> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.  </p>
+                            <p> <b class="--fs20">Assessement</b> refers to the process of evaluating the knowledge, skills, and competencies of individuals who have undergone technical-vocational education. </p>
                         </div>
                     </div>
                 </a>    
@@ -76,7 +76,7 @@
            <li class="col-md-4" > 
                     <img alt="Image" class="rounded" src="{{asset('storage/'.$news->image)}}" style="height:250px !important;">
                     <h6 class="lead text-left fs-6">{{ $news->date }} - News</h6>
-                    <h4 class="text-left --avt-fs4">{{ $news->content}}</h4>
+                    <h4 class="text-left --avt-fs4">{{substr($news->content, 0, 200)}}...</h4>
                     <button class="btn btn-sm btn-primary rounded float-right --avt-fs6" style="bottom: 0;"> <a href="{{URL::to('newsupdates')}}" class="text-white">>> See More</a> </button>
             </li>
            @endforeach
@@ -359,9 +359,6 @@
   
    
 </section>
-<!-- <button type="button" id="scroll" class="btn btn-outline-primary"></button> -->
-<a id="scroll" style="position:fixed;right:10px;bottom:10px;cursor:pointer;">
-<i class="fa-solid fa-circle-up" style="font-size:40px;"></i></a>
 
 @endsection
 @section('scripts')

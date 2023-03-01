@@ -4,9 +4,8 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-12">
-             <span class="lead" style="font-size: 22px;float: left;">Gallery</span> 
+             <span class="--avt-bold --txt-r --fs25">Gallery</span> 
             </div>
-        </div>
     </div>
 </section>
 <section>
@@ -23,13 +22,17 @@
                     </div>
                 </div>
             </div>
-            <div class="masonry__container row masonry--active">
-            @foreach($gallery as $gl)
-               <div class="masonry__item col-lg-4 col-6 filter-people" data-masonry-filter="People">
-                    <a href="{{asset('storage/'.$gl->image) }}" data-lightbox="Gallery 1"> <img alt="Image" src="{{asset('storage/'.$gl->image) }}" style="height: 190px;"> </a>
+            <div class="masonry__container row">
+            @foreach($gallerys as $gl)
+               <div class="masonry__item col-lg-4 col-4 filter-people" data-masonry-filter="People">
+                    <a href="{{asset('storage/'.$gl->image) }}" data-lightbox="Gallery 1"> <img alt="Image" src="{{asset('storage/'.$gl->image) }}" style="height: 300px;width:500px;border-radius: 10px;"> </a>
+                    <p class="--avt-fs5 text-center">{{$gl->subject}} / {{$gl->date}}</p>
                 </div>
-               @endforeach
+            @endforeach
             </div>
+            <div class="d-flex justify-content-center" id="link-st" style="margin: 0 auto !important;">
+                    {{ $gallerys->links() }}
+                </div>
         </div>
     </div>
 </section>

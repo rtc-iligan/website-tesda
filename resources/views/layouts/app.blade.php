@@ -27,7 +27,7 @@
 <body>
     <div>
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container mt-2 mb-2">
+            <div class="container-fluid mt-2 mb-2">
                 <a class="navbar-brand" href="{{ url('/home') }}" >
                     <img class="logo logo-light" alt="logo" src="{{asset('img/logoheader.png')}}" height="25"> 
                 </a>
@@ -105,7 +105,7 @@
                             </ul>
                         </ul>
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto text-right">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -122,9 +122,8 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                <i class="fa-regular fa-user mr-2 --fs20 "></i> {{ Auth::user()->name }}
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     @can('view_accounts')
                                         <a class="dropdown-item" href="{{ route('accounts.index') }}">

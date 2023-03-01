@@ -65,12 +65,13 @@ Route::group(['middleware' => ['auth']],function() {
             Route::resource('/accredited', App\Http\Controllers\AccreditedController::class);
             Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
     });
-    Route::group(['middleware' => ['role:Assessment']],function() {
+    Route::group(['middleware' => ['role:Admin|Assessment']],function() {
         Route::resource('/accredited', App\Http\Controllers\AccreditedController::class);
         Route::resource('/schedule', App\Http\Controllers\ScheduleController::class);
     });
     
 }); 
+
 
     Route::get('/cac', [App\Http\Controllers\HomeController::class, 'cac'])->name('cac');
     Route::post('/addReservation', [App\Http\Controllers\ReservationController::class,'addReservation'])->name('addReservation');
