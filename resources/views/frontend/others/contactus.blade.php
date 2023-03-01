@@ -46,11 +46,13 @@
 </section>
 
     <div class="container col-md-8 mb-3 ">
-       
+
         <div class="card --avt-normal">
         <p class="--avt-fs3 text-center mt-4">Survey, Feedback, Comments, Questions and Suggestions</p>
+      
             <div class="card-body">
-                <form>
+                <form action="{{URL::to('/feedbackstore')}}" method="post">
+                @csrf
                     <div class="row form-group">
                         <div class="col-md-6">
                             <label for="exampleInputPassword1">Name</label>
@@ -58,7 +60,7 @@
                         </div>
                         <div class="col-md-6">
                             <label for="exampleInputPassword1">Contact</label>
-                            <input type="number" class="form-control" name="number" placeholder="Enter contact number">
+                            <input type="number" class="form-control" name="contact" placeholder="Enter contact number">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -73,7 +75,7 @@
                         </div>
                     </div>
                     <div class="row form-group">
-                        <textarea name="subjet" id="" cols="30" rows="10" placeholder="Type here . . . . "></textarea>
+                        <textarea name="content" id="" cols="30" rows="10" placeholder="Type here . . . . "></textarea>
                     </div>
                 
                     

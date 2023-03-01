@@ -280,24 +280,14 @@
     <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
         <div class="slider" style="margin-left: -20px;">
             <ul class="slides">
+            @foreach($ss as $ss)
                 <li class="col-12">
                     <div class="feature feature-3 text-center">
-                        <img alt="image" src="{{asset('img/DSC_00.jpg')}}" class="border--round" style="height: 290px !important;">
+                        <img alt="image" src="{{asset('storage/'.$ss->image)}}" class="border--round" style="height: 290px !important;">
                     </div>
-                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Michael G. Cuento -</p>
+                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- {{ $ss->name }} -</p>
                 </li>
-                <li class="col-12">
-                    <div class="feature feature-3 text-center">
-                        <img alt="image" src="{{asset('img/IMG-2891.jpg')}}" class="border--round" style="height: 290px !important;">
-                    </div>
-                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Carlo A. Quiamco -</p>
-                </li>
-                <li class="col-12">
-                    <div class="feature feature-3 text-center">
-                        <img alt="image" src="{{asset('img/gp-mario.jpg')}}" class="border--round" style="height: 290px !important;">
-                    </div>
-                    <p class="text-white text-center --avt-fs5 mt-2"  style="color:#808080 !important;">- Ralph D. Pacapat -</p>
-                </li>
+                @endforeach 
             </ul>
         </div>
     </div>

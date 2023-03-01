@@ -130,6 +130,9 @@
                                             {{ __('Accounts') }}
                                         </a>
                                     @endcan
+                                    <a class="dropdown-item" href="{{ route('feedback.index') }}">
+                                            {{ __('Feedbacks') }}
+                                        </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

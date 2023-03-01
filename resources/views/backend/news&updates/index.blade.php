@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header h4"><i class="fa-solid fa-align-justify"></i>{{ __(' New&Updates Management') }}</div>
+                <div class="card-header text-white --avt-normal --color-bb"><i class="fa-solid fa-align-justify"></i>{{ __(' New&Updates Management') }}</div>
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-2">

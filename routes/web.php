@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth']],function() {
         Route::get('/getResPerMonth',[App\Http\Controllers\HomeController::class, 'getResPerMonth'])->name('getResPerMonth'); 
         Route::get('/getReservePerMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth');
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); 
-
+        Route::resource('/feedback', App\Http\Controllers\FeedbackController::class);
 
         Route::group(['middleware' => ['role:Admin']],function() { 
             Route::get('/accounts-import', [App\Http\Controllers\AccountsController::class, 'import_get'])->name('accounts.import_get');
@@ -72,8 +72,9 @@ Route::group(['middleware' => ['auth']],function() {
     
 }); 
 
-
+   
     Route::get('/cac', [App\Http\Controllers\HomeController::class, 'cac'])->name('cac');
+    Route::post('/feedbackstore', [App\Http\Controllers\FeedbackController::class,'feedbackstore'])->name('feedbackstore');
     Route::post('/addReservation', [App\Http\Controllers\ReservationController::class,'addReservation'])->name('addReservation');
     Route::get('/reservations', [App\Http\Controllers\HomeController::class,'reservation'])->name('reservation');
     Route::get('/location-map', [App\Http\Controllers\HomeController::class,'locationmap'])->name('locationmap');

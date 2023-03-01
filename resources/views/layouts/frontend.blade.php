@@ -257,6 +257,67 @@
             </div>
         
          @yield('scripts')
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script type="text/javascript">      
+      var success = "{{ Session::get('success') }}";
+      if (success) {
+          swal ({
+              text: success,
+              icon: 'success',
+              button: 'OK',
+          });
+      }
+
+      var deleted = "{{ Session::get('deleted') }}";
+      if (deleted) {
+          swal ({
+              text: deleted,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var error = "{{ Session::get('error') }}";
+      if (error) {
+          swal ({
+              text: error,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var danger = "{{ Session::get('flash_danger') }}";
+      if (danger) {
+          swal ({
+              text: danger,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      var warning = "{{ Session::get('warning') }}";
+      if (warning) {
+          swal ({
+              text: warning,
+              icon: 'info',
+              button: 'OK',
+          });
+      }
+
+      var errors = $('.alert-errors').length;
+      var html_errors = $('#html_errors').val();
+      if(errors){
+          swal ({
+              text: html_errors,
+              icon: 'error',
+              button: 'OK',
+          });
+      }
+
+      $('.logout-link').on('click', function(e) {
+        $(this).closest('form').submit();
+      })
+    </script>
         <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="{{asset('stack/js/parallax.js')}}"></script>

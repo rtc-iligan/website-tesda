@@ -14,7 +14,7 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        //
+        return view('backend.feedback.index');
     }
 
     /**
@@ -82,4 +82,27 @@ class FeedbackController extends Controller
     {
         //
     }
+    public function feedbackstore(Request $request)
+    {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'contact' => 'required',
+            'email' => 'required',
+            'address' => 'required',
+            'content' => 'required',
+           
+        ]);
+
+        $feedback=new Feedback();
+        $feedback->name=$request->name;
+        $feedback->contact=$request->contact;
+        $feedback->email=$request->email;
+        $feedback->address=$request->address;
+        $feedback->content=$request->content;
+        //dd($feedback);
+        $feedback->save();
+
+        return redirect()->back()->with('success','Successfully Posted Feedback!');
+    }
+
 }
