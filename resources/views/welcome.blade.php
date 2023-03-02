@@ -32,14 +32,14 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="{{URL::to('/reservation')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Online Reservation</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="{{URL::to('/requirements')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Enrolment Requirements</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="{{URL::to('/requirements')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Assessment Requirements</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="https://www.tesda.gov.ph/AssessmentCenters/"><i class="fa-solid fa-link text-dark mr-2"></i> Assessment Centers</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="{{asset('docs/LearnersProfile.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Registration Form</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="{{asset('docs/AssessmentForm.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Assessement Form</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="https://bsrs.tesda.gov.ph/"><i class="fa-solid fa-link text-dark mr-2"></i> Biometric-Enabled Scholarship Registration System (BSRS)</a></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" href="{{asset('docs/Brochure.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Brochure</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{URL::to('/reservation')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Online Reservation</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{URL::to('/requirements')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Enrolment Requirements</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{URL::to('/requirements')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Assessment Requirements</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="https://www.tesda.gov.ph/AssessmentCenters/"><i class="fa-solid fa-link text-dark mr-2"></i> Assessment Centers</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{asset('docs/LearnersProfile.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Registration Form</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{asset('docs/AssessmentForm.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Assessement Form</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="https://bsrs.tesda.gov.ph/"><i class="fa-solid fa-link text-dark mr-2"></i> Biometric-Enabled Scholarship Registration System (BSRS)</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{asset('docs/Brochure.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Brochure</a></div>
                 </div>
             </div>
         </div>
