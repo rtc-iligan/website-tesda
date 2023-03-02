@@ -41,6 +41,14 @@ class HomeController extends Controller
         
         return view('home', compact('getQualification','getReservation','getUser','countGender','genderFemale','genderMale'));
     }
+    public function getResQualification()
+    {
+         $reservations = DB::table('reservations')
+                ->selectRaw('res_qualification, res_update, COUNT(*) as count')
+                ->groupBy('res_qualification', 'res_update')
+                ->get();
+                
+    }
     public function getResByRemarks()
     {
         // $dataGetResByRemarks=Reservation::select(['res_qualification', 'res_update', DB::raw('COUNT(*)')])
@@ -101,7 +109,7 @@ class HomeController extends Controller
     public function getResPerMonth()
     {
         $users = Reservation::select('res_id', 'registeredDate')
-        ->whereYear('registeredDate', '=', 2022)
+        ->whereYear('registeredDate', '=', 2023)
         ->get()
         ->groupBy(function ($date) {
             return Carbon::parse($date->registeredDate)->format('m');

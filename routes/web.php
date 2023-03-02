@@ -25,6 +25,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']],function() {
 
         Route::get('/getReservePerYearMonth',[App\Http\Controllers\HomeController::class, 'getReservePerYearMonth'])->name('getReservePerYearMonth');
+        Route::get('/getResQualification',[App\Http\Controllers\HomeController::class, 'getResQualification'])->name('getResQualification');
         Route::get('/getResPerMonth',[App\Http\Controllers\HomeController::class, 'getResPerMonth'])->name('getResPerMonth'); 
         Route::get('/getReservePerMonth/{year}',[App\Http\Controllers\HomeController::class, 'getReservePerMonth'])->name('getReservePerMonth');
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); 

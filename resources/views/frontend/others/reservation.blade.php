@@ -17,7 +17,7 @@
             <div class="card-body">
                  <div class="row">
                      <div class="col-md-4 d-flex justify-content-center" >
-                        <img src="{{asset('img/sample.jpg')}}" alt="as" style=" width: auto;" class="wllpr">
+                        <img src="{{asset('img/res.jpg')}}" alt="as" style=" width: auto;" class="wllpr">
                      </div>
                      <div class="col-md-8">
                         <img src="{{asset('img/ABOTLAHAT.png')}}" alt="ABOTLAHAT" class="wllpr"style="width:200px;height:50px;position: absolute;left:0px;bottom: -20px;">

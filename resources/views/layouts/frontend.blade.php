@@ -200,6 +200,27 @@
                 </nav>
             </div>
         </div>
+        <div class="sticky-quick-links" data-toggle="modal" data-target="#sticky-quick-links">
+        <p class="quick-links">QUICK LINKS</p>
+    </div>
+    <div class="modal fade" id="sticky-quick-links" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{URL::to('/reservations')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Online Reservation</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{URL::to('/requirements')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Enrolment Requirements</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{URL::to('/requirements')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Assessment Requirements</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="https://www.tesda.gov.ph/AssessmentCenters/"><i class="fa-solid fa-link text-dark mr-2"></i> Assessment Centers</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{asset('docs/LearnersProfile.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Registration Form</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{asset('docs/AssessmentForm.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Assessement Form</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="https://bsrs.tesda.gov.ph/"><i class="fa-solid fa-link text-dark mr-2"></i> Biometric-Enabled Scholarship Registration System (BSRS)</a></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3"><a class="d-flex align-items-center" target="_blank" href="{{asset('docs/Brochure.pdf')}}"><i class="fa-solid fa-link text-dark mr-2"></i> Brochure</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
         <div class="main-container">
             @yield('content')
         </div>
@@ -301,19 +322,19 @@
           });
       }
 
-      var errors = $('.alert-errors').length;
-      var html_errors = $('#html_errors').val();
-      if(errors){
-          swal ({
-              text: html_errors,
-              icon: 'error',
-              button: 'OK',
-          });
-      }
+    //   var errors = $('.alert-errors').length;
+    //   var html_errors = $('#html_errors').val();
+    //   if(errors){
+    //       swal ({
+    //           text: html_errors,
+    //           icon: 'error',
+    //           button: 'OK',
+    //       });
+    //   }
 
-      $('.logout-link').on('click', function(e) {
-        $(this).closest('form').submit();
-      })
+    //   $('.logout-link').on('click', function(e) {
+    //     $(this).closest('form').submit();
+    //   })
     </script>
         <script src="{{asset('stack/js/jquery-3.1.1.min.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
