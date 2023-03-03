@@ -28,7 +28,7 @@
     <div class="container">
       
         <div class="row">
-            <div class="col-md-9 col-lg-7 ">
+            <div class="col-md-9 col-lg-7">
                 <h1 class="--avt-bold">Welcome to <br class="">RTC-ILIGAN</h1>
                 <p class="--avt-fs3">"You bring the effort, we deliver result"</p>
                 <p class="--avt-fs4">We hope you find what you're looking for and that you enjoy your stay, have a great day!  </p>
@@ -66,20 +66,21 @@
         </div>
     </div>
 </section>
-<div class="contaier mt-5 mb-5 ">
-    <div class="col-12 col-sm-5 align-wh-dsk">
+<div class="container mt-5 mb-5">
+    <div class="col-12 col-sm-5 ">
         <h1 class="--avt-bold --blue-title">What's Happening</h1>
         <a href="{{ URL::to('newsupdates') }}"><h5 class="--avt--fs6 --blue-title">>> More Latest News and Updates</a>
         
     </div>
+    
 </div>
-<div class="container-fluid">
+<div class="container">
     <div class="slider slider--inline-arrows slider--arrows-hover text-center" data-arrows="true">
         <ul class="slides align-wh-mb" id="slides">
            @foreach($news as $news)
-           <li class="col-md-4" > 
+           <li class="col-lg-4 col-md-4" > 
                     <img alt="Image" class="rounded" src="{{asset('storage/'.$news->image)}}" style="height:250px !important;">
-                    <h6 class="lead text-left fs-6">{{ $news->date }} - News</h6>
+                    <h6 class="lead text-left fs-6">{{ $news->title }} - {{ $news->date }}</h6>
                     <h4 class="text-left --avt-fs4">{{substr($news->content, 0, 200)}}...</h4>
                     <button class="btn btn-sm btn-primary rounded float-right --avt-fs6" style="bottom: 0;"> <a href="{{URL::to('newsupdates')}}" class="text-white">>> See More</a> </button>
             </li>

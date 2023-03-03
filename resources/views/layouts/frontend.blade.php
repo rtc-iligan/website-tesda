@@ -35,7 +35,8 @@
                     <a href="https://www.youtube.com/@tesdaregionx1792"><i class="fa-brands fa-youtube --fs20 text-white mt-3 ml-3"></i></a>
                 </div>
                 <div class="col-md-3 col-sm-3">
-                    <input type="text" placeholder=""class="form-control mt-2 --size-hdr-in" style="width:290px;height:35px;" placeholder="">
+                    <!-- <input type="text" placeholder=""class="form-control mt-2 --size-hdr-in" style="width:290px;height:35px;" placeholder=""> -->
+                    <div class="gcse-search" id="mac"></div>
                 </div>
             </div>
             <div class="row g-2 --hide-dsk">
@@ -349,6 +350,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        
+        <script async src="https://cse.google.com/cse.js?cx=f495e76b6c63d46f7">
+                </script>
+
     </body>
 </html>

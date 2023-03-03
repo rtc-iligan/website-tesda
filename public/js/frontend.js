@@ -30,4 +30,6 @@ $(window).on('load', function() {
         });
     });    
 
-  
+    $('#mac').on('blur', function() {
+        // alert(1);
+    });

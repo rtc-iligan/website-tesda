@@ -47,7 +47,8 @@ class HomeController extends Controller
                 ->selectRaw('res_qualification, res_update, COUNT(*) as count')
                 ->groupBy('res_qualification', 'res_update')
                 ->get();
-                
+          dd($reservations);      
+          if($reservations->blocked);
     }
     public function getResByRemarks()
     {
